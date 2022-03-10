@@ -1,0 +1,78 @@
+# Unreal Engine 4
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+*.log
+GPUCache/
+
+# Binaries
+*.slo
+*.lo
+*.o
+*.ko
+*.so
+*.lai
+*.la
+*.a
+*.lib
+*.dll
+*.so
+*.exe
+*.out
+
+# CMake
+CMakeCache.txt
+CMakeFiles
+/Makefile
+cmake_install.cmake
+install_manifest.txt
+
+## do not ignore this for unreal
+#build/
+
+# Linux
+.*
+*~
+.directory
+*.ktree
+*.preprocessed
+*.swp.*
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+.org-id-locations
+*_archive
+
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Visual Studio
+*.opensdf
+*.sdf
+*.sln
+*.suo
+*.pdb
+*.VC.opendb
+*.VC.db
+
+# Misc
+*.tmp
+*.bak
+
+!.gitignore
+!.gitmodules
