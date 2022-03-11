@@ -1,0 +1,79 @@
+Version = 2.12.0.12165;
+CParticleRendererFeatureSet	$6B70D015
+{
+	RendererFeatures = {
+		"$191F1761",
+		"$8D0A7553",
+		"$D857A09F",
+		"$1DB717AE",
+		"$1098ED35",
+		"$CAD62F46",
+		"$4B933A29",
+		"$C5F9C9BF",
+		"$35A36C4E",
+		"$EAC726E3",
+		"$7FB4AB5F",
+	};
+}
+CParticleRendererFeatureDesc	$191F1761
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "GeometryBillboard";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$D857A09F
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "EnableRendering";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$1DB717AE
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "FlipUVs";
+}
+CParticleRendererFeatureDesc	$1098ED35
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "AlphaRemap";
+}
+CParticleRendererFeatureDesc	$CAD62F46
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "Atlas";
+}
+CParticleRendererFeatureDesc	$C5F9C9BF
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "NormalWrap";
+}
+CParticleRendererFeatureDesc	$35A36C4E
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "Emissive";
+}
+CParticleRendererFeatureDesc	$4B933A29
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "NormalBend";
+}
+CParticleRendererFeatureDesc	$EAC726E3
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "TransformUVs";
+}
+CRHIMaterialShaders	$00269EC3
+{
+	FragmentShader = "Library/UnrealEngine/Shaders/UE_VolumetricFog.frag";
+}
+CParticleRendererFeatureDesc	$7FB4AB5F
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "EmissiveRamp";
+}
+CParticleRendererFeatureDesc	$8D0A7553
+{
+	RendererInterfacePath = "Library/UnrealEngine/Materials/UnrealEngine.pkri";
+	RendererFeatureName = "VolumetricFog";
+	Mandatory = true;
+}

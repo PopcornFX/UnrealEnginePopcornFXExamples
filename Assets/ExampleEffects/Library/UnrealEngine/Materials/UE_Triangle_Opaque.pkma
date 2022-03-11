@@ -1,0 +1,93 @@
+Version = 2.12.0.12165;
+CParticleRendererFeatureSet	$6B70D015
+{
+	RendererFeatures = {
+		"$191F1761",
+		"$D857A09F",
+		"$35A36C4E",
+		"$3D324B43",
+		"$CFA99AF0",
+		"$9154DFA0",
+		"$4B933A29",
+		"$EAC726E3",
+		"$4ADE8DE2",
+		"$429D79DD",
+		"$47CE5166",
+		"$D7C42C69",
+		"$6AA5BFA2",
+	};
+}
+CParticleRendererFeatureDesc	$191F1761
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "GeometryTriangle";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$3D324B43
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "Diffuse";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$D857A09F
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "EnableRendering";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$35A36C4E
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "Opaque";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$4B933A29
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "Lit";
+}
+CParticleRendererFeatureDesc	$9154DFA0
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "NormalBend";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$EAC726E3
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "TriangleCustomNormals";
+}
+CParticleRendererFeatureDesc	$4ADE8DE2
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "TriangleCustomUVs";
+}
+CRHIMaterialShaders	$00269EC3
+{
+	FragmentShader = "Library/PopcornFXCore/Shaders/Opaque_Triangle.frag";
+}
+CParticleRendererFeatureDesc	$CFA99AF0
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "Emissive";
+}
+CParticleRendererFeatureDesc	$429D79DD
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "AlphaRemap";
+}
+CParticleRendererFeatureDesc	$47CE5166
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "ShaderInput1";
+}
+CParticleRendererFeatureDesc	$D7C42C69
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "ShaderInput2";
+}
+CParticleRendererFeatureDesc	$6AA5BFA2
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "ShaderInput3";
+}

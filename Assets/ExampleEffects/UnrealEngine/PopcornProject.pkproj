@@ -1,0 +1,210 @@
+Version = 2.12.0.12166;
+CProjectSettings	$D857A09F
+{
+	General = "$35A36C4E";
+	Scene = "$4B933A29";
+	LOD = "$9154DFA0";
+	Constants = "$EAC726E3";
+	Assets = "$4ADE8DE2";
+	Budgets = "$D279714D";
+	Baking = "$5F621394";
+	Editor = "$41E5AFE7";
+	Features = "$BEDF8936";
+	Documentation = "$2909A531";
+}
+CProjectSettingsGeneral	$35A36C4E
+{
+	ProjectName = "Example effects for Unreal Engine";
+	ProjectDescription = "Contains all the Unreal Engine plugin content-examples effects.";
+	ProjectBanner = "UnrealEngine/UnrealEngine_Logo.png";
+	CompanyName = "Persistant Studios";
+	Homepage = "www.popcornfx.com";
+	SupportContact = "https://discord.gg/4ka27cVrsf";
+	LicensingTerms = "https://www.popcornfx.com/terms-and-conditions/";
+	RootDir = "..";
+	PresetsDir = "Editor/Presets";
+	AnimationTracksDir = "Editor/AnimationTracks";
+	ThumbnailsDir = "Editor/Thumbnails";
+	LibraryDir = "Library";
+	RuntimeConfigsDir = "Config";
+	DocumentationDir = "Documentation";
+	EditorCacheDir = "UnrealEngine/Cache";
+}
+CProjectSettingsScene	$4B933A29
+{
+	CoordinateFrame = Left_Handed_Z_Up;
+	CoordinateFrameAxisX = Right;
+	CoordinateFrameAxisY = Up;
+	CoordinateFrameAxisZ = Backward;
+	DistanceUnits = Meter;
+	MaxDistanceBeforeTeleport = inf;
+}
+CProjectSettingsLOD	$9154DFA0
+{
+}
+CProjectSettingsConstants	$EAC726E3
+{
+	Constants = {
+		"$D6EEA348",
+		"$5F44DFAB",
+		"$D806D24A",
+		"$D03359D5",
+		"$C01E62BC",
+		"$9D2B1A2F",
+		"$55289D1E",
+		"$EC84D339",
+		"$2BBAE5F0",
+		"$14978373",
+		"$89E0DDB2",
+	};
+}
+CProjectSettingsAssets	$4ADE8DE2
+{
+	IgnoredPaths = "/O3DE\\n/Unity\\n/Library/O3DE\\n/Library/Unity\\n/Content/ContentExamples/O3DE\\n/Content/ContentExamples/Unity\\n/Content/ContentExamples/Performance";
+	EffectExtensions = {
+		"pkfx",
+	};
+	MeshExtensions = {
+		"fbx",
+		"gr2",
+	};
+	ImageExtensions = {
+		"dds",
+		"png",
+		"jpg",
+		"jpeg",
+		"tga",
+		"tif",
+		"tiff",
+		"pkm",
+		"pvr",
+		"exr",
+		"hdr",
+	};
+	ImageAtlasExtensions = {
+		"pkat",
+	};
+	VectorFieldExtensions = {
+		"fga",
+		"pkvf",
+	};
+	SoundExtensions = {
+		"wav",
+		"ogg",
+		"mp3",
+	};
+	SimCacheExtensions = {
+		"pksc",
+	};
+	FontExtensions = {
+		"ttf",
+		"otf",
+		"pkfm",
+	};
+	FeatureSetExtensions = {
+		"pkma",
+	};
+	VertexShaderExtensions = {
+		"vert",
+	};
+	FragmentShaderExtensions = {
+		"frag",
+	};
+	ShaderIncludeExtensions = {
+		"h",
+		"inl",
+	};
+	RendererInterfaceExtensions = {
+		"pkri",
+	};
+	VideoExtensions = {
+		"mp4",
+		"avi",
+		"ogv",
+		"wmv",
+	};
+}
+CProjectSettingsBudgets	$D279714D
+{
+}
+CProjectSettingsBaking	$5F621394
+{
+	BuildVersions = {
+		"low: low, desktop, editor, windows",
+		"medium: medium, desktop, editor, windows",
+		"high: high, desktop, editor, windows",
+		"epic: epic, desktop, editor, windows",
+		"cinematic: cinematic, desktop, editor, windows",
+	};
+}
+CProjectSettingsEditor	$41E5AFE7
+{
+	DefaultRestitution = 3.0000001e-01;
+	DefaultRestitutionCombineMode = Average;
+	DefaultFriction = 6.9999999e-01;
+	DefaultFrictionCombineMode = Average;
+	WindScale = 1.0000000e+00;
+}
+CProjectSettingsFeatures	$BEDF8936
+{
+}
+CProjectSettingsDocumentation	$2909A531
+{
+}
+CProjectSettingsConstantItem	$D6EEA348
+{
+	Name = "physics.collisionFilters.WorldStatic";
+}
+CProjectSettingsConstantItem	$5F44DFAB
+{
+	Name = "physics.collisionFilters.WorldDynamic";
+	Value = 1;
+}
+CProjectSettingsConstantItem	$D806D24A
+{
+	Name = "physics.collisionFilters.Pawn";
+	Value = 2;
+}
+CProjectSettingsConstantItem	$D03359D5
+{
+	Name = "physics.collisionFilters.PhysicsBody";
+	Value = 3;
+}
+CProjectSettingsConstantItem	$C01E62BC
+{
+	Name = "physics.collisionFilters.Vehicle";
+	Value = 4;
+}
+CProjectSettingsConstantItem	$9D2B1A2F
+{
+	Name = "physics.collisionFilters.Destructible";
+	Value = 5;
+}
+CProjectSettingsConstantItem	$55289D1E
+{
+	Name = "build.tags.low";
+	Value = 20;
+}
+CProjectSettingsConstantItem	$EC84D339
+{
+	Name = "build.tags.medium";
+	Value = 21;
+}
+CProjectSettingsConstantItem	$2BBAE5F0
+{
+	Name = "build.tags.high";
+	Value = 22;
+}
+CProjectSettingsConstantItem	$14978373
+{
+	Name = "build.tags.epic";
+	Value = 23;
+}
+CProjectSettingsConstantItem	$89E0DDB2
+{
+	Name = "build.tags.cinematic";
+	Value = 24;
+}
+CEditorProject	$AF0F155D
+{
+}
