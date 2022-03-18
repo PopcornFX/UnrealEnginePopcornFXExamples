@@ -30,9 +30,11 @@ If you already cloned the repo, you can run:
 
     git submodule update --init --recursive
 
-## If you downloaded a .zip archive
+## If you downloaded a .zip archive from a Github release
 
-The plugin is already present in packaged archives, there's nothing to do in this case.
+The plugin is already present in packaged archives, you simply need to **download PopcornFX Runtime SDK** for Desktop platforms.
+
+To do so, walk to `Plugins/PopcornFX` and run `Download_SDK_Desktop.bat`: once the script completes, you are all set.
 
 ## If you installed the plugin outside this project
 
