@@ -1,4 +1,4 @@
-Version = 2.12.0.12452;
+Version = 2.12.0.12706;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -36,6 +36,7 @@ CParticleNodeGraph	$42E16C02
 		"$D7827659",
 		"$27994544",
 		"$5718BBAF",
+		"$084C1D24",
 	};
 	WorkspacePosition = int2(-69, -8);
 	WorkspaceZoom = -6;
@@ -451,11 +452,11 @@ CParticleNodeTemplate	$81AA2F2D
 		"$D0EAE073",
 		"$AACB0C1F",
 		"$79B5F45B",
+		"$8585DCE4",
 		"$928F9351",
 		"$F1D45A84",
 		"$D025D965",
 		"$986E40DF",
-		"$8585DCE4",
 		"$AB635420",
 		"$579B71EC",
 		"$5CF00B18",
@@ -2172,7 +2173,7 @@ CParticleNodePinOut	$0398990D
 	Owner = "$5325C0AF";
 	ConnectedPins = {
 		"$2AB6A82F",
-		"$89E2811C",
+		"$AB221EF0",
 	};
 }
 CParticleNodePinIn	$19A3ED01
@@ -2291,7 +2292,7 @@ CParticleNodeRendererMesh	$5718BBAF
 		"$6E40BE20",
 		"$12601F50",
 	};
-	WorkspacePosition = int2(1672, -66);
+	WorkspacePosition = int2(1914, -66);
 	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
@@ -2327,7 +2328,7 @@ CParticleNodePinIn	$89E2811C
 	Owner = "$5718BBAF";
 	BaseType = float3;
 	ConnectedPins = {
-		"$0398990D",
+		"$F9267975",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
@@ -2526,4 +2527,39 @@ CParticleNodePinIn	$12601F50
 	Visible = false;
 	Owner = "$5718BBAF";
 	BaseType = bool;
+}
+CParticleNodeArithmetic	$084C1D24
+{
+	InputPins = {
+		"$AB221EF0",
+		"$E2A44AD2",
+	};
+	OutputPins = {
+		"$F9267975",
+	};
+	WorkspacePosition = int2(1606, -22);
+	Operation = Mul;
+}
+CParticleNodePinIn	$AB221EF0
+{
+	SelfName = "Value";
+	Owner = "$084C1D24";
+	ConnectedPins = {
+		"$0398990D",
+	};
+}
+CParticleNodePinIn	$E2A44AD2
+{
+	SelfName = "ValueB";
+	Type = float;
+	Owner = "$084C1D24";
+	ValueF = float4(1.0000000e+01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinOut	$F9267975
+{
+	SelfName = "Value";
+	Owner = "$084C1D24";
+	ConnectedPins = {
+		"$89E2811C",
+	};
 }

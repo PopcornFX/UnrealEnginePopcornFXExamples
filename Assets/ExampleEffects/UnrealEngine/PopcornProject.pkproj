@@ -1,4 +1,4 @@
-Version = 2.12.0.12166;
+Version = 2.12.0.12703;
 CProjectSettings	$D857A09F
 {
 	General = "$35A36C4E";
@@ -15,7 +15,7 @@ CProjectSettings	$D857A09F
 CProjectSettingsGeneral	$35A36C4E
 {
 	ProjectName = "Example effects for Unreal Engine";
-	ProjectDescription = "Contains all the Unreal Engine plugin content-examples effects.";
+	ProjectDescription = "Contains all the <b>Unreal Engine plugin</b> content-examples effects.\\nFind these <a href=\"https://github.com/PopcornFX/UnrealEnginePopcornFXExamples\">content examples on github</a>, as well as the plugin <a href=\"https://github.com/PopcornFX/UnrealEnginePopcornFXPlugin\">source code</a>.";
 	ProjectBanner = "UnrealEngine/UnrealEngine_Logo.png";
 	CompanyName = "Persistant Studios";
 	Homepage = "www.popcornfx.com";

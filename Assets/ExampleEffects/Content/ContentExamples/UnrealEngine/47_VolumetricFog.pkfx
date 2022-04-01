@@ -1,4 +1,4 @@
-Version = 2.12.0.12166;
+Version = 2.12.0.12706;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -131,11 +131,11 @@ CParticleNodeTemplate	$1838F4AE
 		"$125C39DB",
 		"$72C1010C",
 		"$B913798F",
+		"$CE787BCD",
 		"$92CF64EB",
 		"$A3E9EC7F",
 		"$4703F6C7",
 		"$167D1A5B",
-		"$CE787BCD",
 		"$38A1274A",
 		"$B6F5CC16",
 		"$49145BE4",
@@ -2195,11 +2195,11 @@ CParticleNodeTemplate	$33E4AD49
 		"$A9518B79",
 		"$9787BB6F",
 		"$BFE8F7F1",
+		"$783A893A",
 		"$3351D130",
 		"$0526C7D2",
 		"$E2BB4F56",
 		"$B66C086F",
-		"$783A893A",
 		"$A8C3588F",
 		"$B38DCD72",
 		"$EC89ECB7",
