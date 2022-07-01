@@ -1,4 +1,4 @@
-Version = 2.12.0.12711;
+Version = 2.13.0.13591;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -1447,14 +1447,14 @@ CParticleNodePinIn	$2F40DC72
 	SelfName = "Value";
 	Type = float;
 	Owner = "$0B891949";
-	ValueF = float4(2.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	ValueF = float4(2.0000000e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinIn	$04DD93C5
 {
 	SelfName = "ValueB";
 	Type = float;
 	Owner = "$0B891949";
-	ValueF = float4(6.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	ValueF = float4(6.0000002e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinOut	$FAFA68C6
 {
