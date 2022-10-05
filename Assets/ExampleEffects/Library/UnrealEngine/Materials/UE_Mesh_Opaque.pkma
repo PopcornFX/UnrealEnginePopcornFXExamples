@@ -1,4 +1,4 @@
-Version = 2.13.0.13771;
+Version = 2.14.0.14552;
 CParticleRendererFeatureSet	$6B70D015
 {
 	RendererFeatures = {
@@ -15,6 +15,7 @@ CParticleRendererFeatureSet	$6B70D015
 		"$C454AB44",
 		"$D67ADA2A",
 		"$2E0E3AC7",
+		"$DB1C9F45",
 	};
 }
 CParticleRendererFeatureDesc	$A8FC2215
@@ -89,4 +90,9 @@ CParticleRendererFeatureDesc	$2E0E3AC7
 {
 	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
 	RendererFeatureName = "ShaderInput2";
+}
+CParticleRendererFeatureDesc	$DB1C9F45
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererFeatureName = "ShaderInput3";
 }
