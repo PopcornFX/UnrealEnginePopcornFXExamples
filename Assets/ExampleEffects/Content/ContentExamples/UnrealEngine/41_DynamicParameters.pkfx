@@ -1,4 +1,4 @@
-Version = 2.14.0.14552;
+Version = 2.14.0.14591;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -22,6 +22,7 @@ CParticleNodeGraph	$81861AB7
 		"$C776022A",
 		"$6A0BBE8A",
 		"$E0E495BA",
+		"$82AEE119",
 	};
 	Timeline = "$B014C0B6";
 	WorkspacePosition = int2(-44, -26);
@@ -135,16 +136,20 @@ CParticleNodeGraph	$AA28CB3B
 		"$C1885867",
 		"$E32D8727",
 		"$3FD55611",
-		"$19B2C5AA",
 		"$5ABE5118",
 		"$86490F27",
 		"$3A6F823D",
 		"$0EE773A2",
 		"$E6463220",
 		"$8A398517",
+		"$FDCC0325",
+		"$904C4711",
+		"$DEE89417",
+		"$15750029",
+		"$2A65884D",
 	};
-	WorkspacePosition = int2(176, -126);
-	WorkspaceZoom = -6;
+	WorkspacePosition = int2(15, -133);
+	WorkspaceZoom = -7;
 }
 CParticleNodeLayer	$6A0BBE8A
 {
@@ -868,7 +873,7 @@ CParticleNodePinOut	$0CC46E6A
 CResourceDescriptor_Shape	$D7021A89
 {
 	BoxDimensions = float3(5.0000000e-01, 1.0000000e+00, 3.0000000e+00);
-	Position = float3(-2.4326897e+00, -2.7480292e-01, 1.9073486e-06);
+	Position = float3(-1.2425995e-01, -2.7480292e-01, 1.9073486e-06);
 }
 CParticleNodeTemplate	$C1885867
 {
@@ -1210,7 +1215,7 @@ CParticleNodePinIn	$7E5E587E
 	Visible = false;
 	Owner = "$E32D8727";
 	BaseType = float;
-	ValueF = float4(3.0000000e+01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	ValueF = float4(1.5000000e+01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinOut	$C14143CC
 {
@@ -1253,7 +1258,7 @@ CParticleNodeRendererBillboard	$3FD55611
 		"$37CAD4DB",
 		"$D992A3B4",
 	};
-	WorkspacePosition = int2(396, 22);
+	WorkspacePosition = int2(1232, 22);
 	FeatureSetPath = "Library/UnrealEngine/Materials/UE_Billboard_Opaque.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
@@ -1475,24 +1480,6 @@ CParticleNodePinIn	$37CAD4DB
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
 }
-CParticleNodeSamplerData_VectorField	$19B2C5AA
-{
-	OutputPins = {
-		"$939DA78C",
-	};
-	WorkspacePosition = int2(-924, 286);
-	ResourceDesc = "$450C4F68";
-}
-CResourceDescriptor_VectorField	$450C4F68
-{
-}
-CParticleNodePinOut	$939DA78C
-{
-	SelfName = "Data";
-	Type = dataVectorField;
-	Owner = "$19B2C5AA";
-	BaseType = dataVectorField;
-}
 CParticleNodePinIn	$B011DFFA
 {
 	SelfName = "ShaderInput1.Input1";
@@ -1500,7 +1487,7 @@ CParticleNodePinIn	$B011DFFA
 	Owner = "$3FD55611";
 	BaseType = float4;
 	ConnectedPins = {
-		"$A5763090",
+		"$592CF18C",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
@@ -1515,14 +1502,14 @@ CParticleNodeConstructor	$5ABE5118
 	OutputPins = {
 		"$A5763090",
 	};
-	WorkspacePosition = int2(-22, 242);
+	WorkspacePosition = int2(440, 594);
 }
 CParticleNodePinOut	$A5763090
 {
 	SelfName = "Value";
 	Owner = "$5ABE5118";
 	ConnectedPins = {
-		"$B011DFFA",
+		"$57FDD493",
 	};
 }
 CParticleNodePinIn	$CB0FB764
@@ -1567,7 +1554,7 @@ CParticleNodeSplitter	$86490F27
 		"$8FB5DEFD",
 		"$E6BDAE8E",
 	};
-	WorkspacePosition = int2(-286, 242);
+	WorkspacePosition = int2(-220, 594);
 	Dimension = 3D;
 }
 CParticleNodePinIn	$8ABF3C8B
@@ -1649,7 +1636,7 @@ CParticleNodePinIn	$9E26B167
 	Owner = "$3FD55611";
 	BaseType = float4;
 	ConnectedPins = {
-		"$501D20A1",
+		"$8643C87C",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
@@ -1658,7 +1645,7 @@ CParticleNodeTemplate	$0EE773A2
 	OutputPins = {
 		"$6C17FB32",
 	};
-	WorkspacePosition = int2(-286, 462);
+	WorkspacePosition = int2(-220, 814);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "self.lifeRatio";
 }
@@ -1683,14 +1670,14 @@ CParticleNodeConstructor	$E6463220
 	OutputPins = {
 		"$501D20A1",
 	};
-	WorkspacePosition = int2(0, 550);
+	WorkspacePosition = int2(440, 836);
 }
 CParticleNodePinOut	$501D20A1
 {
 	SelfName = "Value";
 	Owner = "$E6463220";
 	ConnectedPins = {
-		"$9E26B167",
+		"$26913DC8",
 	};
 }
 CParticleNodePinIn	$180BA414
@@ -1724,7 +1711,7 @@ CParticleNodePinIn	$D992A3B4
 	Owner = "$3FD55611";
 	BaseType = float4;
 	ConnectedPins = {
-		"$E538E171",
+		"$DE18E59D",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
@@ -1739,14 +1726,14 @@ CParticleNodeConstructor	$8A398517
 	OutputPins = {
 		"$E538E171",
 	};
-	WorkspacePosition = int2(0, 836);
+	WorkspacePosition = int2(440, 1078);
 }
 CParticleNodePinOut	$E538E171
 {
 	SelfName = "Value";
 	Owner = "$8A398517";
 	ConnectedPins = {
-		"$D992A3B4",
+		"$14A5BD4A",
 	};
 }
 CParticleNodePinIn	$1CB06397
@@ -1781,4 +1768,108 @@ CParticleNodePinIn	$8EFD478D
 	Owner = "$4D117713";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodeAnnotation	$82AEE119
+{
+	Description = {
+		"@eng:This example shows how to pass additional per-particle data to the vertex/fragment shaders of a billboard/ribbon/triangle renderer.",
+	};
+	WorkspacePosition = int2(0, -352);
+	SelfSize = int2(990, 220);
+}
+CParticleNodeAnnotation	$FDCC0325
+{
+	Description = {
+		"@eng:Per particle data can be sent to the shaders using <c>Input0</c>, <c>Input1</c> or <c>Input2</c>\\n\\nIn the material, they can be retrieved using the <c>DynamicParameter</c> node.\\n\\nCheck out the <a href=\"https://www.popcornfx.com/docs/popcornfx-v2-13/plugins/ue4-plugin/effects/#effect-materials\">documentation</a> to see the list of supported inputs per renderer.",
+	};
+	WorkspacePosition = int2(110, 154);
+	SelfSize = int2(770, 1188);
+}
+CParticleNodePassThrough	$904C4711
+{
+	InputPins = {
+		"$57FDD493",
+	};
+	OutputPins = {
+		"$592CF18C",
+	};
+	WorkspacePosition = int2(946, 616);
+}
+CParticleNodePinIn	$57FDD493
+{
+	SelfName = "Value";
+	Owner = "$904C4711";
+	ConnectedPins = {
+		"$A5763090",
+	};
+}
+CParticleNodePinOut	$592CF18C
+{
+	SelfName = "Value";
+	Owner = "$904C4711";
+	ConnectedPins = {
+		"$B011DFFA",
+	};
+}
+CParticleNodePassThrough	$DEE89417
+{
+	InputPins = {
+		"$26913DC8",
+	};
+	OutputPins = {
+		"$8643C87C",
+	};
+	WorkspacePosition = int2(946, 858);
+}
+CParticleNodePinIn	$26913DC8
+{
+	SelfName = "Value";
+	Owner = "$DEE89417";
+	ConnectedPins = {
+		"$501D20A1",
+	};
+}
+CParticleNodePinOut	$8643C87C
+{
+	SelfName = "Value";
+	Owner = "$DEE89417";
+	ConnectedPins = {
+		"$9E26B167",
+	};
+}
+CParticleNodePassThrough	$15750029
+{
+	InputPins = {
+		"$14A5BD4A",
+	};
+	OutputPins = {
+		"$DE18E59D",
+	};
+	WorkspacePosition = int2(946, 1100);
+}
+CParticleNodePinIn	$14A5BD4A
+{
+	SelfName = "Value";
+	Owner = "$15750029";
+	ConnectedPins = {
+		"$E538E171",
+	};
+}
+CParticleNodePinOut	$DE18E59D
+{
+	SelfName = "Value";
+	Owner = "$15750029";
+	ConnectedPins = {
+		"$D992A3B4",
+	};
+}
+CParticleNodeAnnotation	$2A65884D
+{
+	Description = {
+		"@eng:Billboard/ribbon/triangle shaders have the <c>DynamicParameter0</c> reserved (mesh particles do not have this limitation).",
+	};
+	WorkspacePosition = int2(1166, 726);
+	Scale = -1;
+	PostIt = true;
+	SelfSize = int2(560, 373);
 }
