@@ -1,4 +1,4 @@
-Version = 2.14.0.14607;
+Version = 2.15.0.14729;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -188,6 +188,7 @@ CParticleNodeRendererMesh	$13985CF9
 		"$28EAE052",
 		"$09B7A71F",
 		"$A304B5E4",
+		"$DDD9CF61",
 	};
 	WorkspacePosition = int2(0, 22);
 	FeatureSetPath = "Library/UnrealEngine/Materials/UE_Mesh_Opaque.pkma";
@@ -205,6 +206,7 @@ CParticleNodeRendererMesh	$13985CF9
 		"ShaderInput0",
 		"ShaderInput1",
 		"ShaderInput2",
+		"ShaderInput3",
 	};
 }
 CParticleNodePinIn	$0DC8E7FA
@@ -1740,6 +1742,7 @@ CParticleNodeTemplate	$DDAAA403
 	};
 	OutputPins = {
 		"$37CED7D4",
+		"$689723A5",
 	};
 	WorkspacePosition = int2(-1100, 836);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Utils.pkfx";
@@ -2040,4 +2043,18 @@ CParticleNodePinIn	$0010E36F
 	Owner = "$4D117713";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$DDD9CF61
+{
+	SelfName = "ShaderInput3";
+	Type = bool;
+	Visible = false;
+	Owner = "$13985CF9";
+	BaseType = bool;
+}
+CParticleNodePinOut	$689723A5
+{
+	SelfName = "Cursor";
+	Visible = false;
+	Owner = "$DDAAA403";
 }

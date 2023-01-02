@@ -1,4 +1,4 @@
-Version = 2.14.0.14607;
+Version = 2.15.0.14729;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -2902,6 +2902,7 @@ CParticleNodeTemplate	$7A681F3A
 	};
 	OutputPins = {
 		"$63EDA200",
+		"$BE3860B4",
 	};
 	WorkspacePosition = int2(-308, 286);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Utils.pkfx";
@@ -3062,6 +3063,7 @@ CParticleNodeTemplate	$30AC5CA6
 	};
 	OutputPins = {
 		"$2736FEBF",
+		"$401DCF6D",
 	};
 	WorkspacePosition = int2(-44, 330);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Utils.pkfx";
@@ -3152,6 +3154,7 @@ CParticleNodePinIn	$B8374694
 {
 	SelfName = "DefaultValue";
 	Owner = "$17BD7591";
+	Visible = false;
 }
 CParticleNodePinOut	$3E016BA6
 {
@@ -3188,6 +3191,7 @@ CParticleNodePinIn	$71E1219D
 {
 	SelfName = "DefaultValue";
 	Owner = "$B9E961B7";
+	Visible = false;
 }
 CParticleNodePinOut	$95503679
 {
@@ -3569,4 +3573,16 @@ CParticleNodePinIn	$783A893A
 	Owner = "$33E4AD49";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinOut	$BE3860B4
+{
+	SelfName = "Cursor";
+	Visible = false;
+	Owner = "$7A681F3A";
+}
+CParticleNodePinOut	$401DCF6D
+{
+	SelfName = "Cursor";
+	Visible = false;
+	Owner = "$30AC5CA6";
 }

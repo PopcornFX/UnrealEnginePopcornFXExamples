@@ -1,4 +1,4 @@
-Version = 2.14.0.14607;
+Version = 2.15.0.14729;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -1275,6 +1275,7 @@ CParticleNodeTemplate	$022E728E
 	};
 	OutputPins = {
 		"$9C3A44C1",
+		"$80BAE8FB",
 	};
 	WorkspacePosition = int2(-308, 286);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Utils.pkfx";
@@ -1499,6 +1500,7 @@ CParticleNodeRendererMesh	$D17C855E
 		"$9033BCE3",
 		"$8B8415AD",
 		"$5B57A74A",
+		"$211AE109",
 		"$9AD570E9",
 		"$36704878",
 		"$DDFB34A6",
@@ -1506,6 +1508,7 @@ CParticleNodeRendererMesh	$D17C855E
 		"$6B25133D",
 		"$21C43D52",
 		"$9DC0A8C3",
+		"$28ECE2B8",
 	};
 	WorkspacePosition = int2(0, -264);
 	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
@@ -1517,12 +1520,14 @@ CParticleNodeRendererMesh	$D17C855E
 		"EnableRendering",
 		"Lit",
 		"LegacyLit",
+		"Atlas",
 		"MeshAtlas",
 		"AlphaRemap",
 		"Emissive",
 		"TransformUVs",
 		"EmissiveRamp",
 		"UseVertexColors",
+		"MeshLOD",
 	};
 }
 CParticleNodePinIn	$A288FB4D
@@ -1702,6 +1707,7 @@ CParticleNodePinIn	$0C7CF79F
 {
 	SelfName = "DefaultValue";
 	Owner = "$968F09F4";
+	Visible = false;
 }
 CParticleNodePinOut	$F60E1752
 {
@@ -1917,6 +1923,7 @@ CParticleNodePinIn	$95371760
 {
 	SelfName = "DefaultValue";
 	Owner = "$4AAA9EC5";
+	Visible = false;
 }
 CParticleNodePinOut	$D8A1036C
 {
@@ -2683,6 +2690,7 @@ CParticleNodePinIn	$27A280D7
 {
 	SelfName = "DefaultValue";
 	Owner = "$13D1D1E5";
+	Visible = false;
 }
 CParticleNodePinOut	$9205EC3E
 {
@@ -2915,6 +2923,7 @@ CParticleNodePinIn	$7E5DABD9
 {
 	SelfName = "DefaultValue";
 	Owner = "$8B9527EB";
+	Visible = false;
 }
 CParticleNodePinOut	$ED26FA84
 {
@@ -2942,6 +2951,7 @@ CParticleNodePinIn	$8D73FCC4
 {
 	SelfName = "DefaultValue";
 	Owner = "$37D35394";
+	Visible = false;
 }
 CParticleNodePinOut	$E636D4F4
 {
@@ -2979,4 +2989,26 @@ CParticleNodePinIn	$39135AC6
 	Owner = "$1838F4AE";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinOut	$80BAE8FB
+{
+	SelfName = "Cursor";
+	Visible = false;
+	Owner = "$022E728E";
+}
+CParticleNodePinIn	$211AE109
+{
+	SelfName = "Atlas";
+	Type = bool;
+	Visible = false;
+	Owner = "$D17C855E";
+	BaseType = bool;
+}
+CParticleNodePinIn	$28ECE2B8
+{
+	SelfName = "MeshLOD";
+	Type = bool;
+	Visible = false;
+	Owner = "$D17C855E";
+	BaseType = bool;
 }

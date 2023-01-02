@@ -1,4 +1,4 @@
-Version = 2.14.0.14607;
+Version = 2.15.0.14729;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -446,6 +446,7 @@ CParticleNodeRendererMesh	$9808D8CF
 		"$897D0217",
 		"$7C725FEB",
 		"$856FC9C4",
+		"$10EFDA05",
 		"$4802C039",
 		"$E857804D",
 		"$918C84F2",
@@ -453,6 +454,7 @@ CParticleNodeRendererMesh	$9808D8CF
 		"$B3522B81",
 		"$D3256549",
 		"$3FE6F79E",
+		"$539B7058",
 	};
 	WorkspacePosition = int2(-198, 132);
 	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
@@ -464,12 +466,14 @@ CParticleNodeRendererMesh	$9808D8CF
 		"EnableRendering",
 		"Lit",
 		"LegacyLit",
+		"Atlas",
 		"MeshAtlas",
 		"AlphaRemap",
 		"Emissive",
 		"TransformUVs",
 		"EmissiveRamp",
 		"UseVertexColors",
+		"MeshLOD",
 	};
 }
 CParticleNodePinIn	$977488C1
@@ -4968,6 +4972,7 @@ CParticleNodePinIn	$6089EA91
 {
 	SelfName = "DefaultValue";
 	Owner = "$FD08C047";
+	Visible = false;
 }
 CParticleNodePinOut	$348870B2
 {
@@ -5268,4 +5273,20 @@ CParticleNodePinOut	$8D2CCBEE
 	ConnectedPins = {
 		"$4E710AD0",
 	};
+}
+CParticleNodePinIn	$10EFDA05
+{
+	SelfName = "Atlas";
+	Type = bool;
+	Visible = false;
+	Owner = "$9808D8CF";
+	BaseType = bool;
+}
+CParticleNodePinIn	$539B7058
+{
+	SelfName = "MeshLOD";
+	Type = bool;
+	Visible = false;
+	Owner = "$9808D8CF";
+	BaseType = bool;
 }

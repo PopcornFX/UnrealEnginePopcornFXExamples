@@ -1,4 +1,4 @@
-Version = 2.14.0.14607;
+Version = 2.15.0.14729;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -1252,6 +1252,7 @@ CParticleNodePinIn	$9AD8B319
 {
 	SelfName = "DefaultValue";
 	Owner = "$1998CC6C";
+	Visible = false;
 }
 CParticleNodePinOut	$1402143C
 {
@@ -1348,6 +1349,7 @@ CParticleNodePinIn	$3633D45B
 {
 	SelfName = "DefaultValue";
 	Owner = "$44AA5310";
+	Visible = false;
 }
 CParticleNodePinOut	$BBB8A125
 {
@@ -1481,6 +1483,7 @@ CParticleNodePinIn	$329F03EA
 {
 	SelfName = "DefaultValue";
 	Owner = "$59ECEE38";
+	Visible = false;
 }
 CParticleNodePinOut	$1CC9EFE6
 {
