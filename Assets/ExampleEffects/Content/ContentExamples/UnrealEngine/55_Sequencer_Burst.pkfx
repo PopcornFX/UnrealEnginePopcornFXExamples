@@ -1,4 +1,4 @@
-Version = 2.15.0.14729;
+Version = 2.15.0.15796;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -131,6 +131,7 @@ CParticleNodeTemplate	$F02495CD
 		"$1B30654E",
 		"$75C79502",
 		"$8B66367E",
+		"$9B7C54BA",
 		"$DA1862BB",
 		"$EB08CDF0",
 		"$1FBDC01E",
@@ -535,8 +536,8 @@ CParticleNodeTemplate	$66691374
 		"$02EF76BB",
 		"$739D9FA9",
 		"$4254D889",
-		"$7CA2ABFE",
 		"$E50D3B46",
+		"$7CA2ABFE",
 		"$3DFE1AAF",
 		"$9254A078",
 		"$C6BF5DBD",
@@ -1603,8 +1604,8 @@ CParticleNodeTemplate	$74C2ED5F
 		"$57822503",
 		"$E7C1A0AC",
 		"$624C7C04",
-		"$84FA9568",
 		"$A2297BCE",
+		"$84FA9568",
 		"$6F635387",
 		"$AE4145D9",
 		"$FDD8967C",
@@ -2666,4 +2667,12 @@ CParticleNodePinOut	$58767817
 	SelfName = "Cursor";
 	Visible = false;
 	Owner = "$187D1E67";
+}
+CParticleNodePinIn	$9B7C54BA
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$F02495CD";
+	BaseType = bool;
 }

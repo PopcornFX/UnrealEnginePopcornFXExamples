@@ -1,4 +1,4 @@
-Version = 2.15.0.15495;
+Version = 2.15.0.15796;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -7,6 +7,7 @@ CParticleEffect	$6B70D015
 		"$1A488438",
 		"$476FE66D",
 		"$77FD347B",
+		"$8F13B6C0",
 		"$506D362A",
 	};
 	AttributeFlatList = "$8F7A985A";
@@ -5033,4 +5034,332 @@ CEditorBackdropFrameExporter	$029B091C
 CEditorBackdropSpotLight	$1057900F
 {
 	Enabled = false;
+}
+CParticleNodeGraph	$8F13B6C0
+{
+	CustomName = "debug.drawValue";
+	Description = {
+		"@eng:This node draws <b><c>Value</c></b> at <b><c>Position</c></b>, offsetted by <b><c>ScreenOffset</c></b> world space units.\\n\\nIt will only draw when the simulation runs in the editor. When baked for ingame use, everything will be removed and have zero cost on the final effect.",
+	};
+	Public = true;
+	ClassType = Renderer;
+	Nodes = {
+		"$4FBDE7A8",
+		"$0F459773",
+		"$8A8DB590",
+		"$46055C61",
+		"$B73B610A",
+		"$2A1E0368",
+		"$6B60D1DF",
+		"$894678F7",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeTemplateExport	$4FBDE7A8
+{
+	InputPins = {
+		"$DC480B05",
+	};
+	OutputPins = {
+		"$2B2475CF",
+	};
+	WorkspacePosition = int2(-462, -286);
+	ExportedName = "Enabled";
+	ExportedType = bool;
+	Type = Input;
+	DefaultValueB4 = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$DC480B05
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$4FBDE7A8";
+}
+CParticleNodePinOut	$2B2475CF
+{
+	SelfName = "Value";
+	Owner = "$4FBDE7A8";
+	ConnectedPins = {
+		"$7BD70B20",
+	};
+}
+CParticleNodeTemplateExport	$0F459773
+{
+	Description = {
+		"@eng:World space position",
+	};
+	InputPins = {
+		"$F69F8032",
+	};
+	OutputPins = {
+		"$2C101D3C",
+	};
+	WorkspacePosition = int2(-462, -110);
+	ExportedName = "Position";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Input;
+	VisibleByDefault = true;
+	TransformSpace = World;
+	TransformMode = Position;
+}
+CParticleNodePinIn	$F69F8032
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$0F459773";
+}
+CParticleNodePinOut	$2C101D3C
+{
+	SelfName = "Value";
+	Owner = "$0F459773";
+	ConnectedPins = {
+		"$B51E69D7",
+	};
+}
+CParticleNodeTemplateExport	$8A8DB590
+{
+	InputPins = {
+		"$92620D8E",
+	};
+	OutputPins = {
+		"$FA428ABF",
+	};
+	WorkspacePosition = int2(-462, 286);
+	ExportedName = "Value";
+	ExportedTypeMask = 8160;
+	Type = Input;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$92620D8E
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$8A8DB590";
+}
+CParticleNodePinOut	$FA428ABF
+{
+	SelfName = "Value";
+	Owner = "$8A8DB590";
+	ConnectedPins = {
+		"$A37D5C2C",
+	};
+}
+CParticleNodeTemplateExport	$46055C61
+{
+	InputPins = {
+		"$0DA79654",
+	};
+	OutputPins = {
+		"$6BDF0733",
+	};
+	WorkspacePosition = int2(-462, 154);
+	ExportedName = "Color";
+	ExportedType = float4;
+	Semantic = Color;
+	Type = Input;
+	DefaultValueF4 = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodePinIn	$0DA79654
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$46055C61";
+}
+CParticleNodePinOut	$6BDF0733
+{
+	SelfName = "Value";
+	Owner = "$46055C61";
+	ConnectedPins = {
+		"$A6256BAC",
+	};
+}
+CParticleNodeTemplateExport	$B73B610A
+{
+	Description = {
+		"@eng:World space 2D screen offset:\\n<ul>\\n<li>x: along the view side axis</li>\\n<li>y: along the view up axis</li>\\n</ul>",
+	};
+	InputPins = {
+		"$1D975EE9",
+	};
+	OutputPins = {
+		"$95F7587D",
+	};
+	WorkspacePosition = int2(-462, 462);
+	ExportedName = "ScreenOffset";
+	ExportedType = float2;
+	Type = Input;
+	UseSlider = true;
+	MinValueF4 = float4(-1.0000000e+00, -1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	MaxValueF4 = float4(1.0000000e+00, 1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$1D975EE9
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$B73B610A";
+}
+CParticleNodePinOut	$95F7587D
+{
+	SelfName = "Value";
+	Owner = "$B73B610A";
+	ConnectedPins = {
+		"$90A2C983",
+	};
+}
+CParticleNodeTemplateExport	$2A1E0368
+{
+	InputPins = {
+		"$EF900516",
+	};
+	OutputPins = {
+		"$BED47B2B",
+	};
+	WorkspacePosition = int2(-462, 638);
+	ExportedName = "AlignMode";
+	ExportedType = int;
+	Type = Input;
+	InputType = Property;
+	VisibleByDefault = true;
+	DropDownMode = SingleSelect;
+	EnumList = {
+		"AlignLeft",
+		"AlignCenter",
+		"AlignRight",
+	};
+	DefaultValueI4 = int4(1, 0, 0, 0);
+}
+CParticleNodePinIn	$EF900516
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$2A1E0368";
+}
+CParticleNodePinOut	$BED47B2B
+{
+	SelfName = "Value";
+	Owner = "$2A1E0368";
+	ConnectedPins = {
+		"$91073DC2",
+	};
+}
+CParticleNodeScript	$6B60D1DF
+{
+	CustomName = {
+		"@eng:Forced at Evolve",
+	};
+	ExecStage = Evolve;
+	InputPins = {
+		"$7BD70B20",
+		"$B51E69D7",
+		"$411BA228",
+		"$A6256BAC",
+		"$A37D5C2C",
+		"$90A2C983",
+		"$91073DC2",
+	};
+	WorkspacePosition = int2(176, 22);
+	Expression = "debug.drawValue(Enabled, Value, Position, FontScale, Color, Offset, AlignMode);";
+}
+CParticleNodePinIn	$7BD70B20
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Owner = "$6B60D1DF";
+	BaseType = bool;
+	ConnectedPins = {
+		"$2B2475CF",
+	};
+}
+CParticleNodePinIn	$A37D5C2C
+{
+	SelfName = "Value";
+	Owner = "$6B60D1DF";
+	ConnectedPins = {
+		"$FA428ABF",
+	};
+}
+CParticleNodePinIn	$B51E69D7
+{
+	SelfName = "Position";
+	Type = float3;
+	Owner = "$6B60D1DF";
+	BaseType = float3;
+	ConnectedPins = {
+		"$2C101D3C",
+	};
+}
+CParticleNodePinIn	$A6256BAC
+{
+	SelfName = "Color";
+	Type = float4;
+	Owner = "$6B60D1DF";
+	BaseType = float4;
+	ConnectedPins = {
+		"$6BDF0733",
+	};
+}
+CParticleNodePinIn	$90A2C983
+{
+	SelfName = "Offset";
+	Type = float2;
+	Owner = "$6B60D1DF";
+	BaseType = float2;
+	ConnectedPins = {
+		"$95F7587D",
+	};
+}
+CParticleNodePinIn	$91073DC2
+{
+	SelfName = "AlignMode";
+	Type = int;
+	Owner = "$6B60D1DF";
+	BaseType = int;
+	ConnectedPins = {
+		"$BED47B2B",
+	};
+}
+CParticleNodeTemplateExport	$894678F7
+{
+	Description = {
+		"@eng:World space font scale",
+	};
+	InputPins = {
+		"$367C4C0B",
+	};
+	OutputPins = {
+		"$E5374991",
+	};
+	WorkspacePosition = int2(-462, 22);
+	ExportedName = "FontScale";
+	ExportedType = float;
+	Type = Input;
+	UseSlider = true;
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	MinValueF4 = float4(1.0000000e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	MaxValueF4 = float4(2.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$367C4C0B
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$894678F7";
+}
+CParticleNodePinOut	$E5374991
+{
+	SelfName = "Value";
+	Owner = "$894678F7";
+	ConnectedPins = {
+		"$411BA228",
+	};
+}
+CParticleNodePinIn	$411BA228
+{
+	SelfName = "FontScale";
+	Type = float;
+	Owner = "$6B60D1DF";
+	BaseType = float;
+	ConnectedPins = {
+		"$E5374991",
+	};
 }

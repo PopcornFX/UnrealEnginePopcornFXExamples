@@ -1,4 +1,4 @@
-Version = 2.15.0.14729;
+Version = 2.15.0.15796;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -142,6 +142,7 @@ CParticleNodeTemplate	$D69F80F7
 		"$1A5462BD",
 		"$41C5F521",
 		"$0F0E146A",
+		"$C1977A6C",
 		"$6B121A4F",
 		"$1D288273",
 		"$D97D7699",
@@ -1438,4 +1439,12 @@ CParticleNodeAnnotation	$DA5464B1
 	};
 	WorkspacePosition = int2(44, -352);
 	SelfSize = int2(990, 220);
+}
+CParticleNodePinIn	$C1977A6C
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$D69F80F7";
+	BaseType = bool;
 }

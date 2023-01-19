@@ -1,4 +1,4 @@
-Version = 2.15.0.14729;
+Version = 2.15.0.15796;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -69,6 +69,7 @@ CParticleNodeTemplate	$5A5BD1DE
 		"$8BA95130",
 		"$8058C653",
 		"$E32FF502",
+		"$16742C65",
 		"$59DA6D2D",
 		"$26EA62EF",
 		"$A0A649A7",
@@ -527,8 +528,8 @@ CParticleNodeTemplate	$DC3441B4
 		"$33909BA6",
 		"$90BF90CA",
 		"$A6A8D1EA",
-		"$868A461E",
 		"$64ECAFAB",
+		"$868A461E",
 		"$979A3A51",
 		"$E50134AC",
 		"$F5E0F5E9",
@@ -1251,8 +1252,8 @@ CParticleNodeTemplateExport	$1998CC6C
 CParticleNodePinIn	$9AD8B319
 {
 	SelfName = "DefaultValue";
-	Owner = "$1998CC6C";
 	Visible = false;
+	Owner = "$1998CC6C";
 }
 CParticleNodePinOut	$1402143C
 {
@@ -1348,8 +1349,8 @@ CParticleNodeTemplateExport	$44AA5310
 CParticleNodePinIn	$3633D45B
 {
 	SelfName = "DefaultValue";
-	Owner = "$44AA5310";
 	Visible = false;
+	Owner = "$44AA5310";
 }
 CParticleNodePinOut	$BBB8A125
 {
@@ -1482,8 +1483,8 @@ CParticleNodeTemplateExport	$59ECEE38
 CParticleNodePinIn	$329F03EA
 {
 	SelfName = "DefaultValue";
-	Owner = "$59ECEE38";
 	Visible = false;
+	Owner = "$59ECEE38";
 }
 CParticleNodePinOut	$1CC9EFE6
 {
@@ -1848,5 +1849,13 @@ CParticleNodePinIn	$C54509F8
 	Type = bool;
 	Visible = false;
 	Owner = "$46439604";
+	BaseType = bool;
+}
+CParticleNodePinIn	$16742C65
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
 	BaseType = bool;
 }

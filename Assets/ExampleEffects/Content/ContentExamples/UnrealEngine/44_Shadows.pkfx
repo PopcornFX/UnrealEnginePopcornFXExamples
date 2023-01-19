@@ -1,4 +1,4 @@
-Version = 2.15.0.14729;
+Version = 2.15.0.15796;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -121,6 +121,7 @@ CParticleNodeTemplate	$5A5BD1DE
 		"$8BA95130",
 		"$8058C653",
 		"$E32FF502",
+		"$BEB39DF1",
 		"$59DA6D2D",
 		"$1DC56AFD",
 		"$A0A649A7",
@@ -716,6 +717,7 @@ CParticleNodeTemplate	$C9A73982
 		"$CD7EAC2B",
 		"$FE9A5E1E",
 		"$39FCC027",
+		"$3565F374",
 		"$807FCC0D",
 		"$28D3B5A1",
 		"$0A9A66F3",
@@ -940,8 +942,8 @@ CParticleNodeTemplate	$C92F98F9
 		"$3F41DE85",
 		"$BB792F1A",
 		"$8C2F90B4",
-		"$A62E8979",
 		"$D97DD813",
+		"$A62E8979",
 		"$183A6A04",
 		"$9B35A4E6",
 		"$9DD8B761",
@@ -1814,6 +1816,7 @@ CParticleNodeTemplate	$3F8BDA91
 		"$6EB9907E",
 		"$27B27B52",
 		"$F0C322A1",
+		"$95C6A69E",
 		"$BC857A92",
 		"$E97CB043",
 		"$A7C2A869",
@@ -2585,8 +2588,8 @@ CParticleNodeTemplate	$E6CE0DD3
 		"$04FD0020",
 		"$DD87382B",
 		"$CCB92234",
-		"$53CBF7DA",
 		"$363960DB",
+		"$53CBF7DA",
 		"$588B8B8D",
 		"$8F0A8140",
 		"$404C3441",
@@ -3215,6 +3218,7 @@ CParticleNodeTemplate	$705C2FFC
 		"$1B2DFCFA",
 		"$425FFA2E",
 		"$0EB4DA02",
+		"$DCDBCA85",
 		"$8E12300F",
 		"$5F4DD6B6",
 		"$297D44FC",
@@ -3741,8 +3745,8 @@ CParticleNodeTemplate	$96A5AEB7
 		"$F1C81435",
 		"$524743B6",
 		"$61CFCD3C",
-		"$B0E76C55",
 		"$18E203BC",
+		"$B0E76C55",
 		"$240C0471",
 		"$28865A75",
 		"$99927410",
@@ -4471,6 +4475,7 @@ CParticleNodeTemplate	$C7D2344A
 		"$6EDEAFEF",
 		"$70DE672A",
 		"$7FFD6B07",
+		"$1C52F6D7",
 		"$3F216FC3",
 		"$54AC3F2F",
 		"$BA6A8E86",
@@ -4971,8 +4976,8 @@ CParticleNodeTemplateExport	$FD08C047
 CParticleNodePinIn	$6089EA91
 {
 	SelfName = "DefaultValue";
-	Owner = "$FD08C047";
 	Visible = false;
+	Owner = "$FD08C047";
 }
 CParticleNodePinOut	$348870B2
 {
@@ -5288,5 +5293,45 @@ CParticleNodePinIn	$539B7058
 	Type = bool;
 	Visible = false;
 	Owner = "$9808D8CF";
+	BaseType = bool;
+}
+CParticleNodePinIn	$BEB39DF1
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
+	BaseType = bool;
+}
+CParticleNodePinIn	$3565F374
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$C9A73982";
+	BaseType = bool;
+}
+CParticleNodePinIn	$95C6A69E
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$3F8BDA91";
+	BaseType = bool;
+}
+CParticleNodePinIn	$DCDBCA85
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$705C2FFC";
+	BaseType = bool;
+}
+CParticleNodePinIn	$1C52F6D7
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$C7D2344A";
 	BaseType = bool;
 }

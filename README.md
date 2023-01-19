@@ -1,8 +1,8 @@
 # Unreal Engine PopcornFX Examples Project
 
 **Unreal Engine** project to showcase **PopcornFX** plugin features.
-* **PopcornFX:** `v2.13`
-* **Unreal Engine:** `4.27` and `5.0`
+* **PopcornFX:** `v2.15`
+* **Unreal Engine:** `4.27` and `5.1`
 
 This example project presents integration features of PopcornFX into Unreal Engine 4 & 5,
 it does not present the full range of PopcornFX features.
