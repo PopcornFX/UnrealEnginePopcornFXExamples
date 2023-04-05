@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -33,8 +33,8 @@ CParticleTimelineTrack	$EAC726E3
 }
 CEditorAssetEffect	$4ADE8DE2
 {
-	StartCameraPosition = float3(0.0000000e+00, 2.9720700e+00, 6.9693499e+00);
-	StartCameraOrientation = float3(3.6905026e-01, 6.1621731e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 1.4500000e+00, 6.5000000e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$D279714D";
 }
 CEditorBackdropList	$D279714D
@@ -71,12 +71,13 @@ CEditorBackdropGrid	$2909A531
 CEditorBackdropMesh	$D6EEA348
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(0.0000000e+00, -1.4035400e+00, 9.7302938e-01);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -1.4000000e+00, 1.0000000e+00);
 }
 CEditorBackdropDirectionalLight	$5F44DFAB
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSpotLight	$D806D24A
@@ -205,7 +206,7 @@ CParticleNodeRendererLight	$19042580
 		"$4C107A78",
 	};
 	WorkspacePosition = int2(0, -220);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Light.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Light.pkma";
 	RendererFeatures = {
 		"GeometryLight",
 		"Light",
@@ -447,6 +448,7 @@ CParticleNodeTemplate	$E65BC156
 {
 	InputPins = {
 		"$9E74B4DE",
+		"$25296480",
 		"$CEBDA38F",
 		"$A4185AF7",
 		"$D67AA402",
@@ -762,7 +764,7 @@ CParticleNodeRendererBillboard	$3AEBA6E2
 		"$F51167E2",
 	};
 	WorkspacePosition = int2(0, -264);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -2040,7 +2042,7 @@ CParticleNodeRendererBillboard	$8058CCE0
 		"$0BF89BB2",
 	};
 	WorkspacePosition = int2(286, -484);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -2464,4 +2466,13 @@ CParticleNodePinIn	$8AB4F1E0
 	Visible = false;
 	Owner = "$E65BC156";
 	BaseType = bool;
+}
+CParticleNodePinIn	$25296480
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$E65BC156";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

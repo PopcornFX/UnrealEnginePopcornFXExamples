@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -8,8 +8,8 @@ CEditorAssetEffect	$41EED1A4
 {
 	LoopingEnabled = false;
 	LoopDelay = 2.0000000e+00;
-	StartCameraPosition = float3(0.0000000e+00, 1.8939700e+00, 5.8410201e+00);
-	StartCameraOrientation = float3(1.0885617e-01, -2.6767501e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 1.0500000e+00, 5.5000000e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$69D57342";
 }
 CParticleAttributeList	$B660FBF9
@@ -25,8 +25,8 @@ CParticleNodeGraph	$81861AB7
 		"$DA5464B1",
 	};
 	Timeline = "$B014C0B6";
-	WorkspacePosition = int2(-187, 4);
-	WorkspaceZoom = -5;
+	WorkspacePosition = int2(-205, 30);
+	WorkspaceZoom = -4;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -98,11 +98,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.1251701e-01;
-	Position = float3(0.0000000e+00, -8.4303802e-01, 0.0000000e+00);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -1.8000000e+00, 0.0000000e+00);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -128,6 +130,7 @@ CParticleNodeTemplate	$D69F80F7
 {
 	InputPins = {
 		"$B27A4C9F",
+		"$94C459D1",
 		"$9B9BE01B",
 		"$D430B210",
 		"$3CAA5F24",
@@ -359,6 +362,7 @@ CParticleNodeGraph	$E18D54D1
 		"$1A507376",
 		"$8BE8B479",
 		"$34DBAEF9",
+		"$20E0238D",
 	};
 	WorkspacePosition = int2(129, 75);
 	WorkspaceZoom = -5;
@@ -430,7 +434,7 @@ CParticleNodeRendererMesh	$5B7F5F36
 		"$3FA194B4",
 	};
 	WorkspacePosition = int2(110, -264);
-	FeatureSetPath = "Library/UnrealEngine/Materials/UE_Mesh_Transparent.pkma";
+	Material = "Library/UnrealEngine/Materials/UE_Mesh_Transparent.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"Transparent",
@@ -1042,10 +1046,7 @@ CParticleNodePinOut	$2193346E
 	SelfName = "Value";
 	Owner = "$AB80F2C9";
 	ConnectedPins = {
-		"$B3F025C8",
-		"$A5EA6364",
-		"$F1F75EAB",
-		"$3FA194B4",
+		"$F36FFDC4",
 	};
 }
 CParticleNodePinIn	$B3F025C8
@@ -1055,7 +1056,7 @@ CParticleNodePinIn	$B3F025C8
 	Owner = "$5B7F5F36";
 	BaseType = float4;
 	ConnectedPins = {
-		"$2193346E",
+		"$2953E857",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
@@ -1066,7 +1067,7 @@ CParticleNodePinIn	$A5EA6364
 	Owner = "$5B7F5F36";
 	BaseType = float4;
 	ConnectedPins = {
-		"$2193346E",
+		"$2953E857",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
@@ -1077,7 +1078,7 @@ CParticleNodePinIn	$F1F75EAB
 	Owner = "$5B7F5F36";
 	BaseType = float4;
 	ConnectedPins = {
-		"$2193346E",
+		"$2953E857",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
@@ -1088,7 +1089,7 @@ CParticleNodePinIn	$3FA194B4
 	Owner = "$5B7F5F36";
 	BaseType = float4;
 	ConnectedPins = {
-		"$2193346E",
+		"$2953E857",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
@@ -1447,4 +1448,42 @@ CParticleNodePinIn	$C1977A6C
 	Visible = false;
 	Owner = "$D69F80F7";
 	BaseType = bool;
+}
+CParticleNodePinIn	$94C459D1
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$D69F80F7";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePassThrough	$20E0238D
+{
+	InputPins = {
+		"$F36FFDC4",
+	};
+	OutputPins = {
+		"$2953E857",
+	};
+	WorkspacePosition = int2(-132, 110);
+}
+CParticleNodePinIn	$F36FFDC4
+{
+	SelfName = "Value";
+	Owner = "$20E0238D";
+	ConnectedPins = {
+		"$2193346E",
+	};
+}
+CParticleNodePinOut	$2953E857
+{
+	SelfName = "Value";
+	Owner = "$20E0238D";
+	ConnectedPins = {
+		"$3FA194B4",
+		"$B3F025C8",
+		"$A5EA6364",
+		"$F1F75EAB",
+	};
 }

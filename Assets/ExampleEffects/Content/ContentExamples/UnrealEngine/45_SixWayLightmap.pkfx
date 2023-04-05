@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -8,8 +8,8 @@ CEditorAssetEffect	$41EED1A4
 {
 	LoopingEnabled = false;
 	LoopDelay = 1.0000000e+01;
-	StartCameraPosition = float3(0.0000000e+00, 1.7507800e+00, 5.3813400e+00);
-	StartCameraOrientation = float3(1.9620994e-01, 2.6985221e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 1.8500000e+00, 5.5000000e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$69D57342";
 }
 CParticleAttributeList	$B660FBF9
@@ -23,8 +23,8 @@ CParticleNodeGraph	$81861AB7
 		"$2B70E956",
 	};
 	Timeline = "$B014C0B6";
-	WorkspacePosition = int2(-44, -26);
-	WorkspaceZoom = -5;
+	WorkspacePosition = int2(-203, -17);
+	WorkspaceZoom = -4;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -96,12 +96,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
 	Position = float3(0.0000000e+00, -1.0000000e+00, 0.0000000e+00);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -154,8 +155,8 @@ CParticleNodeGraph	$690F0183
 		"$99ABC4FD",
 		"$AC66E553",
 	};
-	WorkspacePosition = int2(-193, -3);
-	WorkspaceZoom = -5;
+	WorkspacePosition = int2(-203, -24);
+	WorkspaceZoom = -4;
 }
 CParticleNodeRendererBillboard	$35FD7BFE
 {
@@ -189,7 +190,7 @@ CParticleNodeRendererBillboard	$35FD7BFE
 		"$6B9A91DB",
 	};
 	WorkspacePosition = int2(902, -44);
-	FeatureSetPath = "Library/PopcornFXCustom/SixWayLightmap.pkma";
+	Material = "Library/PopcornFXCustom/SixWayLightmap.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",

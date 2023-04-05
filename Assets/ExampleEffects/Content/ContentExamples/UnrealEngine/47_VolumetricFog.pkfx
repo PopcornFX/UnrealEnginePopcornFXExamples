@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -28,8 +28,8 @@ CEditorAssetEffect	$41EED1A4
 {
 	LoopingEnabled = false;
 	LoopDelay = 1.0000000e+01;
-	StartCameraPosition = float3(-1.5682800e-03, 2.4042599e+00, 6.3941498e+00);
-	StartCameraOrientation = float3(2.3115140e-01, 2.6899669e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 2.2500000e+00, 6.4000001e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$69D57342";
 }
 CParticleNodeRendererBillboard	$8F7A985A
@@ -67,7 +67,7 @@ CParticleNodeRendererBillboard	$8F7A985A
 		"$A11F5972",
 	};
 	WorkspacePosition = int2(176, -22);
-	FeatureSetPath = "Library/UnrealEngine/Materials/UE_VolumetricFog.pkma";
+	Material = "Library/UnrealEngine/Materials/UE_VolumetricFog.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"VolumetricFog",
@@ -293,6 +293,7 @@ CParticleNodeTemplate	$5A5BD1DE
 {
 	InputPins = {
 		"$94DB7335",
+		"$B66E2903",
 		"$C78B225F",
 		"$353B08E3",
 		"$9AA9404E",
@@ -746,12 +747,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(3.8146973e-06, -6.3134146e-01, 8.9798832e-01);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -6.0000002e-01, 8.9999998e-01);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -1517,6 +1519,7 @@ CParticleNodeTemplate	$0C89271A
 {
 	InputPins = {
 		"$EE2502B2",
+		"$3CA67516",
 		"$04E65DB6",
 		"$DC0FAB68",
 		"$87913DEB",
@@ -2601,7 +2604,7 @@ CParticleNodeRendererLight	$95470D1F
 		"$7F5154A0",
 	};
 	WorkspacePosition = int2(924, -198);
-	FeatureSetPath = "Library/UnrealEngine/Materials/UE_Light.pkma";
+	Material = "Library/UnrealEngine/Materials/UE_Light.pkma";
 	RendererFeatures = {
 		"GeometryLight",
 		"Light",
@@ -3603,4 +3606,22 @@ CParticleNodePinIn	$F4CEC939
 	Visible = false;
 	Owner = "$0C89271A";
 	BaseType = bool;
+}
+CParticleNodePinIn	$B66E2903
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$3CA67516
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$0C89271A";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

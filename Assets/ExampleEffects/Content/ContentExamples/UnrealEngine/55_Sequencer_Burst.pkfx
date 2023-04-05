@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -29,8 +29,8 @@ CEditorAssetEffect	$96CD1EC2
 		"@eng:<b>Burst effect</b>, single layer of particles randomly instantly shooting out in a spherical shell.",
 	};
 	LoopDelay = 2.0000000e+00;
-	StartCameraPosition = float3(0.0000000e+00, 2.7253001e+00, 5.8653402e+00);
-	StartCameraOrientation = float3(3.1941253e-01, 5.3756139e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 1.3500000e+00, 5.5000000e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$69D57342";
 }
 CParticleNodeSetLife	$D734A95F
@@ -67,8 +67,8 @@ CParticleNodeGraph	$81861AB7
 		"$058F2BCD",
 	};
 	Timeline = "$CE8CC02E";
-	WorkspacePosition = int2(-47, -13);
-	WorkspaceZoom = -3;
+	WorkspacePosition = int2(-13, -27);
+	WorkspaceZoom = -5;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$48E2E8B7
@@ -117,6 +117,7 @@ CParticleNodeTemplate	$F02495CD
 {
 	InputPins = {
 		"$125C39DB",
+		"$DBE3614B",
 		"$4703F6C7",
 		"$6B1D589C",
 		"$B6F5CC16",
@@ -393,12 +394,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(0.0000000e+00, -1.1262496e+00, 0.0000000e+00);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -1.5000000e+00, 0.0000000e+00);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -1265,8 +1267,8 @@ CParticleNodeGraph	$22CB553E
 		"$5A79ED64",
 		"$C0609BA0",
 	};
-	WorkspacePosition = int2(38, -4);
-	WorkspaceZoom = -4;
+	WorkspacePosition = int2(28, -8);
+	WorkspaceZoom = -5;
 }
 CParticleNodeLayer	$058F2BCD
 {
@@ -1337,7 +1339,7 @@ CParticleNodeRendererBillboard	$2BCC687D
 		"$3777BCB0",
 	};
 	WorkspacePosition = int2(638, -264);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Transparent",
@@ -2675,4 +2677,13 @@ CParticleNodePinIn	$9B7C54BA
 	Visible = false;
 	Owner = "$F02495CD";
 	BaseType = bool;
+}
+CParticleNodePinIn	$DBE3614B
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$F02495CD";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

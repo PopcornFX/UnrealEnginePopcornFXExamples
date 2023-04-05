@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -8,8 +8,8 @@ CEditorAssetEffect	$41EED1A4
 {
 	LoopingEnabled = false;
 	LoopDelay = 1.0000000e+01;
-	StartCameraPosition = float3(3.2037214e-04, 7.9031020e-01, 6.0651331e+00);
-	StartCameraOrientation = float3(1.6933215e-01, 1.3542534e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 1.1500000e+00, 6.1999998e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$69D57342";
 }
 CParticleAttributeList	$B660FBF9
@@ -25,8 +25,8 @@ CParticleNodeGraph	$81861AB7
 		"$82AEE119",
 	};
 	Timeline = "$B014C0B6";
-	WorkspacePosition = int2(-44, -26);
-	WorkspaceZoom = -5;
+	WorkspacePosition = int2(-178, 19);
+	WorkspaceZoom = -4;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -98,12 +98,13 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
-	Position = float3(0.0000000e+00, -1.7535900e+00, 7.1429443e-01);
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
+	Position = float3(0.0000000e+00, -1.7000000e+00, 6.9999999e-01);
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -147,6 +148,8 @@ CParticleNodeGraph	$AA28CB3B
 		"$DEE89417",
 		"$15750029",
 		"$2A65884D",
+		"$93CC359F",
+		"$7AE1C09E",
 	};
 	WorkspacePosition = int2(15, -133);
 	WorkspaceZoom = -7;
@@ -173,6 +176,7 @@ CParticleNodeTemplate	$E0E495BA
 {
 	InputPins = {
 		"$DC7A313C",
+		"$2407FFD3",
 		"$CE99B255",
 		"$CB1E6C00",
 		"$6BC6449A",
@@ -1260,7 +1264,7 @@ CParticleNodeRendererBillboard	$3FD55611
 		"$D992A3B4",
 	};
 	WorkspacePosition = int2(1232, 22);
-	FeatureSetPath = "Library/UnrealEngine/Materials/UE_Billboard_Opaque.pkma";
+	Material = "Library/UnrealEngine/Materials/UE_Billboard_Opaque.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -1488,7 +1492,7 @@ CParticleNodePinIn	$B011DFFA
 	Owner = "$3FD55611";
 	BaseType = float4;
 	ConnectedPins = {
-		"$592CF18C",
+		"$15BF0A48",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
@@ -1637,7 +1641,7 @@ CParticleNodePinIn	$9E26B167
 	Owner = "$3FD55611";
 	BaseType = float4;
 	ConnectedPins = {
-		"$8643C87C",
+		"$CC1E54DF",
 	};
 	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
 }
@@ -1794,7 +1798,7 @@ CParticleNodePassThrough	$904C4711
 	OutputPins = {
 		"$592CF18C",
 	};
-	WorkspacePosition = int2(946, 616);
+	WorkspacePosition = int2(858, 616);
 }
 CParticleNodePinIn	$57FDD493
 {
@@ -1809,7 +1813,7 @@ CParticleNodePinOut	$592CF18C
 	SelfName = "Value";
 	Owner = "$904C4711";
 	ConnectedPins = {
-		"$B011DFFA",
+		"$90B90C76",
 	};
 }
 CParticleNodePassThrough	$DEE89417
@@ -1820,7 +1824,7 @@ CParticleNodePassThrough	$DEE89417
 	OutputPins = {
 		"$8643C87C",
 	};
-	WorkspacePosition = int2(946, 858);
+	WorkspacePosition = int2(858, 858);
 }
 CParticleNodePinIn	$26913DC8
 {
@@ -1835,7 +1839,7 @@ CParticleNodePinOut	$8643C87C
 	SelfName = "Value";
 	Owner = "$DEE89417";
 	ConnectedPins = {
-		"$9E26B167",
+		"$097B6CD1",
 	};
 }
 CParticleNodePassThrough	$15750029
@@ -1846,7 +1850,7 @@ CParticleNodePassThrough	$15750029
 	OutputPins = {
 		"$DE18E59D",
 	};
-	WorkspacePosition = int2(946, 1100);
+	WorkspacePosition = int2(858, 1100);
 }
 CParticleNodePinIn	$14A5BD4A
 {
@@ -1881,4 +1885,65 @@ CParticleNodePinIn	$13BF4010
 	Visible = false;
 	Owner = "$E0E495BA";
 	BaseType = bool;
+}
+CParticleNodePinIn	$2407FFD3
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$E0E495BA";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePassThrough	$93CC359F
+{
+	InputPins = {
+		"$90B90C76",
+	};
+	OutputPins = {
+		"$15BF0A48",
+	};
+	WorkspacePosition = int2(1100, 220);
+}
+CParticleNodePinIn	$90B90C76
+{
+	SelfName = "Value";
+	Owner = "$93CC359F";
+	ConnectedPins = {
+		"$592CF18C",
+	};
+}
+CParticleNodePinOut	$15BF0A48
+{
+	SelfName = "Value";
+	Owner = "$93CC359F";
+	ConnectedPins = {
+		"$B011DFFA",
+	};
+}
+CParticleNodePassThrough	$7AE1C09E
+{
+	InputPins = {
+		"$097B6CD1",
+	};
+	OutputPins = {
+		"$CC1E54DF",
+	};
+	WorkspacePosition = int2(1166, 264);
+}
+CParticleNodePinIn	$097B6CD1
+{
+	SelfName = "Value";
+	Owner = "$7AE1C09E";
+	ConnectedPins = {
+		"$8643C87C",
+	};
+}
+CParticleNodePinOut	$CC1E54DF
+{
+	SelfName = "Value";
+	Owner = "$7AE1C09E";
+	ConnectedPins = {
+		"$9E26B167",
+	};
 }

@@ -1,4 +1,4 @@
-Version = 2.15.0.15796;
+Version = 2.16.0.16702;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -23,15 +23,15 @@ CParticleNodeGraph	$42E16C02
 		"$030B346F",
 		"$80D9580B",
 	};
-	WorkspacePosition = int2(173, -1);
+	WorkspacePosition = int2(320, -103);
 	WorkspaceZoom = -5;
 }
 CEditorAssetEffect	$41EED1A4
 {
 	LoopingEnabled = false;
 	LoopDelay = 1.0000000e+01;
-	StartCameraPosition = float3(0.0000000e+00, 2.4796000e+00, 5.3090401e+00);
-	StartCameraOrientation = float3(1.6261248e-01, -2.6878067e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 2.8499999e+00, 5.5000000e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	Backdrops_Scene = "$69D57342";
 }
 CParticleAttributeList	$B660FBF9
@@ -107,6 +107,7 @@ CParticleNodeTemplate	$5A5BD1DE
 	};
 	InputPins = {
 		"$94DB7335",
+		"$E265887F",
 		"$C78B225F",
 		"$353B08E3",
 		"$9AA9404E",
@@ -331,11 +332,12 @@ CEditorBackdropGrid	$CF880096
 CEditorBackdropMesh	$C9F5C011
 {
 	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
-	Roughness = 4.9190301e-01;
-	Metalness = 2.9535100e-01;
+	Roughness = 5.0000000e-01;
+	CastShadows = true;
 }
 CEditorBackdropDirectionalLight	$B34D67A8
 {
+	Direction = float3(1.0000000e+00, -1.0000000e+00, -5.0000000e-01);
 	Intensity = 3.0000001e-01;
 }
 CEditorBackdropSound	$28CECB8B
@@ -438,6 +440,7 @@ CParticleNodeRendererMesh	$9808D8CF
 		"$DA276BE4",
 		"$88B64E84",
 		"$57AD7588",
+		"$D19B73B1",
 		"$9392AD54",
 		"$6B2BBA99",
 		"$085B0BB4",
@@ -458,13 +461,14 @@ CParticleNodeRendererMesh	$9808D8CF
 		"$539B7058",
 	};
 	WorkspacePosition = int2(-198, 132);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"Opaque",
 		"Diffuse",
 		"DiffuseRamp",
 		"EnableRendering",
+		"Culling",
 		"Lit",
 		"LegacyLit",
 		"Atlas",
@@ -703,6 +707,7 @@ CParticleNodeTemplate	$C9A73982
 	};
 	InputPins = {
 		"$99A29A86",
+		"$1CE84C14",
 		"$24DAAC50",
 		"$16CC257B",
 		"$4B6FF671",
@@ -1802,6 +1807,7 @@ CParticleNodeTemplate	$3F8BDA91
 {
 	InputPins = {
 		"$9C5930DF",
+		"$3C1A1CA2",
 		"$D064A320",
 		"$320A3C3D",
 		"$3DBE807C",
@@ -2027,7 +2033,7 @@ CParticleNodeGraph	$152A7198
 		"$BEC00C3C",
 		"$F17794B2",
 	};
-	WorkspacePosition = int2(184, 14);
+	WorkspacePosition = int2(226, 77);
 	WorkspaceZoom = -5;
 }
 CParticleNodeLayer	$2FBF894D
@@ -2163,7 +2169,7 @@ CParticleNodeRendererBillboard	$1F05B329
 		"$7A7C41E7",
 	};
 	WorkspacePosition = int2(22, -638);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"Diffuse",
@@ -3204,6 +3210,7 @@ CParticleNodeTemplate	$705C2FFC
 {
 	InputPins = {
 		"$F9201B5E",
+		"$83974913",
 		"$187C97BE",
 		"$AEB4B3A7",
 		"$95BD3C5A",
@@ -3433,6 +3440,7 @@ CParticleNodeGraph	$7560FC96
 		"$191AC90C",
 		"$3FA07F31",
 	};
+	WorkspacePosition = int2(202, -23);
 	WorkspaceZoom = -4;
 }
 CParticleNodeLayer	$072E5164
@@ -3517,7 +3525,7 @@ CParticleNodeRendererRibbon	$7400F1F2
 		"$74206BFB",
 	};
 	WorkspacePosition = int2(0, -176);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Ribbon.pkma";
+	Material = "Library/PopcornFXCore/Materials/Opaque_Ribbon.pkma";
 	RendererFeatures = {
 		"GeometryRibbon",
 		"Opaque",
@@ -4434,6 +4442,7 @@ CParticleNodeGraph	$86120099
 		"$ADDF2D6D",
 		"$A1579EB0",
 	};
+	WorkspacePosition = int2(-134, 29);
 	WorkspaceZoom = -4;
 }
 CParticleNodeLayer	$C6F15D88
@@ -4461,6 +4470,7 @@ CParticleNodeTemplate	$C7D2344A
 {
 	InputPins = {
 		"$B1F42DCD",
+		"$59E1B024",
 		"$BAD6DDDC",
 		"$C1143C50",
 		"$99BFF114",
@@ -4700,8 +4710,8 @@ CParticleNodeRendererTriangle	$7331C1C6
 		"$482EED67",
 		"$FAEF289C",
 	};
-	WorkspacePosition = int2(990, -198);
-	FeatureSetPath = "Library/PopcornFXCore/Materials/Opaque_Triangle.pkma";
+	WorkspacePosition = int2(682, -176);
+	Material = "Library/PopcornFXCore/Materials/Opaque_Triangle.pkma";
 	RendererFeatures = {
 		"GeometryTriangle",
 		"EnableRendering",
@@ -5334,4 +5344,58 @@ CParticleNodePinIn	$1C52F6D7
 	Visible = false;
 	Owner = "$C7D2344A";
 	BaseType = bool;
+}
+CParticleNodePinIn	$E265887F
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$1CE84C14
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$C9A73982";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$3C1A1CA2
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$3F8BDA91";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$83974913
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$705C2FFC";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$59E1B024
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$C7D2344A";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$D19B73B1
+{
+	SelfName = "General.DoubleSided";
+	Type = bool;
+	Visible = false;
+	Owner = "$9808D8CF";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }
