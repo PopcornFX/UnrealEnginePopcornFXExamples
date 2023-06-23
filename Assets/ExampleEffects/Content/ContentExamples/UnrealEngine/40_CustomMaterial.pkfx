@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17580;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -26,6 +26,7 @@ CParticleNodeGraph	$81861AB7
 	Timeline = "$B014C0B6";
 	WorkspacePosition = int2(-205, -8);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -1985,6 +1986,9 @@ CParticleNodePinOut	$E3699F7B
 }
 CParticleNodeTemplate	$A2434A38
 {
+	InputPins = {
+		"$1217153A",
+	};
 	OutputPins = {
 		"$4A27DA6C",
 	};
@@ -2077,4 +2081,13 @@ CParticleNodePinIn	$329F477D
 	Owner = "$E0E495BA";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$1217153A
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$A2434A38";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }

@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17580;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -25,6 +25,7 @@ CParticleNodeGraph	$42E16C02
 	};
 	WorkspacePosition = int2(320, -103);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CEditorAssetEffect	$41EED1A4
 {
@@ -55,6 +56,7 @@ CParticleNodeGraph	$81861AB7
 	Timeline = "$B014C0B6";
 	WorkspacePosition = int2(-44, -26);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -2035,6 +2037,7 @@ CParticleNodeGraph	$152A7198
 	};
 	WorkspacePosition = int2(226, 77);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeLayer	$2FBF894D
 {
@@ -3088,6 +3091,9 @@ CParticleNodePinOut	$18C12094
 }
 CParticleNodeTemplate	$8D2B9FF3
 {
+	InputPins = {
+		"$22EF054A",
+	};
 	OutputPins = {
 		"$382919E8",
 	};
@@ -3442,6 +3448,7 @@ CParticleNodeGraph	$7560FC96
 	};
 	WorkspacePosition = int2(202, -23);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeLayer	$072E5164
 {
@@ -4444,6 +4451,7 @@ CParticleNodeGraph	$86120099
 	};
 	WorkspacePosition = int2(-134, 29);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeLayer	$C6F15D88
 {
@@ -4857,6 +4865,9 @@ CParticleNodeGraph	$552E7319
 }
 CParticleNodeTemplate	$C8888BA5
 {
+	InputPins = {
+		"$04D70615",
+	};
 	OutputPins = {
 		"$F92379AC",
 	};
@@ -4948,6 +4959,7 @@ CParticleNodePinIn	$B3A07674
 	ConnectedPins = {
 		"$D91084F7",
 	};
+	ValueF = float4(0.0000000e+00, 1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinIn	$6F14F1CA
 {
@@ -5398,4 +5410,22 @@ CParticleNodePinIn	$D19B73B1
 	Owner = "$9808D8CF";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$22EF054A
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$8D2B9FF3";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$04D70615
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$C8888BA5";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }

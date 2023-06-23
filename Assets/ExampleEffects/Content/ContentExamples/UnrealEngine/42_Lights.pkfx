@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17580;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -145,6 +145,7 @@ CParticleNodeGraph	$3274705F
 	};
 	WorkspacePosition = int2(265, -8);
 	WorkspaceZoom = -4;
+	HasExplicitWorkspaceCoords = true;
 }
 CParticleNodeLayer	$174748FC
 {
@@ -397,6 +398,9 @@ CParticleNodePinOut	$9C871511
 CParticleNodeTemplate	$0A6D1E39
 {
 	ExecStage = Evolve;
+	InputPins = {
+		"$E58A4BD0",
+	};
 	OutputPins = {
 		"$C30A2477",
 	};
@@ -2475,4 +2479,13 @@ CParticleNodePinIn	$25296480
 	Owner = "$E65BC156";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$E58A4BD0
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$0A6D1E39";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }

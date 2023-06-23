@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17642;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -24,6 +24,7 @@ CParticleNodeGraph	$42E16C02
 	};
 	WorkspacePosition = int2(212, -29);
 	WorkspaceZoom = -6;
+	HasExplicitWorkspaceCoords = true;
 }
 CEditorAssetEffect	$41EED1A4
 {
@@ -172,8 +173,8 @@ CParticleNodeTemplate	$1838F4AE
 		"$A13D2D10",
 		"$B92198B9",
 		"$02CF91B5",
-		"$6539F1B2",
 		"$31CE33E9",
+		"$6539F1B2",
 		"$7CE540CD",
 		"$3245FB22",
 		"$55B1C429",
@@ -261,6 +262,7 @@ CParticleNodeGraph	$81861AB7
 	Timeline = "$B014C0B6";
 	WorkspacePosition = int2(-44, -26);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -307,6 +309,7 @@ CParticleNodeTemplate	$5A5BD1DE
 {
 	InputPins = {
 		"$94DB7335",
+		"$9F6F6776",
 		"$C78B225F",
 		"$353B08E3",
 		"$9AA9404E",
@@ -321,6 +324,7 @@ CParticleNodeTemplate	$5A5BD1DE
 		"$8BA95130",
 		"$8058C653",
 		"$E32FF502",
+		"$AF847D19",
 		"$59DA6D2D",
 		"$6E65A36D",
 		"$A0A649A7",
@@ -1695,4 +1699,21 @@ CParticleNodePinOut	$5F5304FA
 	SelfName = "Cursor";
 	Visible = false;
 	Owner = "$8AB3F390";
+}
+CParticleNodePinIn	$9F6F6776
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$AF847D19
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$5A5BD1DE";
+	BaseType = bool;
 }

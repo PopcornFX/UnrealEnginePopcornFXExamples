@@ -1,4 +1,4 @@
-Version = 2.16.0.16702;
+Version = 2.17.0.17580;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -23,6 +23,7 @@ CParticleNodeGraph	$42E16C02
 	};
 	WorkspacePosition = int2(173, -1);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 }
 CEditorAssetEffect	$41EED1A4
 {
@@ -169,6 +170,7 @@ CParticleNodeGraph	$81861AB7
 	Timeline = "$B014C0B6";
 	WorkspacePosition = int2(-44, -26);
 	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
 	GraphType = Event;
 }
 CParticleNodeEventStart	$C776022A
@@ -1318,8 +1320,8 @@ CParticleNodeTemplate	$CD287025
 	InputPins = {
 		"$46424BD6",
 		"$B05F380E",
-		"$7580AF67",
 		"$EFED5044",
+		"$7580AF67",
 		"$D11A27AE",
 		"$C2EEF295",
 		"$FD2DA5E5",
