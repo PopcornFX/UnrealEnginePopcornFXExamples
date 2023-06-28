@@ -1,4 +1,4 @@
-Version = 2.17.0.17642;
+Version = 2.17.0.17676;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -9714,6 +9714,7 @@ CParticleNodeTemplate	$CC9ABDA2
 		"$10AC12F2",
 		"$F5461908",
 		"$22D2A86B",
+		"$8F61F705",
 		"$67F1052B",
 		"$2A0FEA0A",
 		"$D065F99A",
@@ -9741,6 +9742,7 @@ CParticleNodeTemplate	$CC9ABDA2
 		"$FC8E200C",
 		"$414CB256",
 		"$6ECE9236",
+		"$34482AC5",
 		"$27C2D11E",
 		"$0D5FA566",
 		"$9956CEEB",
@@ -12201,6 +12203,7 @@ CParticleNodeTemplate	$C681D376
 		"$6AB2D303",
 		"$1A43F6FC",
 		"$CFFA236F",
+		"$897AC6A6",
 		"$56A31DC7",
 		"$8173BF5E",
 		"$D82C4853",
@@ -12228,6 +12231,7 @@ CParticleNodeTemplate	$C681D376
 		"$C1E128F5",
 		"$ECF9AA90",
 		"$577920A1",
+		"$DAAAEF86",
 		"$FB31D837",
 		"$D67F9383",
 		"$E592EDD0",
@@ -12977,6 +12981,7 @@ CParticleNodeTemplate	$8E0E9FEF
 		"$5BF7BECB",
 		"$12B3112D",
 		"$3FAA40F4",
+		"$F7291ADB",
 		"$FD64101B",
 		"$5470B8C7",
 		"$7B7C0AD7",
@@ -13004,6 +13009,7 @@ CParticleNodeTemplate	$8E0E9FEF
 		"$35E37EB7",
 		"$245BBE6C",
 		"$512B7A43",
+		"$D7F13F2D",
 		"$21289E07",
 		"$383800E2",
 		"$7E723BA9",
@@ -28281,4 +28287,52 @@ CParticleNodePinIn	$F3D45CA1
 	Owner = "$D37248E0";
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$8F61F705
+{
+	SelfName = "DefaultSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$CC9ABDA2";
+	BaseType = int;
+}
+CParticleNodePinOut	$34482AC5
+{
+	SelfName = "CollisionSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$CC9ABDA2";
+	BaseType = int;
+}
+CParticleNodePinIn	$897AC6A6
+{
+	SelfName = "DefaultSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$C681D376";
+	BaseType = int;
+}
+CParticleNodePinOut	$DAAAEF86
+{
+	SelfName = "CollisionSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$C681D376";
+	BaseType = int;
+}
+CParticleNodePinIn	$F7291ADB
+{
+	SelfName = "DefaultSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$8E0E9FEF";
+	BaseType = int;
+}
+CParticleNodePinOut	$D7F13F2D
+{
+	SelfName = "CollisionSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$8E0E9FEF";
+	BaseType = int;
 }

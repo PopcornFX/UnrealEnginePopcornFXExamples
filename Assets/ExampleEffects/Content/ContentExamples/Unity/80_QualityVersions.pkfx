@@ -1,4 +1,4 @@
-Version = 2.17.0.17580;
+Version = 2.17.0.17676;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -3311,6 +3311,7 @@ CParticleNodeTemplate	$8EFEBCF6
 		"$CA3BCC53",
 		"$BB2510BC",
 		"$26E05D5A",
+		"$E23AECB9",
 		"$222B9B99",
 		"$6E167E84",
 		"$D1CF5EB7",
@@ -3338,8 +3339,9 @@ CParticleNodeTemplate	$8EFEBCF6
 		"$21395F48",
 		"$45F3848A",
 		"$1207562E",
-		"$14D82D57",
+		"$C38FF3B1",
 		"$EB103C5C",
+		"$14D82D57",
 		"$23277C0E",
 	};
 	WorkspacePosition = int2(1804, 154);
@@ -5068,6 +5070,7 @@ CParticleNodeTemplate	$40A61A55
 		"$A6B171E0",
 		"$035784A6",
 		"$F44CC104",
+		"$30F0D6D5",
 		"$C03F06BB",
 		"$4D6712D9",
 		"$7D41C477",
@@ -5095,8 +5098,9 @@ CParticleNodeTemplate	$40A61A55
 		"$47A963B9",
 		"$15BAF82B",
 		"$6414CE13",
-		"$0C0BA2DC",
+		"$11880E59",
 		"$A8C87D75",
+		"$0C0BA2DC",
 		"$F728503B",
 	};
 	WorkspacePosition = int2(462, 440);
@@ -7439,4 +7443,36 @@ CParticleAttributeDeclaration	$455327A1
 	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 	MinValueF4 = float4(1.0000000e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 	MaxValueF4 = float4(3.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$E23AECB9
+{
+	SelfName = "DefaultSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$8EFEBCF6";
+	BaseType = int;
+}
+CParticleNodePinOut	$C38FF3B1
+{
+	SelfName = "CollisionSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$8EFEBCF6";
+	BaseType = int;
+}
+CParticleNodePinIn	$30F0D6D5
+{
+	SelfName = "DefaultSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$40A61A55";
+	BaseType = int;
+}
+CParticleNodePinOut	$11880E59
+{
+	SelfName = "CollisionSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$40A61A55";
+	BaseType = int;
 }

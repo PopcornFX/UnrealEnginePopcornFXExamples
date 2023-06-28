@@ -1,4 +1,4 @@
-Version = 2.17.0.17642;
+Version = 2.17.0.17676;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -804,6 +804,7 @@ CParticleNodeTemplate	$66691374
 		"$FA2A7F70",
 		"$91C2929A",
 		"$B7587C29",
+		"$1E8FAC80",
 		"$C05B3B5C",
 		"$FFA2CCA3",
 		"$CA4E497B",
@@ -831,8 +832,9 @@ CParticleNodeTemplate	$66691374
 		"$0F21D252",
 		"$C417ABED",
 		"$774A7F07",
-		"$2ECE8500",
+		"$51293CE8",
 		"$84CE2A08",
+		"$2ECE8500",
 		"$AE37153E",
 	};
 	WorkspacePosition = int2(-242, 110);
@@ -1648,4 +1650,20 @@ CParticleNodePinIn	$00CC99F5
 	Visible = false;
 	Owner = "$F02495CD";
 	BaseType = bool;
+}
+CParticleNodePinIn	$1E8FAC80
+{
+	SelfName = "DefaultSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$66691374";
+	BaseType = int;
+}
+CParticleNodePinOut	$51293CE8
+{
+	SelfName = "CollisionSurfaceType";
+	Type = int;
+	Visible = false;
+	Owner = "$66691374";
+	BaseType = int;
 }
