@@ -1,4 +1,4 @@
-Version = 2.17.0.17676;
+Version = 2.18.0.18760;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -1343,7 +1343,7 @@ CParticleNodePinOut	$F3036D99
 		"$ECC12C58",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$B59DF6D5
+CParticleNodeStaticBuildTagIf	$B59DF6D5
 {
 	InputPins = {
 		"$6C270D87",
@@ -1381,7 +1381,7 @@ CParticleNodePinOut	$2954B80F
 		"$041979D7",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$FB9C0D99
+CParticleNodeStaticBuildTagIf	$FB9C0D99
 {
 	InputPins = {
 		"$8CD946BA",
@@ -1419,7 +1419,7 @@ CParticleNodePinOut	$C3FDB564
 		"$83C8EF08",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$EED369B2
+CParticleNodeStaticBuildTagIf	$EED369B2
 {
 	InputPins = {
 		"$1E00B284",
@@ -1457,7 +1457,7 @@ CParticleNodePinOut	$A15D5C6B
 		"$D980402C",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$B419FEC2
+CParticleNodeStaticBuildTagIf	$B419FEC2
 {
 	InputPins = {
 		"$5B11B052",
@@ -1495,7 +1495,7 @@ CParticleNodePinOut	$1D0928F2
 		"$07E7C1A3",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$7FD3E2DA
+CParticleNodeStaticBuildTagIf	$7FD3E2DA
 {
 	InputPins = {
 		"$40549D32",
@@ -1533,7 +1533,7 @@ CParticleNodePinOut	$A528ADF0
 		"$AE707D2B",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$E2FCE309
+CParticleNodeStaticBuildTagIf	$E2FCE309
 {
 	InputPins = {
 		"$BC4654B0",
@@ -1571,7 +1571,7 @@ CParticleNodePinOut	$690F1E71
 		"$97510207",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$16BEFF05
+CParticleNodeStaticBuildTagIf	$16BEFF05
 {
 	InputPins = {
 		"$39324E7A",
@@ -1609,7 +1609,7 @@ CParticleNodePinOut	$897D9FB5
 		"$6F2AD67E",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$912C2405
+CParticleNodeStaticBuildTagIf	$912C2405
 {
 	InputPins = {
 		"$6845F861",
@@ -1668,7 +1668,7 @@ CParticleNodePinOut	$422B6F70
 		"$7839A5AE",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$92F2EFEE
+CParticleNodeStaticBuildTagIf	$92F2EFEE
 {
 	InputPins = {
 		"$92FAC560",
@@ -1705,7 +1705,7 @@ CParticleNodePinOut	$EE548AA5
 		"$8E3F01A5",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$1967AE84
+CParticleNodeStaticBuildTagIf	$1967AE84
 {
 	InputPins = {
 		"$5D0CDFF7",
@@ -1743,7 +1743,7 @@ CParticleNodePinOut	$BD210F92
 		"$34F3BAA4",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$BEF36999
+CParticleNodeStaticBuildTagIf	$BEF36999
 {
 	InputPins = {
 		"$F2CA258C",
@@ -1781,7 +1781,7 @@ CParticleNodePinOut	$0E7ACBC3
 		"$EC4433F0",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$6A6EEE04
+CParticleNodeStaticBuildTagIf	$6A6EEE04
 {
 	InputPins = {
 		"$154530A8",
@@ -2132,7 +2132,7 @@ CParticleNodePinOut	$1410A8FD
 		"$5443AA8B",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$25B40C76
+CParticleNodeStaticBuildTagIf	$25B40C76
 {
 	InputPins = {
 		"$4EAAAB5F",
@@ -2169,7 +2169,7 @@ CParticleNodePinOut	$95D33F38
 		"$EC10D229",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$28FF06C1
+CParticleNodeStaticBuildTagIf	$28FF06C1
 {
 	InputPins = {
 		"$058B7CF8",
@@ -2207,7 +2207,7 @@ CParticleNodePinOut	$6A523B42
 		"$F41F3D19",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$B040D613
+CParticleNodeStaticBuildTagIf	$B040D613
 {
 	InputPins = {
 		"$DB516EB2",
@@ -2245,7 +2245,7 @@ CParticleNodePinOut	$61D1C041
 		"$BC114C93",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$95B81D5B
+CParticleNodeStaticBuildTagIf	$95B81D5B
 {
 	InputPins = {
 		"$FB8BA1AE",
@@ -2283,7 +2283,7 @@ CParticleNodePinOut	$A2414CAF
 		"$957ECC17",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$055BD4F1
+CParticleNodeStaticBuildTagIf	$055BD4F1
 {
 	InputPins = {
 		"$BCC48D01",
@@ -2321,7 +2321,7 @@ CParticleNodePinOut	$AF8D1CD0
 		"$51AA659F",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$58F2A9A0
+CParticleNodeStaticBuildTagIf	$58F2A9A0
 {
 	InputPins = {
 		"$C14B41A2",

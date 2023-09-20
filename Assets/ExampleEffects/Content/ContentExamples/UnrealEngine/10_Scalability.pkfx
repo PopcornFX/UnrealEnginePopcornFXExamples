@@ -1,4 +1,4 @@
-Version = 2.17.0.17676;
+Version = 2.18.0.18760;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -1632,7 +1632,7 @@ CParticleNodePinOut	$DA6AB5C7
 		"$52909C1B",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$14F35DF9
+CParticleNodeStaticBuildTagIf	$14F35DF9
 {
 	InputPins = {
 		"$A750F630",
@@ -1670,7 +1670,7 @@ CParticleNodePinOut	$B2CE6DC9
 		"$49C7D929",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$ADB17A13
+CParticleNodeStaticBuildTagIf	$ADB17A13
 {
 	InputPins = {
 		"$D8CA9BDA",
@@ -1707,7 +1707,7 @@ CParticleNodePinOut	$3CDD6057
 		"$3D284AEB",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$7531C298
+CParticleNodeStaticBuildTagIf	$7531C298
 {
 	InputPins = {
 		"$CE0E6922",
@@ -1745,7 +1745,7 @@ CParticleNodePinOut	$0B871551
 		"$0513542D",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$AE14B27B
+CParticleNodeStaticBuildTagIf	$AE14B27B
 {
 	InputPins = {
 		"$250E1E33",
@@ -1802,7 +1802,7 @@ CParticleNodePinOut	$9AF654D8
 		"$2063FDFF",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$38677E17
+CParticleNodeStaticBuildTagIf	$38677E17
 {
 	InputPins = {
 		"$0CB818F2",
@@ -1840,7 +1840,7 @@ CParticleNodePinOut	$5A24D81D
 		"$8CAE1C9E",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$B55391EE
+CParticleNodeStaticBuildTagIf	$B55391EE
 {
 	InputPins = {
 		"$74C701FE",
@@ -1878,7 +1878,7 @@ CParticleNodePinOut	$1289BC92
 		"$09EE70A6",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$879B5BF2
+CParticleNodeStaticBuildTagIf	$879B5BF2
 {
 	InputPins = {
 		"$68F05E40",
@@ -1916,7 +1916,7 @@ CParticleNodePinOut	$7202B23A
 		"$C4B975CA",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$6A6D2F29
+CParticleNodeStaticBuildTagIf	$6A6D2F29
 {
 	InputPins = {
 		"$43908915",
@@ -2666,7 +2666,7 @@ CParticleNodePinOut	$8D9F2232
 	Owner = "$B1A800C1";
 	BaseType = float;
 }
-CParticleNodeStaticBuildTagSwitch	$A6E6E5AB
+CParticleNodeStaticBuildTagIf	$A6E6E5AB
 {
 	InputPins = {
 		"$96389793",
@@ -2704,7 +2704,7 @@ CParticleNodePinOut	$991411D2
 		"$FA9BBD64",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$FD257701
+CParticleNodeStaticBuildTagIf	$FD257701
 {
 	InputPins = {
 		"$9C5647CF",
@@ -2742,7 +2742,7 @@ CParticleNodePinOut	$5F7058BF
 		"$C258718E",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$474984F5
+CParticleNodeStaticBuildTagIf	$474984F5
 {
 	InputPins = {
 		"$E90EEFAF",
@@ -2780,7 +2780,7 @@ CParticleNodePinOut	$DEEBBDA1
 		"$CDFABF73",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$61716B52
+CParticleNodeStaticBuildTagIf	$61716B52
 {
 	InputPins = {
 		"$4270B67F",
@@ -2818,7 +2818,7 @@ CParticleNodePinOut	$6711C060
 		"$FAE1E2D8",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$F2BD077D
+CParticleNodeStaticBuildTagIf	$F2BD077D
 {
 	InputPins = {
 		"$322A77F8",
@@ -4022,7 +4022,7 @@ CParticleNodePinIn	$99B4A4FB
 	Owner = "$5A5BD1DE";
 	BaseType = bool;
 }
-CParticleNodeStaticBuildTagSwitch	$0D5BC854
+CParticleNodeStaticBuildTagIf	$0D5BC854
 {
 	InputPins = {
 		"$0E689BAB",
@@ -4060,7 +4060,7 @@ CParticleNodePinOut	$2888731D
 		"$C3510F1B",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$C9080F8E
+CParticleNodeStaticBuildTagIf	$C9080F8E
 {
 	InputPins = {
 		"$48AD78A4",
@@ -4098,7 +4098,7 @@ CParticleNodePinOut	$971E89D3
 		"$129B775D",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$8939221C
+CParticleNodeStaticBuildTagIf	$8939221C
 {
 	InputPins = {
 		"$3969AE2D",
@@ -4136,7 +4136,7 @@ CParticleNodePinOut	$5BD1FC61
 		"$7D25A879",
 	};
 }
-CParticleNodeStaticBuildTagSwitch	$7FD192FD
+CParticleNodeStaticBuildTagIf	$7FD192FD
 {
 	InputPins = {
 		"$150087DA",
