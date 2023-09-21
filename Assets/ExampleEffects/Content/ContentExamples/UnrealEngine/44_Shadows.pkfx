@@ -3496,8 +3496,8 @@ CParticleNodeRendererRibbon	$7400F1F2
 		"$8892027E",
 		"$28747A42",
 		"$A09E4AD6",
-		"$09A04799",
-		"$E5CD5340",
+		"$B0A921FC",
+		"$9C5C217C",
 		"$C38C7468",
 		"$3764EA5D",
 		"$391C3C5D",
@@ -5485,18 +5485,18 @@ CParticleNodePinOut	$6AA3CC6A
 	Owner = "$96A5AEB7";
 	BaseType = int;
 }
-CParticleNodePinIn	$09A04799
+CParticleNodePinIn	$B0A921FC
 {
-	SelfName = "GeometryRibbon.PlaneCount";
+	SelfName = "General.PlaneCount";
 	Type = int;
 	Visible = false;
 	Owner = "$7400F1F2";
 	BaseType = int;
 	ValueI = int4(2, 0, 0, 0);
 }
-CParticleNodePinIn	$E5CD5340
+CParticleNodePinIn	$9C5C217C
 {
-	SelfName = "GeometryRibbon.SegmentCount";
+	SelfName = "General.SegmentCount";
 	Type = int;
 	Visible = false;
 	Owner = "$7400F1F2";
