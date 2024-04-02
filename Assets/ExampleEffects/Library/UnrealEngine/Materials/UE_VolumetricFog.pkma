@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleRendererMaterial	$6B70D015
 {
 	RendererFeatures = {
@@ -13,6 +13,7 @@ CParticleRendererMaterial	$6B70D015
 		"$35A36C4E",
 		"$EAC726E3",
 		"$7FB4AB5F",
+		"$59E693A7",
 	};
 }
 CParticleRendererFeatureDesc	$191F1761
@@ -76,4 +77,9 @@ CParticleRendererFeatureDesc	$8D0A7553
 	RendererInterfacePath = "Library/UnrealEngine/Materials/UnrealEngine.pkri";
 	RendererFeatureName = "VolumetricFog";
 	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$59E693A7
+{
+	RendererInterfacePath = "Library/UnrealEngine/Materials/UnrealEngine.pkri";
+	RendererFeatureName = "Raytraced";
 }

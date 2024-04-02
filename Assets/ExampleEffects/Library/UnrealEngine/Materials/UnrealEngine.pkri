@@ -1,7 +1,7 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CEngineRendererInterface	$6B70D015
 {
-	InterfaceName = "Unreal Engine 4 features";
+	InterfaceName = "Unreal Engine features";
 	RendererFeatures = {
 		"$77FDD556",
 		"$D19F01F1",

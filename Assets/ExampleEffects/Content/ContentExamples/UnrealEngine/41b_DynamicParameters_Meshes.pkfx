@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -434,6 +434,7 @@ CParticleNodeRendererMesh	$5B7F5F36
 		"$F1F75EAB",
 		"$804974F9",
 		"$3FA194B4",
+		"$1D073C69",
 	};
 	WorkspacePosition = int2(110, -264);
 	Material = "Library/UnrealEngine/Materials/UE_Mesh_Transparent.pkma";
@@ -452,6 +453,7 @@ CParticleNodeRendererMesh	$5B7F5F36
 		"ShaderInput1",
 		"ShaderInput2",
 		"ShaderInput3",
+		"Raytraced",
 	};
 }
 CParticleNodePinIn	$110F6C88
@@ -1488,4 +1490,12 @@ CParticleNodePinOut	$2953E857
 		"$A5EA6364",
 		"$F1F75EAB",
 	};
+}
+CParticleNodePinIn	$1D073C69
+{
+	SelfName = "Raytraced";
+	Type = bool;
+	Visible = false;
+	Owner = "$5B7F5F36";
+	BaseType = bool;
 }

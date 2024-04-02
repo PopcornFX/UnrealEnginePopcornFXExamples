@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CProjectSettings	$D857A09F
 {
 	General = "$35A36C4E";
@@ -10,6 +10,7 @@ CProjectSettings	$D857A09F
 	Budgets = "$D279714D";
 	Baking = "$5F621394";
 	Editor = "$41E5AFE7";
+	Rendering = "$DBE780E4";
 	Documentation = "$2909A531";
 }
 CProjectSettingsGeneral	$35A36C4E
@@ -206,5 +207,8 @@ CProjectSettingsConstantItem	$89E0DDB2
 	Value = 24;
 }
 CEditorProject	$AF0F155D
+{
+}
+CProjectSettingsRendering	$DBE780E4
 {
 }

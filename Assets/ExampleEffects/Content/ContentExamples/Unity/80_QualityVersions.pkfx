@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -996,11 +996,12 @@ CParticleNodeRendererBillboard	$915DF239
 	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Diffuse",
 		"Opaque",
 		"EnableRendering",
 		"Lit",
-		"LegacyLit",
+		"LegacyLitOpaque",
 		"FlipUVs",
 		"AlphaRemap",
 		"Atlas",
@@ -1143,7 +1144,7 @@ CParticleNodePinIn	$24B27080
 }
 CParticleNodePinIn	$FE23445B
 {
-	SelfName = "LegacyLit";
+	SelfName = "LegacyLitOpaque";
 	Type = bool;
 	Visible = false;
 	Owner = "$915DF239";
@@ -2426,6 +2427,7 @@ CParticleNodeRendererBillboard	$BE60A5E9
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -3866,11 +3868,11 @@ CParticleNodeTemplate	$29B68FF3
 {
 	InputPins = {
 		"$BA981564",
-		"$E810C9D4",
 		"$86F27260",
 		"$B86EFB08",
 		"$F39D7A67",
 		"$DD584C62",
+		"$E810C9D4",
 	};
 	OutputPins = {
 		"$97E61D68",
@@ -3904,7 +3906,7 @@ CParticleNodeTemplate	$29B68FF3
 	};
 	WorkspacePosition = int2(880, 154);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "ShapeSample";
+	SubGraphName = "shape.sample";
 }
 CParticleNodePinIn	$BA981564
 {
@@ -4590,6 +4592,7 @@ CParticleNodeRendererBillboard	$ED08333C
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -5538,6 +5541,7 @@ CParticleNodeRendererBillboard	$692E4678
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -5852,6 +5856,7 @@ CParticleNodeRendererMesh	$E0458C18
 	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
+		"ComputeVelocity",
 		"Opaque",
 		"Diffuse",
 		"DiffuseRamp",

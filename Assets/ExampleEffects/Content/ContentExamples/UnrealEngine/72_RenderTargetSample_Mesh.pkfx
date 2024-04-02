@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -86,6 +86,7 @@ CParticleNodeRendererBillboard	$8F7A985A
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -1523,6 +1524,7 @@ CParticleNodeRendererMesh	$D17C855E
 	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
+		"ComputeVelocity",
 		"Opaque",
 		"Diffuse",
 		"DiffuseRamp",
@@ -1957,19 +1959,19 @@ CParticleNodeTemplate	$857F89A0
 {
 	InputPins = {
 		"$3CCC0BF3",
-		"$B8063E40",
 		"$BD3C2D53",
 		"$DDA5720B",
-		"$3F8FC342",
 		"$6DCD9000",
 		"$2A883E16",
-		"$8E336ED4",
-		"$922AAB68",
+		"$B8063E40",
+		"$3F8FC342",
 		"$59F41066",
 		"$DECCE72C",
+		"$922AAB68",
 		"$3A87A3D8",
 		"$4F486768",
 		"$A9D6569E",
+		"$8E336ED4",
 	};
 	OutputPins = {
 		"$039EE35F",
@@ -2589,7 +2591,7 @@ CParticleNodeTemplate	$4E8A9A41
 	};
 	WorkspacePosition = int2(-22, -66);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "TextureSample";
+	SubGraphName = "texture.sample";
 }
 CParticleNodePinIn	$D78E1A7E
 {

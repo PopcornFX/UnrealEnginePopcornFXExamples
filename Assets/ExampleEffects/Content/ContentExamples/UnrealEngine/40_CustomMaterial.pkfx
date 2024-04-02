@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -191,6 +191,7 @@ CParticleNodeRendererMesh	$13985CF9
 		"$09B7A71F",
 		"$A304B5E4",
 		"$DDD9CF61",
+		"$9F315FE6",
 	};
 	WorkspacePosition = int2(0, 22);
 	Material = "Library/UnrealEngine/Materials/UE_Mesh_Opaque.pkma";
@@ -209,6 +210,7 @@ CParticleNodeRendererMesh	$13985CF9
 		"ShaderInput1",
 		"ShaderInput2",
 		"ShaderInput3",
+		"Raytraced",
 	};
 }
 CParticleNodePinIn	$0DC8E7FA
@@ -1082,11 +1084,11 @@ CParticleNodeTemplate	$C1885867
 {
 	InputPins = {
 		"$D93D5A83",
-		"$172DC0B0",
 		"$31F38319",
 		"$22A2A9A0",
 		"$3855D2FF",
 		"$3D270A25",
+		"$172DC0B0",
 	};
 	OutputPins = {
 		"$267262A1",
@@ -1120,7 +1122,7 @@ CParticleNodeTemplate	$C1885867
 	};
 	WorkspacePosition = int2(-1474, -22);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "ShapeSample";
+	SubGraphName = "shape.sample";
 }
 CParticleNodePinIn	$D93D5A83
 {
@@ -2108,4 +2110,12 @@ CParticleNodePinOut	$214A4F21
 	Visible = false;
 	Owner = "$4D117713";
 	BaseType = int;
+}
+CParticleNodePinIn	$9F315FE6
+{
+	SelfName = "Raytraced";
+	Type = bool;
+	Visible = false;
+	Owner = "$13985CF9";
+	BaseType = bool;
 }

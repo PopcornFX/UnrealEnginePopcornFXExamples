@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleRendererMaterial	$6B70D015
 {
 	RendererFeatures = {
@@ -16,6 +16,7 @@ CParticleRendererMaterial	$6B70D015
 		"$D67ADA2A",
 		"$2E0E3AC7",
 		"$5D223009",
+		"$10ED1EFA",
 	};
 }
 CParticleRendererFeatureDesc	$A8FC2215
@@ -95,4 +96,9 @@ CParticleRendererFeatureDesc	$5D223009
 {
 	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
 	RendererFeatureName = "ShaderInput3";
+}
+CParticleRendererFeatureDesc	$10ED1EFA
+{
+	RendererInterfacePath = "Library/UnrealEngine/Materials/UnrealEngine.pkri";
+	RendererFeatureName = "Raytraced";
 }

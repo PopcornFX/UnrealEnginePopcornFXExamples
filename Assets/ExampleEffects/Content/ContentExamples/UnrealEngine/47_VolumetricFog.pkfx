@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -66,6 +66,7 @@ CParticleNodeRendererBillboard	$8F7A985A
 		"$D806D24A",
 		"$14978373",
 		"$A11F5972",
+		"$AC880D9A",
 	};
 	WorkspacePosition = int2(176, -22);
 	Material = "Library/UnrealEngine/Materials/UE_VolumetricFog.pkma";
@@ -81,6 +82,7 @@ CParticleNodeRendererBillboard	$8F7A985A
 		"Emissive",
 		"TransformUVs",
 		"EmissiveRamp",
+		"Raytraced",
 	};
 }
 CParticleNodePinIn	$62BCE275
@@ -1073,11 +1075,11 @@ CParticleNodeTemplate	$7DCF404A
 {
 	InputPins = {
 		"$8E00A72A",
-		"$093AED92",
 		"$7B0F8FB9",
 		"$B1804FA6",
 		"$E66E7A72",
 		"$76BC636D",
+		"$093AED92",
 	};
 	OutputPins = {
 		"$52173149",
@@ -1111,7 +1113,7 @@ CParticleNodeTemplate	$7DCF404A
 	};
 	WorkspacePosition = int2(-1364, -66);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "ShapeSample";
+	SubGraphName = "shape.sample";
 }
 CParticleNodePinIn	$8E00A72A
 {
@@ -1842,11 +1844,11 @@ CParticleNodeTemplate	$2E4E3610
 {
 	InputPins = {
 		"$CAF2DE91",
-		"$E2EDF91E",
 		"$3C004B99",
 		"$03D32771",
 		"$5236A153",
 		"$9362489B",
+		"$E2EDF91E",
 	};
 	OutputPins = {
 		"$31EE30B0",
@@ -1880,7 +1882,7 @@ CParticleNodeTemplate	$2E4E3610
 	};
 	WorkspacePosition = int2(-594, -242);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "ShapeSample";
+	SubGraphName = "shape.sample";
 }
 CParticleNodePinIn	$CAF2DE91
 {
@@ -3662,4 +3664,12 @@ CParticleNodePinOut	$BC0B2937
 	Visible = false;
 	Owner = "$33E4AD49";
 	BaseType = int;
+}
+CParticleNodePinIn	$AC880D9A
+{
+	SelfName = "Raytraced";
+	Type = bool;
+	Visible = false;
+	Owner = "$8F7A985A";
+	BaseType = bool;
 }

@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -452,6 +452,7 @@ CParticleNodeRendererBillboard	$4A81E48E
 	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Transparent",
 		"Diffuse",
 		"EnableRendering",
@@ -1683,7 +1684,7 @@ CParticleNodeTemplate	$4F47D924
 	};
 	WorkspacePosition = int2(-1980, -308);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "TextureSample";
+	SubGraphName = "texture.sample";
 }
 CParticleNodePinOut	$4E4A508E
 {

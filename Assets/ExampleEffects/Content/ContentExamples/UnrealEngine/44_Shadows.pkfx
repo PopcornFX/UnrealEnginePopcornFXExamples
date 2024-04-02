@@ -1,4 +1,4 @@
-Version = 2.18.0.18760;
+Version = 2.19.0.20560;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -466,6 +466,7 @@ CParticleNodeRendererMesh	$9808D8CF
 	Material = "Library/PopcornFXCore/Materials/Default_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
+		"ComputeVelocity",
 		"Opaque",
 		"Diffuse",
 		"DiffuseRamp",
@@ -1341,11 +1342,11 @@ CParticleNodeTemplate	$B5928761
 {
 	InputPins = {
 		"$341A45D1",
-		"$E803F41C",
 		"$56409D9E",
 		"$9FA4EBC8",
 		"$0451AFA5",
 		"$1A365E24",
+		"$E803F41C",
 	};
 	OutputPins = {
 		"$0909924B",
@@ -1379,7 +1380,7 @@ CParticleNodeTemplate	$B5928761
 	};
 	WorkspacePosition = int2(-1650, 242);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
-	SubGraphName = "ShapeSample";
+	SubGraphName = "shape.sample";
 }
 CParticleNodePinIn	$341A45D1
 {
@@ -2177,11 +2178,12 @@ CParticleNodeRendererBillboard	$1F05B329
 	Material = "Library/PopcornFXCore/Materials/Opaque_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
+		"ComputeVelocity",
 		"Diffuse",
 		"Opaque",
 		"EnableRendering",
 		"Lit",
-		"LegacyLit",
+		"LegacyLitOpaque",
 		"FlipUVs",
 		"AlphaRemap",
 		"Atlas",
@@ -2359,7 +2361,7 @@ CParticleNodePinIn	$DA62CECA
 }
 CParticleNodePinIn	$20B9DA4E
 {
-	SelfName = "LegacyLit";
+	SelfName = "LegacyLitOpaque";
 	Type = bool;
 	Visible = false;
 	Owner = "$1F05B329";
@@ -3541,11 +3543,12 @@ CParticleNodeRendererRibbon	$7400F1F2
 	Material = "Library/PopcornFXCore/Materials/Opaque_Ribbon.pkma";
 	RendererFeatures = {
 		"GeometryRibbon",
+		"ComputeVelocity",
 		"Opaque",
 		"Diffuse",
 		"EnableRendering",
 		"Lit",
-		"LegacyLit",
+		"LegacyLitOpaque",
 		"CorrectDeformation",
 		"CustomTextureU",
 		"TextureUVs",
@@ -3630,7 +3633,7 @@ CParticleNodePinIn	$7A003922
 }
 CParticleNodePinIn	$5A2777F5
 {
-	SelfName = "LegacyLit";
+	SelfName = "LegacyLitOpaque";
 	Type = bool;
 	Visible = false;
 	Owner = "$7400F1F2";
