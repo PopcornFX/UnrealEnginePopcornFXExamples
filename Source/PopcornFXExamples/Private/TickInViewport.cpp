@@ -4,7 +4,6 @@
 //----------------------------------------------------------------------------
 
 #include "TickInViewport.h"
-#include "PopcornFXExamples.h"
 
 ATickInViewport::ATickInViewport()
 {

@@ -9,5 +9,6 @@ public class PopcornFXExamplesEditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 		ExtraModuleNames.AddRange( new string[] { "PopcornFXExamples" } );
+		DefaultBuildSettings = BuildSettingsVersion.V5;
 	}
 }

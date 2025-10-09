@@ -4,7 +4,6 @@
 //----------------------------------------------------------------------------
 
 #include "DrawMaterialToRenderTarget.h"
-#include "PopcornFXExamples.h"
 #include "Kismet/KismetRenderingLibrary.h"
 
 UDrawMaterialToRenderTarget::UDrawMaterialToRenderTarget()
