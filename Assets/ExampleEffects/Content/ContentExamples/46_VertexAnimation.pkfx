@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.22.0.23871;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$9154DFA0";
@@ -194,6 +194,7 @@ CParticleNodeTemplate	$591511AD
 	InputPins = {
 		"$6A402A37",
 		"$00791CC6",
+		"$97D45884",
 	};
 	OutputPins = {
 		"$F7B6F8AD",
@@ -285,6 +286,7 @@ CParticleNodeTemplate	$62F4224C
 	InputPins = {
 		"$B2167C92",
 		"$487B49E7",
+		"$43DA7951",
 	};
 	OutputPins = {
 		"$3A7F3823",
@@ -391,6 +393,7 @@ CParticleNodeTemplate	$9B02AAA6
 	InputPins = {
 		"$EC12BCB6",
 		"$BB7CB899",
+		"$613FF148",
 	};
 	OutputPins = {
 		"$3A8C1DDB",
@@ -2128,4 +2131,31 @@ CParticleNodePinIn	$30830759
 	Owner = "$013F7404";
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$97D45884
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$591511AD";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$43DA7951
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$62F4224C";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$613FF148
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$9B02AAA6";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

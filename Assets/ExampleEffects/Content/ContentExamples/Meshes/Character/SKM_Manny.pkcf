@@ -1,0 +1,6 @@
+Version = 2.22.0.23871;
+COvenBakeConfig_Mesh	$14277701
+{
+	ImportLevelOfDetail = HierarchyBasedLODs;
+	ImportSkeleton = true;
+}

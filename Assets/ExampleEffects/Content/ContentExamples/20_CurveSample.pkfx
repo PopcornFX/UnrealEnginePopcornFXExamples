@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.22.0.23871;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -20,7 +20,7 @@ CEditorAssetEffect	$41EED1A4
 }
 CParticleAttributeList	$B660FBF9
 {
-	SamplerList = {
+	AttributeAndSamplerList = {
 		"$5529674E",
 	};
 }
@@ -454,7 +454,7 @@ CParticleNodeRendererBillboard	$4E876109
 		"$C9C6A5CE",
 	};
 	WorkspacePosition = int2(440, -286);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -703,8 +703,8 @@ CParticleNodePinIn	$C9C6A5CE
 CParticleAttributeSamplerDeclaration	$5529674E
 {
 	ExportedName = "Curve";
-	ExportedType = Curve;
 	Pinned = true;
+	ExportedType = Curve;
 	AttribSamplerDefaultValue = "$74ADDEDC";
 	UsageFlags = 1;
 }
@@ -847,6 +847,7 @@ CParticleNodeTemplate	$9E40E306
 	InputPins = {
 		"$AF5ADB5B",
 		"$E1241163",
+		"$7D63B602",
 	};
 	OutputPins = {
 		"$C51EFF20",
@@ -1024,7 +1025,7 @@ CParticleNodeRendererBillboard	$6B62641B
 		"$6D8EBDD4",
 	};
 	WorkspacePosition = int2(440, -66);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -1303,7 +1304,7 @@ CParticleNodeRendererBillboard	$F3802C6D
 		"$B609C88C",
 	};
 	WorkspacePosition = int2(440, 154);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -1582,7 +1583,7 @@ CParticleNodeRendererBillboard	$D023C399
 		"$C93D011A",
 	};
 	WorkspacePosition = int2(440, 374);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -2381,4 +2382,13 @@ CParticleNodePinOut	$B425BE6A
 	ConnectedPins = {
 		"$5AA1D217",
 	};
+}
+CParticleNodePinIn	$7D63B602
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$9E40E306";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

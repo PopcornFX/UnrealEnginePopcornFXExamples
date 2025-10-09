@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.22.0.23871;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -976,6 +976,7 @@ CParticleNodeTemplate	$AB80F2C9
 		"$244D2CD2",
 		"$A55AF4E3",
 		"$0AA46ACA",
+		"$1B50B902",
 	};
 	OutputPins = {
 		"$2193346E",
@@ -1102,6 +1103,7 @@ CParticleNodeTemplate	$6D150FBB
 	InputPins = {
 		"$421418F3",
 		"$9B38C736",
+		"$14E9AD22",
 	};
 	OutputPins = {
 		"$6EB67758",
@@ -1413,7 +1415,9 @@ CParticleNodePinIn	$09894946
 CParticleNodePinOut	$FAD62DB7
 {
 	SelfName = "RGB";
+	Type = float3;
 	Owner = "$8BE8B479";
+	BaseType = float3;
 	ConnectedPins = {
 		"$601E570A",
 	};
@@ -1421,13 +1425,17 @@ CParticleNodePinOut	$FAD62DB7
 CParticleNodePinOut	$AD65D8BE
 {
 	SelfName = "A";
+	Type = float;
 	Owner = "$8BE8B479";
+	BaseType = float;
 }
 CParticleNodePinOut	$B6D11915
 {
 	SelfName = "Cursor";
+	Type = float;
 	Visible = false;
 	Owner = "$AB80F2C9";
+	BaseType = float;
 }
 CParticleNodeAnnotation	$34DBAEF9
 {
@@ -1498,4 +1506,21 @@ CParticleNodePinIn	$1D073C69
 	Visible = false;
 	Owner = "$5B7F5F36";
 	BaseType = bool;
+}
+CParticleNodePinIn	$1B50B902
+{
+	SelfName = "ConstantSpeed";
+	Type = bool;
+	Visible = false;
+	Owner = "$AB80F2C9";
+	BaseType = bool;
+}
+CParticleNodePinIn	$14E9AD22
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$6D150FBB";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.22.0.23871;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -17,7 +17,7 @@ CEditorAssetEffect	$41EED1A4
 }
 CParticleAttributeList	$B660FBF9
 {
-	SamplerList = {
+	AttributeAndSamplerList = {
 		"$63B6C2B6",
 	};
 }
@@ -227,7 +227,7 @@ CParticleNodeRendererBillboard	$4E876109
 		"$C9C6A5CE",
 	};
 	WorkspacePosition = int2(-220, 484);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -564,8 +564,8 @@ CResourceDescriptor_AnimTrack	$59DC3B5A
 CParticleAttributeSamplerDeclaration	$63B6C2B6
 {
 	ExportedName = "AnimTrack";
-	ExportedType = Animtrack;
 	Pinned = true;
+	ExportedType = Animtrack;
 	AttribSamplerDefaultValue = "$59DC3B5A";
 }
 CParticleNodeTemplateExport	$4C41C522
@@ -965,6 +965,7 @@ CParticleNodeTemplate	$E478842B
 	InputPins = {
 		"$3340D1A4",
 		"$7A9E9C7C",
+		"$C6D11D53",
 	};
 	OutputPins = {
 		"$DFECEEAC",
@@ -1031,7 +1032,7 @@ CParticleNodeRendererBillboard	$4C1D9C2C
 		"$5B309B11",
 	};
 	WorkspacePosition = int2(484, 176);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -1413,6 +1414,11 @@ CParticleNodeTemplate	$F92FD102
 {
 	InputPins = {
 		"$862D25C4",
+		"$4C2D2C50",
+		"$4A8A63CC",
+		"$28953196",
+		"$44403FBE",
+		"$F3F3E664",
 		"$8A575481",
 		"$FFF506B1",
 		"$639C5FA1",
@@ -1547,6 +1553,11 @@ CParticleNodeTemplate	$6375C327
 {
 	InputPins = {
 		"$53BC5002",
+		"$D4C9877E",
+		"$9EAE2E78",
+		"$E63CD32C",
+		"$2CB2E7FB",
+		"$54BE8BAC",
 		"$DC65F5FE",
 		"$641831D2",
 		"$117C4BD1",
@@ -1627,6 +1638,11 @@ CParticleNodeTemplate	$B9543825
 {
 	InputPins = {
 		"$3D190A67",
+		"$C256D18D",
+		"$1A5EB4B0",
+		"$9407D5C7",
+		"$70061A8C",
+		"$1978B1E6",
 		"$AD774684",
 		"$C49C418D",
 		"$43B1E127",
@@ -2088,4 +2104,133 @@ CParticleNodePinIn	$1E3BB32C
 	Owner = "$475E311F";
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$4C2D2C50
+{
+	SelfName = "Transparent.Type";
+	Type = int;
+	Visible = false;
+	Owner = "$F92FD102";
+	BaseType = int;
+}
+CParticleNodePinIn	$4A8A63CC
+{
+	SelfName = "Transparent.SortMode";
+	Type = int;
+	Visible = false;
+	Owner = "$F92FD102";
+	BaseType = int;
+}
+CParticleNodePinIn	$28953196
+{
+	SelfName = "Transparent.GlobalSortOverride";
+	Type = int;
+	Visible = false;
+	Owner = "$F92FD102";
+	BaseType = int;
+}
+CParticleNodePinIn	$44403FBE
+{
+	SelfName = "Transparent.CameraSortOffset";
+	Type = float;
+	Visible = false;
+	Owner = "$F92FD102";
+	BaseType = float;
+}
+CParticleNodePinIn	$F3F3E664
+{
+	SelfName = "SortKey";
+	Type = float;
+	Visible = false;
+	Owner = "$F92FD102";
+	BaseType = float;
+}
+CParticleNodePinIn	$D4C9877E
+{
+	SelfName = "Transparent.Type";
+	Type = int;
+	Visible = false;
+	Owner = "$6375C327";
+	BaseType = int;
+}
+CParticleNodePinIn	$9EAE2E78
+{
+	SelfName = "Transparent.SortMode";
+	Type = int;
+	Visible = false;
+	Owner = "$6375C327";
+	BaseType = int;
+}
+CParticleNodePinIn	$E63CD32C
+{
+	SelfName = "Transparent.GlobalSortOverride";
+	Type = int;
+	Visible = false;
+	Owner = "$6375C327";
+	BaseType = int;
+}
+CParticleNodePinIn	$2CB2E7FB
+{
+	SelfName = "Transparent.CameraSortOffset";
+	Type = float;
+	Visible = false;
+	Owner = "$6375C327";
+	BaseType = float;
+}
+CParticleNodePinIn	$54BE8BAC
+{
+	SelfName = "SortKey";
+	Type = float;
+	Visible = false;
+	Owner = "$6375C327";
+	BaseType = float;
+}
+CParticleNodePinIn	$C256D18D
+{
+	SelfName = "Transparent.Type";
+	Type = int;
+	Visible = false;
+	Owner = "$B9543825";
+	BaseType = int;
+}
+CParticleNodePinIn	$1A5EB4B0
+{
+	SelfName = "Transparent.SortMode";
+	Type = int;
+	Visible = false;
+	Owner = "$B9543825";
+	BaseType = int;
+}
+CParticleNodePinIn	$9407D5C7
+{
+	SelfName = "Transparent.GlobalSortOverride";
+	Type = int;
+	Visible = false;
+	Owner = "$B9543825";
+	BaseType = int;
+}
+CParticleNodePinIn	$70061A8C
+{
+	SelfName = "Transparent.CameraSortOffset";
+	Type = float;
+	Visible = false;
+	Owner = "$B9543825";
+	BaseType = float;
+}
+CParticleNodePinIn	$1978B1E6
+{
+	SelfName = "SortKey";
+	Type = float;
+	Visible = false;
+	Owner = "$B9543825";
+	BaseType = float;
+}
+CParticleNodePinIn	$C6D11D53
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$E478842B";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

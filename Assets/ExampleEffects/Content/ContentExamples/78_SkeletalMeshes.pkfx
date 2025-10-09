@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.22.0.23871;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -597,6 +597,7 @@ CParticleNodeTemplate	$D0A3DA98
 		"$043E2669",
 		"$42B57801",
 		"$6A4A764F",
+		"$6F6B8F4D",
 	};
 	OutputPins = {
 		"$70BFF5A7",
@@ -678,13 +679,16 @@ CParticleNodePinOut	$70BFF5A7
 CParticleNodePinOut	$01BF2649
 {
 	SelfName = "Cursor";
+	Type = float;
 	Owner = "$D0A3DA98";
+	BaseType = float;
 }
 CParticleNodeTemplate	$CDB70712
 {
 	InputPins = {
 		"$3DCA8DCA",
 		"$4E80C57B",
+		"$34064218",
 	};
 	OutputPins = {
 		"$6AB13D37",
@@ -724,6 +728,7 @@ CParticleNodeTemplate	$A1F7C813
 	InputPins = {
 		"$5F7278A7",
 		"$7CB0FB63",
+		"$9F564ED0",
 	};
 	OutputPins = {
 		"$03C266E2",
@@ -763,6 +768,7 @@ CParticleNodeTemplate	$FFDBF993
 	InputPins = {
 		"$F8AF5C0E",
 		"$3F52B7F3",
+		"$7D984A17",
 	};
 	OutputPins = {
 		"$056447C9",
@@ -897,7 +903,7 @@ CParticleNodeRendererMesh	$63708AE0
 		"$FEF953AE",
 	};
 	WorkspacePosition = int2(220, 440);
-	Material = "Library/PopcornFXCore/Materials/Animated_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Animated_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"ComputeVelocity",
@@ -1226,7 +1232,7 @@ CParticleNodeRendererMesh	$45BEAE72
 		"$14249D1D",
 	};
 	WorkspacePosition = int2(220, 44);
-	Material = "Library/PopcornFXCore/Materials/Animated_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Animated_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"ComputeVelocity",
@@ -1559,7 +1565,7 @@ CParticleNodeRendererMesh	$57333F65
 		"$AD2CC800",
 	};
 	WorkspacePosition = int2(220, -484);
-	Material = "Library/PopcornFXCore/Materials/Animated_Mesh.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Animated_Mesh.pkma";
 	RendererFeatures = {
 		"GeometryMesh",
 		"ComputeVelocity",
@@ -2134,6 +2140,7 @@ CParticleNodeTemplate	$CA31AFDE
 		"$03795BE7",
 		"$C9EC57D1",
 		"$F9B2DA10",
+		"$349034F9",
 	};
 	OutputPins = {
 		"$FA60BB45",
@@ -2215,7 +2222,9 @@ CParticleNodePinOut	$FA60BB45
 CParticleNodePinOut	$8C89E395
 {
 	SelfName = "Cursor";
+	Type = float;
 	Owner = "$CA31AFDE";
+	BaseType = float;
 }
 CParticleNodePassThrough	$6CE35E78
 {
@@ -2277,6 +2286,49 @@ CParticleNodePinIn	$456D4C91
 	Type = bool;
 	Visible = false;
 	Owner = "$57333F65";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$6F6B8F4D
+{
+	SelfName = "ConstantSpeed";
+	Type = bool;
+	Visible = false;
+	Owner = "$D0A3DA98";
+	BaseType = bool;
+}
+CParticleNodePinIn	$349034F9
+{
+	SelfName = "ConstantSpeed";
+	Type = bool;
+	Visible = false;
+	Owner = "$CA31AFDE";
+	BaseType = bool;
+}
+CParticleNodePinIn	$34064218
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$CDB70712";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$9F564ED0
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$A1F7C813";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$7D984A17
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$FFDBF993";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
 }

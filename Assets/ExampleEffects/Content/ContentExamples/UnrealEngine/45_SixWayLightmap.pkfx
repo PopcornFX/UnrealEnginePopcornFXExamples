@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.22.0.23871;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -542,6 +542,7 @@ CParticleNodeTemplate	$470DC1E5
 	InputPins = {
 		"$6A655612",
 		"$A864C31C",
+		"$4988D0FC",
 	};
 	OutputPins = {
 		"$CF48FCDD",
@@ -733,4 +734,13 @@ CParticleNodePinOut	$64C5FDBB
 	Visible = false;
 	Owner = "$AC66E553";
 	BaseType = float;
+}
+CParticleNodePinIn	$4988D0FC
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$470DC1E5";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

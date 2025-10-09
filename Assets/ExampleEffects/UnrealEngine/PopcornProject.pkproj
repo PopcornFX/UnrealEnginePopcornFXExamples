@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.22.0.23870;
 CProjectSettings	$D857A09F
 {
 	General = "$35A36C4E";
@@ -68,6 +68,7 @@ CProjectSettingsAssets	$4ADE8DE2
 	MeshExtensions = {
 		"fbx",
 		"gr2",
+		"pkgo",
 	};
 	ImageExtensions = {
 		"dds",
@@ -81,6 +82,7 @@ CProjectSettingsAssets	$4ADE8DE2
 		"pvr",
 		"exr",
 		"hdr",
+		"pktx",
 	};
 	ImageAtlasExtensions = {
 		"pkat",
@@ -88,6 +90,7 @@ CProjectSettingsAssets	$4ADE8DE2
 	VectorFieldExtensions = {
 		"fga",
 		"pkvf",
+		"pkvx",
 	};
 	SoundExtensions = {
 		"wav",
@@ -148,6 +151,13 @@ CProjectSettingsEditor	$41E5AFE7
 }
 CProjectSettingsFeatures	$BEDF8936
 {
+	DefaultMaterialBillboard = "Library/PopcornFXCore/Materials/Billboard_Transparent.pkma";
+	DefaultMaterialRibbon = "Library/PopcornFXCore/Materials/Ribbon_Transparent.pkma";
+	DefaultMaterialMesh = "Library/PopcornFXCore/Materials/Mesh_Opaque.pkma";
+	DefaultMaterialTriangle = "Library/PopcornFXCore/Materials/Triangle_Transparent.pkma";
+	DefaultMaterialDecal = "Library/PopcornFXCore/Materials/Decal_Default.pkma";
+	DefaultMaterialLight = "Library/PopcornFXCore/Materials/Light_Default.pkma";
+	DefaultMaterialSound = "Library/PopcornFXCore/Materials/Sound_Default.pkma";
 }
 CProjectSettingsDocumentation	$2909A531
 {

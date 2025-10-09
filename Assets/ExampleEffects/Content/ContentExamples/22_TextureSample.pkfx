@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.22.0.23871;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -6,7 +6,7 @@ CParticleEffect	$D857A09F
 }
 CParticleAttributeList	$35A36C4E
 {
-	SamplerList = {
+	AttributeAndSamplerList = {
 		"$BA7438B4",
 	};
 }
@@ -419,7 +419,7 @@ CParticleNodeRendererBillboard	$9629BEA2
 		"$558DB436",
 	};
 	WorkspacePosition = int2(2816, -572);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -679,8 +679,8 @@ CEditorBackdropSpotLight	$F57D922D
 CParticleAttributeSamplerDeclaration	$BA7438B4
 {
 	ExportedName = "DiffuseTexture";
-	ExportedType = Image;
 	Pinned = true;
+	ExportedType = Image;
 	AttribSamplerDefaultValue = "$50E5DBAC";
 	UsageFlags = 4;
 }
@@ -722,6 +722,7 @@ CParticleNodeTemplate	$C2ECBFFF
 	InputPins = {
 		"$6F779DF4",
 		"$ACEC8E75",
+		"$80D74D14",
 	};
 	OutputPins = {
 		"$E8553318",
@@ -764,14 +765,18 @@ CParticleNodeTemplate	$E621F2C1
 	ExecStage = Evolve;
 	InputPins = {
 		"$A40C42FF",
-		"$4B8ECBD0",
-		"$0A36A62E",
 		"$DD322448",
-		"$5557AC7B",
+		"$4B8ECBD0",
 		"$1ABBB3FB",
-		"$4B33B7D5",
+		"$5557AC7B",
 		"$46A92782",
+		"$DE18E38B",
+		"$740A771F",
+		"$471DC7FD",
+		"$2A02C8C1",
 		"$EB2C59B9",
+		"$0A36A62E",
+		"$4B33B7D5",
 	};
 	OutputPins = {
 		"$82895C51",
@@ -1538,4 +1543,47 @@ CParticleNodePinIn	$A201E8AB
 	Owner = "$EED03F84";
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$80D74D14
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$C2ECBFFF";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$DE18E38B
+{
+	SelfName = "Translate";
+	Type = float2;
+	Visible = false;
+	Owner = "$E621F2C1";
+	BaseType = float2;
+}
+CParticleNodePinIn	$740A771F
+{
+	SelfName = "Rotate";
+	Type = float;
+	Visible = false;
+	Owner = "$E621F2C1";
+	BaseType = float;
+}
+CParticleNodePinIn	$471DC7FD
+{
+	SelfName = "Scale";
+	Type = float2;
+	Visible = false;
+	Owner = "$E621F2C1";
+	BaseType = float2;
+	ValueF = float4(1.0000000e+00, 1.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$2A02C8C1
+{
+	SelfName = "Pivot";
+	Type = float2;
+	Visible = false;
+	Owner = "$E621F2C1";
+	BaseType = float2;
+	ValueF = float4(5.0000000e-01, 5.0000000e-01, 0.0000000e+00, 0.0000000e+00);
 }

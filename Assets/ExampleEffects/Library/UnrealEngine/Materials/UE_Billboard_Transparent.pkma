@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.22.0.23871;
 CParticleRendererMaterial	$6B70D015
 {
 	RendererFeatures = {
@@ -23,71 +23,71 @@ CParticleRendererMaterial	$6B70D015
 }
 CParticleRendererFeatureDesc	$191F1761
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "GeometryBillboard";
 	Mandatory = true;
 }
 CParticleRendererFeatureDesc	$5F3F8D5F
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "Transparent";
 	Mandatory = true;
 }
 CParticleRendererFeatureDesc	$3D324B43
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "Diffuse";
 	Mandatory = true;
 }
 CParticleRendererFeatureDesc	$D857A09F
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "EnableRendering";
 	Mandatory = true;
 }
 CParticleRendererFeatureDesc	$EA3837ED
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "Lit";
 }
 CParticleRendererFeatureDesc	$EA331F29
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "SoftParticles";
 }
 CParticleRendererFeatureDesc	$1DB717AE
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "FlipUVs";
 }
 CParticleRendererFeatureDesc	$1098ED35
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "AlphaRemap";
 }
 CParticleRendererFeatureDesc	$CAD62F46
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "Atlas";
 }
 CParticleRendererFeatureDesc	$D851A09F
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "DiffuseRamp";
 }
 CParticleRendererFeatureDesc	$35A36C4E
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "Emissive";
 }
 CParticleRendererFeatureDesc	$4B933A29
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "NormalBend";
 }
 CParticleRendererFeatureDesc	$EAC726E3
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "TransformUVs";
 }
 CRHIMaterialShaders	$00269EC3
@@ -96,17 +96,17 @@ CRHIMaterialShaders	$00269EC3
 }
 CParticleRendererFeatureDesc	$2A32C149
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "ShaderInput1";
 }
 CParticleRendererFeatureDesc	$F75A9B91
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "ShaderInput2";
 }
 CParticleRendererFeatureDesc	$8B8F5134
 {
-	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Editor.pkri";
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Legacy.pkri";
 	RendererFeatureName = "ShaderInput3";
 }
 CParticleRendererFeatureDesc	$321AE511

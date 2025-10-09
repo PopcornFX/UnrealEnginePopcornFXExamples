@@ -1,0 +1,353 @@
+Version = 2.22.0.23871;
+CParticleRendererMaterial	$6B70D015
+{
+	RendererFeatures = {
+		"$191F1761",
+		"$D857A09F",
+		"$5F3F8D5F",
+		"$3D324B43",
+		"$D851A09F",
+		"$EA3837ED",
+		"$C5F9C9BF",
+		"$4B933A29",
+		"$35A36C4E",
+		"$7FB4AB5F",
+		"$1098ED35",
+		"$EA331F29",
+		"$1DB717AE",
+		"$EAC726E3",
+		"$FD189ED3",
+		"$DA06D7A4",
+		"$860D8229",
+		"$7C172983",
+		"$84A90A2B",
+	};
+	NodeGraph = "$A0057BBD";
+}
+CParticleRendererFeatureDesc	$191F1761
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "GeometryTriangle";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$D857A09F
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "EnableRendering";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$5F3F8D5F
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "Transparent";
+	Mandatory = true;
+}
+CParticleRendererFeatureDesc	$3D324B43
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "Diffuse";
+}
+CParticleRendererFeatureDesc	$D851A09F
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "DiffuseRamp";
+}
+CParticleRendererFeatureDesc	$EA3837ED
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "Lit";
+}
+CParticleRendererFeatureDesc	$C5F9C9BF
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "NormalWrap";
+}
+CParticleRendererFeatureDesc	$4B933A29
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "NormalBend";
+}
+CParticleRendererFeatureDesc	$35A36C4E
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "Emissive";
+	EnabledByDefault = true;
+}
+CParticleRendererFeatureDesc	$7FB4AB5F
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "EmissiveRamp";
+}
+CParticleRendererFeatureDesc	$1098ED35
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "AlphaRemap";
+}
+CParticleRendererFeatureDesc	$EA331F29
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "SoftParticles";
+}
+CParticleRendererFeatureDesc	$1DB717AE
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "BasicTransformUVs";
+}
+CParticleRendererFeatureDesc	$EAC726E3
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "TransformUVs";
+}
+CRHIMaterialShaders	$00269EC3
+{
+	FragmentShader = "Library/PopcornFXCore/Shaders/Particle_Master.frag";
+}
+CParticleRendererFeatureDesc	$FD189ED3
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "TriangleCustomNormals";
+}
+CParticleRendererFeatureDesc	$DA06D7A4
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "TriangleCustomUVs";
+}
+CParticleRendererFeatureDesc	$860D8229
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "TextureClamp";
+}
+CParticleRendererFeatureDesc	$7C172983
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "FastLit";
+}
+CParticleRendererFeatureDesc	$84A90A2B
+{
+	RendererInterfacePath = "Library/PopcornFXCore/Materials/Interface/Default.pkri";
+	RendererFeatureName = "ComputeVelocity";
+	Mandatory = true;
+}
+CParticleNodeGraph	$A0057BBD
+{
+	CustomName = "Adapter";
+	Nodes = {
+		"$F23F9670",
+		"$385F4117",
+		"$20F9420E",
+		"$7C2B26A3",
+		"$314A92FC",
+		"$BCA430BC",
+		"$C1097AD9",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeArithmetic	$F23F9670
+{
+	InputPins = {
+		"$97914FE7",
+		"$0B443368",
+	};
+	OutputPins = {
+		"$4896098B",
+	};
+	WorkspacePosition = int2(-66, -198);
+	Operation = Div;
+}
+CParticleNodePinIn	$97914FE7
+{
+	SelfName = "Value";
+	Owner = "$F23F9670";
+	ConnectedPins = {
+		"$9E4553E8",
+	};
+}
+CParticleNodePinIn	$0B443368
+{
+	SelfName = "ValueB";
+	Type = float;
+	Owner = "$F23F9670";
+	ValueF = float4(3.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinOut	$4896098B
+{
+	SelfName = "Value";
+	Owner = "$F23F9670";
+	ConnectedPins = {
+		"$66615219",
+	};
+}
+CParticleNodePartialDerivative	$385F4117
+{
+	InputPins = {
+		"$66615219",
+	};
+	OutputPins = {
+		"$39DD11E4",
+	};
+	WorkspacePosition = int2(176, -198);
+}
+CParticleNodePinIn	$66615219
+{
+	SelfName = "Function";
+	Owner = "$385F4117";
+	ConnectedPins = {
+		"$4896098B",
+	};
+}
+CParticleNodePinOut	$39DD11E4
+{
+	SelfName = "Derivative";
+	Owner = "$385F4117";
+	ConnectedPins = {
+		"$15612ED9",
+	};
+}
+CParticleNodeArithmetic	$20F9420E
+{
+	InputPins = {
+		"$661694B2",
+		"$AA65624C",
+		"$62B074C6",
+	};
+	OutputPins = {
+		"$9E4553E8",
+	};
+	WorkspacePosition = int2(-308, -198);
+	InputCount = 3;
+}
+CParticleNodePinIn	$661694B2
+{
+	SelfName = "Value";
+	Owner = "$20F9420E";
+	ConnectedPins = {
+		"$0BD737E0",
+	};
+}
+CParticleNodePinIn	$AA65624C
+{
+	SelfName = "ValueB";
+	Owner = "$20F9420E";
+	ConnectedPins = {
+		"$D602C295",
+	};
+}
+CParticleNodePinIn	$62B074C6
+{
+	SelfName = "Value3";
+	Owner = "$20F9420E";
+	ConnectedPins = {
+		"$D75F4DA3",
+	};
+}
+CParticleNodePinOut	$9E4553E8
+{
+	SelfName = "Value";
+	Owner = "$20F9420E";
+	ConnectedPins = {
+		"$97914FE7",
+	};
+}
+CParticleNodeTemplateExport	$7C2B26A3
+{
+	InputPins = {
+		"$15612ED9",
+	};
+	WorkspacePosition = int2(572, -198);
+	ExportedName = "ComputeVelocity.MoveVector";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Output;
+}
+CParticleNodePinIn	$15612ED9
+{
+	SelfName = "Value";
+	Owner = "$7C2B26A3";
+	ConnectedPins = {
+		"$39DD11E4",
+	};
+}
+CParticleNodeTemplateExport	$314A92FC
+{
+	InputPins = {
+		"$113AE70F",
+	};
+	OutputPins = {
+		"$0BD737E0",
+	};
+	WorkspacePosition = int2(-638, -330);
+	ExportedName = "General.Position1";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Input;
+}
+CParticleNodePinIn	$113AE70F
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$314A92FC";
+}
+CParticleNodePinOut	$0BD737E0
+{
+	SelfName = "Value";
+	Owner = "$314A92FC";
+	ConnectedPins = {
+		"$661694B2",
+	};
+}
+CParticleNodeTemplateExport	$BCA430BC
+{
+	InputPins = {
+		"$F34F9063",
+	};
+	OutputPins = {
+		"$D602C295",
+	};
+	WorkspacePosition = int2(-638, -154);
+	ExportedName = "General.Position2";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Input;
+}
+CParticleNodePinIn	$F34F9063
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$BCA430BC";
+}
+CParticleNodePinOut	$D602C295
+{
+	SelfName = "Value";
+	Owner = "$BCA430BC";
+	ConnectedPins = {
+		"$AA65624C",
+	};
+}
+CParticleNodeTemplateExport	$C1097AD9
+{
+	InputPins = {
+		"$B6A425F5",
+	};
+	OutputPins = {
+		"$D75F4DA3",
+	};
+	WorkspacePosition = int2(-638, 22);
+	ExportedName = "General.Position3";
+	ExportedType = float3;
+	Semantic = 3D_Coordinate;
+	Type = Input;
+}
+CParticleNodePinIn	$B6A425F5
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$C1097AD9";
+}
+CParticleNodePinOut	$D75F4DA3
+{
+	SelfName = "Value";
+	Owner = "$C1097AD9";
+	ConnectedPins = {
+		"$62B074C6",
+	};
+}

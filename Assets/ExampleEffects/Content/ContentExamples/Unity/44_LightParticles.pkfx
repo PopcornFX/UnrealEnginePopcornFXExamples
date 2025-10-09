@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.22.0.23871;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -23,6 +23,8 @@ CParticleNodeGraph	$42E16C02
 		"$B0D057B7",
 		"$50CC6422",
 		"$165E1278",
+		"$9C3048BA",
+		"$33EA9FFD",
 	};
 	WorkspacePosition = int2(229, -90);
 	WorkspaceZoom = -5;
@@ -78,8 +80,8 @@ CParticleNodeRendererBillboard	$8F7A985A
 		"$14978373",
 		"$A11F5972",
 	};
-	WorkspacePosition = int2(132, -22);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	WorkspacePosition = int2(198, -22);
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -132,6 +134,9 @@ CParticleNodePinIn	$61D82A82
 }
 CParticleAttributeList	$B660FBF9
 {
+	AttributeAndSamplerList = {
+		"$092D5273",
+	};
 }
 CParticleNodeGraph	$81861AB7
 {
@@ -565,7 +570,7 @@ CParticleNodeTemplate	$EB079F9D
 	OutputPins = {
 		"$F7C0B36E",
 	};
-	WorkspacePosition = int2(-1408, 330);
+	WorkspacePosition = int2(-1430, 286);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "effect.age";
 }
@@ -576,7 +581,7 @@ CParticleNodePinOut	$F7C0B36E
 	Owner = "$EB079F9D";
 	BaseType = float;
 	ConnectedPins = {
-		"$CD0573CC",
+		"$68805AE0",
 	};
 }
 CParticleNodeArithmetic	$C7B840FA
@@ -588,7 +593,7 @@ CParticleNodeArithmetic	$C7B840FA
 	OutputPins = {
 		"$00E3C2D9",
 	};
-	WorkspacePosition = int2(-1034, 330);
+	WorkspacePosition = int2(-924, 286);
 	Operation = Mul;
 }
 CParticleNodePinIn	$CD0573CC
@@ -597,7 +602,7 @@ CParticleNodePinIn	$CD0573CC
 	Type = float;
 	Owner = "$C7B840FA";
 	ConnectedPins = {
-		"$F7C0B36E",
+		"$6E5A215B",
 	};
 }
 CParticleNodePinIn	$EF46B33E
@@ -626,8 +631,8 @@ CParticleNodeRendererLight	$54B1DA29
 		"$C159D00F",
 		"$918F162F",
 	};
-	WorkspacePosition = int2(132, 132);
-	Material = "Library/PopcornFXCore/Materials/Default_Light.pkma";
+	WorkspacePosition = int2(198, 132);
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Light.pkma";
 	RendererFeatures = {
 		"GeometryLight",
 		"Light",
@@ -763,7 +768,7 @@ CParticleNodePinIn	$A30629C2
 	Visible = false;
 	Owner = "$27CE78FC";
 	BaseType = float;
-	ValueF = float4(8.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	ValueF = float4(6.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinIn	$A7CDB5C0
 {
@@ -772,7 +777,7 @@ CParticleNodePinIn	$A7CDB5C0
 	Visible = false;
 	Owner = "$27CE78FC";
 	BaseType = float;
-	ValueF = float4(8.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	ValueF = float4(6.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinIn	$32A40B48
 {
@@ -889,7 +894,7 @@ CParticleNodeTemplate	$2A6DF271
 		"$7E8D236F",
 		"$2CC60857",
 	};
-	WorkspacePosition = int2(-1188, -132);
+	WorkspacePosition = int2(-1232, -22);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Placement.pkfx";
 	SubGraphName = "CirclePlacement";
 }
@@ -1040,7 +1045,7 @@ CParticleNodeEventPayloadExtract	$6CC3E4CD
 		"$B62E572B",
 		"$547CE897",
 	};
-	WorkspacePosition = int2(-1606, -22);
+	WorkspacePosition = int2(-1650, 88);
 	PayloadName = "SpawnCount";
 	IgnoreWarningsMissing = true;
 }
@@ -1088,7 +1093,7 @@ CParticleNodeEventPayloadExtract	$D436B39B
 		"$710FF056",
 		"$481D9CB9",
 	};
-	WorkspacePosition = int2(-1606, -176);
+	WorkspacePosition = int2(-1650, -66);
 	PayloadName = "EmittedCount";
 	PayloadType = int;
 	PayloadKind = EmittedCount;
@@ -1138,13 +1143,15 @@ CParticleNodeMathFunction2	$7D8C87E9
 	OutputPins = {
 		"$C1FD8D97",
 	};
-	WorkspacePosition = int2(-902, 528);
+	WorkspacePosition = int2(-550, 264);
 	Function = Rand;
 }
 CParticleNodePinIn	$8C3F677D
 {
 	SelfName = "Value";
+	Type = float;
 	Owner = "$7D8C87E9";
+	ValueF = float4(-1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinIn	$BB3AFA03
 {
@@ -1190,7 +1197,7 @@ CParticleNodeTemplate	$71C30017
 		"$14F39E83",
 		"$C245951D",
 	};
-	WorkspacePosition = int2(-572, 484);
+	WorkspacePosition = int2(-220, 220);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Color.pkfx";
 	SubGraphName = "Color";
 }
@@ -1455,20 +1462,22 @@ CParticleNodeMathFunction2	$B0D057B7
 	OutputPins = {
 		"$DC172137",
 	};
-	WorkspacePosition = int2(-220, 594);
+	WorkspacePosition = int2(-220, 396);
 	Function = Rand;
 }
 CParticleNodePinIn	$23601E40
 {
 	SelfName = "Value";
+	Type = float;
 	Owner = "$B0D057B7";
+	ValueF = float4(2.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinIn	$0092FF06
 {
 	SelfName = "ValueB";
 	Type = float;
 	Owner = "$B0D057B7";
-	ValueF = float4(1.0000000e+01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	ValueF = float4(5.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
 CParticleNodePinOut	$DC172137
 {
@@ -1483,6 +1492,7 @@ CParticleNodeTemplate	$50CC6422
 	InputPins = {
 		"$ED5AF1AF",
 		"$1CC94679",
+		"$AAC3A862",
 	};
 	OutputPins = {
 		"$20E0E5A7",
@@ -1529,7 +1539,7 @@ CParticleNodeArithmetic	$165E1278
 	OutputPins = {
 		"$925F577B",
 	};
-	WorkspacePosition = int2(-880, -132);
+	WorkspacePosition = int2(-924, -22);
 	Operation = Mul;
 }
 CParticleNodePinIn	$95B83079
@@ -1564,4 +1574,86 @@ CParticleNodePinIn	$0EF16E0D
 	Owner = "$EB079F9D";
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodeArithmetic	$9C3048BA
+{
+	InputPins = {
+		"$68805AE0",
+		"$0046C664",
+	};
+	OutputPins = {
+		"$6E5A215B",
+	};
+	WorkspacePosition = int2(-1166, 286);
+	Operation = Mul;
+}
+CParticleNodePinIn	$68805AE0
+{
+	SelfName = "Value";
+	Owner = "$9C3048BA";
+	ConnectedPins = {
+		"$F7C0B36E",
+	};
+}
+CParticleNodePinIn	$0046C664
+{
+	SelfName = "ValueB";
+	Type = float;
+	Owner = "$9C3048BA";
+	ConnectedPins = {
+		"$98C4F7E8",
+	};
+	ValueF = float4(5.0000000e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinOut	$6E5A215B
+{
+	SelfName = "Value";
+	Owner = "$9C3048BA";
+	ConnectedPins = {
+		"$CD0573CC",
+	};
+}
+CParticleAttributeDeclaration	$092D5273
+{
+	ExportedName = "RotationSpeed";
+	Pinned = true;
+	DefaultValueF4 = float4(2.5000000e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodeTemplateExport	$33EA9FFD
+{
+	InputPins = {
+		"$B17BB069",
+	};
+	OutputPins = {
+		"$98C4F7E8",
+	};
+	WorkspacePosition = int2(-1430, 418);
+	ExportedName = "RotationSpeed";
+	ExportedType = float;
+	Type = Input;
+	InputType = Attribute;
+	DefaultValueF4 = float4(2.5000000e-01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$B17BB069
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$33EA9FFD";
+}
+CParticleNodePinOut	$98C4F7E8
+{
+	SelfName = "Value";
+	Owner = "$33EA9FFD";
+	ConnectedPins = {
+		"$0046C664",
+	};
+}
+CParticleNodePinIn	$AAC3A862
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$50CC6422";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }

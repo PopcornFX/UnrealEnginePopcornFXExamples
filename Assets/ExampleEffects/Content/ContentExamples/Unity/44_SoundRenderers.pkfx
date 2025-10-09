@@ -1,4 +1,4 @@
-Version = 2.19.0.20560;
+Version = 2.22.0.23871;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -65,7 +65,7 @@ CParticleNodeRendererBillboard	$8F7A985A
 		"$A11F5972",
 	};
 	WorkspacePosition = int2(132, -22);
-	Material = "Library/PopcornFXCore/Materials/Default_Billboard.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Billboard.pkma";
 	RendererFeatures = {
 		"GeometryBillboard",
 		"ComputeVelocity",
@@ -294,6 +294,7 @@ CParticleNodeTemplate	$4ADE8DE2
 	InputPins = {
 		"$D279714D",
 		"$D03359D5",
+		"$DE1286D2",
 	};
 	OutputPins = {
 		"$5F621394",
@@ -647,7 +648,7 @@ CParticleNodeRendererSound	$1695567E
 		"$424E298A",
 	};
 	WorkspacePosition = int2(132, 132);
-	Material = "Library/PopcornFXCore/Materials/Default_Sound.pkma";
+	Material = "Library/PopcornFXCore/Materials/Legacy/Legacy_Default_Sound.pkma";
 	RendererFeatures = {
 		"GeometrySound",
 		"Sound",
@@ -716,4 +717,13 @@ CParticleNodePinIn	$A38E54B9
 	Owner = "$EB079F9D";
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$DE1286D2
+{
+	SelfName = "PayloadTransformsAtSpawn";
+	Type = bool;
+	Visible = false;
+	Owner = "$4ADE8DE2";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
 }
