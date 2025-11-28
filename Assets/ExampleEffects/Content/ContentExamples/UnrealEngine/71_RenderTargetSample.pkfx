@@ -1,4 +1,4 @@
-Version = 2.22.0.23871;
+Version = 2.23.0.25073;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -10,6 +10,13 @@ CEditorAssetEffect	$41EED1A4
 	LoopDelay = 1.0000000e+01;
 	StartCameraPosition = float3(0.0000000e+00, 2.1500001e+00, 5.5000000e+00);
 	StartCameraOrientation = float3(2.0943953e-01, 0.0000000e+00, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$69D57342";
 }
 CParticleAttributeList	$B660FBF9
@@ -1699,7 +1706,6 @@ CParticleNodeTemplate	$4F47D924
 		"$2F20EEA4",
 	};
 	OutputPins = {
-		"$E48D00C4",
 		"$4E4A508E",
 	};
 	WorkspacePosition = int2(-1980, -308);
@@ -1714,14 +1720,6 @@ CParticleNodePinOut	$4E4A508E
 		"$5F3B882A",
 		"$842B08EA",
 	};
-}
-CParticleNodePinOut	$E48D00C4
-{
-	SelfName = "Sampler";
-	Type = dataImage;
-	Visible = false;
-	Owner = "$4F47D924";
-	BaseType = dataImage;
 }
 CParticleNodePinIn	$E7CC0ED1
 {

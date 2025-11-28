@@ -1,4 +1,4 @@
-Version = 2.22.0.23871;
+Version = 2.23.0.25073;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -13,6 +13,13 @@ CEditorAssetEffect	$96CD1EC2
 	LoopDelay = 1.0000000e+00;
 	StartCameraPosition = float3(1.0185015e+00, 1.5669980e+00, 3.4913015e+00);
 	StartCameraOrientation = float3(-6.7718819e-02, -2.9890501e-01, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$69D57342";
 }
 CParticleAttributeList	$B660FBF9
@@ -2149,7 +2156,6 @@ CParticleNodeTemplate	$857EE48D
 		"$088BDE56",
 	};
 	OutputPins = {
-		"$3B1D2E0C",
 		"$88942858",
 		"$06DBD6E2",
 		"$43E6BA52",
@@ -2177,14 +2183,6 @@ CParticleNodePinIn	$088BDE56
 	ConnectedPins = {
 		"$6F1FC8EF",
 	};
-}
-CParticleNodePinOut	$3B1D2E0C
-{
-	SelfName = "Sampler";
-	Type = dataCurve;
-	Visible = false;
-	Owner = "$857EE48D";
-	BaseType = dataCurve;
 }
 CParticleNodePinOut	$88942858
 {
@@ -2432,7 +2430,6 @@ CParticleNodeTemplate	$DB841059
 		"$1A8ECA1F",
 	};
 	OutputPins = {
-		"$19316F8B",
 		"$A62C102D",
 		"$2C4BA5D3",
 		"$3FA6A142",
@@ -2460,14 +2457,6 @@ CParticleNodePinIn	$1A8ECA1F
 	ConnectedPins = {
 		"$0F6111C9",
 	};
-}
-CParticleNodePinOut	$19316F8B
-{
-	SelfName = "Sampler";
-	Type = dataCurve;
-	Visible = false;
-	Owner = "$DB841059";
-	BaseType = dataCurve;
 }
 CParticleNodePinOut	$A62C102D
 {
@@ -2769,7 +2758,6 @@ CParticleNodeTemplate	$730FD350
 		"$91D614E5",
 	};
 	OutputPins = {
-		"$95FB5BD4",
 		"$4171E9FA",
 		"$EE95ED9E",
 		"$050CDC88",
@@ -2797,14 +2785,6 @@ CParticleNodePinIn	$91D614E5
 	ConnectedPins = {
 		"$FDEA8B1D",
 	};
-}
-CParticleNodePinOut	$95FB5BD4
-{
-	SelfName = "Sampler";
-	Type = dataCurve;
-	Visible = false;
-	Owner = "$730FD350";
-	BaseType = dataCurve;
 }
 CParticleNodePinOut	$4171E9FA
 {

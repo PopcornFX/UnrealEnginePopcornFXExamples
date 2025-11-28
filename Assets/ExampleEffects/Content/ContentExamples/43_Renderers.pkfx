@@ -1,4 +1,4 @@
-Version = 2.22.4.24562;
+Version = 2.23.0.25073;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -35,6 +35,13 @@ CEditorAssetEffect	$41EED1A4
 	LoopDelay = 1.0000000e+01;
 	StartCameraPosition = float3(0.0000000e+00, -3.0000001e-01, 8.6499996e+00);
 	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$69D57342";
 }
 CParticleNodeRendererBillboard	$8F7A985A
@@ -330,7 +337,6 @@ CParticleNodeLayer	$C5163AA2
 	};
 	WorkspacePosition = int2(572, -462);
 	WorkspaceRollupState = 2;
-	PreferredSimLocation = GPU;
 	NodeGraph = "$42E16C02";
 }
 CParticleNodePinIn	$43290D5D
@@ -9727,7 +9733,6 @@ CParticleNodeTemplate	$D6075FA6
 		"$D700FD7C",
 	};
 	OutputPins = {
-		"$8A54F0D2",
 		"$30A28D85",
 		"$28F3DB53",
 		"$E6ED95EC",
@@ -9755,14 +9760,6 @@ CParticleNodePinIn	$D700FD7C
 	ConnectedPins = {
 		"$83218B39",
 	};
-}
-CParticleNodePinOut	$8A54F0D2
-{
-	SelfName = "Sampler";
-	Type = dataCurve;
-	Visible = false;
-	Owner = "$D6075FA6";
-	BaseType = dataCurve;
 }
 CParticleNodePinOut	$30A28D85
 {

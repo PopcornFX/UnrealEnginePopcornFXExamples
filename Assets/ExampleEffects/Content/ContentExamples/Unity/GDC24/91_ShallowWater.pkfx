@@ -1,4 +1,4 @@
-Version = 2.22.0.23871;
+Version = 2.23.0.25073;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$9154DFA0";
@@ -24,6 +24,13 @@ CEditorAssetEffect	$4B933A29
 {
 	StartCameraPosition = float3(6.3246098e+00, 3.3578405e+00, -6.3121810e+00);
 	StartCameraOrientation = float3(2.4135968e-01, -2.2367127e+00, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
 	Backdrops_Scene = "$00269EC3";
 }
 CParticleNodeGraph	$9154DFA0
@@ -5223,6 +5230,7 @@ CParticleNodeTemplate	$7EC23829
 {
 	ExecStage = Evolve;
 	InputPins = {
+		"$192AB0CE",
 		"$37999FD5",
 	};
 	OutputPins = {
@@ -7224,4 +7232,13 @@ CParticleNodePinIn	$683DF840
 	Visible = false;
 	Owner = "$239E66F4";
 	BaseType = float;
+}
+CParticleNodePinIn	$192AB0CE
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$7EC23829";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
