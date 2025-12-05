@@ -1,0 +1,1649 @@
+Version = 2.23.0.25083;
+CParticleEffect	$6B70D015
+{
+	LayerGraph = "$81861AB7";
+	AttributeFlatList = "$B660FBF9";
+}
+CEditorAssetEffect	$41EED1A4
+{
+	LoopingEnabled = false;
+	LoopDelay = 1.0000000e+01;
+	StartCameraPosition = float3(0.0000000e+00, 1.8939700e+00, 5.8410201e+00);
+	StartCameraOrientation = float3(1.0885617e-01, -2.6767501e-03, 0.0000000e+00);
+	StartCameraFov = 9.0000000e+01;
+	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera2Fov = 9.0000000e+01;
+	Camera3Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
+	Camera3Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	Camera3Fov = 9.0000000e+01;
+	Backdrops_Scene = "$69D57342";
+}
+CParticleAttributeList	$B660FBF9
+{
+	AttributeAndSamplerList = {
+		"$E9C576E2",
+	};
+}
+CParticleNodeGraph	$81861AB7
+{
+	CustomName = "Root";
+	Nodes = {
+		"$C776022A",
+		"$21C8A330",
+		"$63FB3C14",
+		"$52EAA79B",
+		"$8D336A55",
+	};
+	Timeline = "$B014C0B6";
+	WorkspacePosition = int2(-44, -26);
+	WorkspaceZoom = -5;
+	HasExplicitWorkspaceCoords = true;
+	GraphType = Event;
+}
+CParticleNodeEventStart	$C776022A
+{
+	OutputPins = {
+		"$FAC5D9D8",
+	};
+	WorkspacePosition = int2(110, -22);
+	EventName = "Root";
+}
+CParticleNodePinOut	$FAC5D9D8
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$C776022A";
+	BaseType = event;
+	ConnectedPins = {
+		"$15E59E67",
+	};
+}
+CParticleTimeline	$B014C0B6
+{
+	Tracks = {
+		"$89BB54AC",
+	};
+}
+CParticleTimelineTrack	$89BB54AC
+{
+	CustomName = "Root";
+	EventStream = "$63EBE82E";
+}
+CResourceDescriptor_EventStream	$63EBE82E
+{
+	Times = {
+		0.0000000e+00,
+	};
+}
+CEditorBackdropList	$69D57342
+{
+	Children = {
+		"$F57D922D",
+		"$AA1655F4",
+		"$AB93F1C7",
+		"$CF880096",
+		"$C9F5C011",
+		"$B34D67A8",
+		"$0B148219",
+		"$28CECB8B",
+		"$347F3BAA",
+		"$0A554EB5",
+		"$F551587E",
+	};
+}
+CEditorBackdropBackground	$F57D922D
+{
+}
+CEditorBackdropEffect	$AA1655F4
+{
+	Enabled = false;
+}
+CEditorBackdropAnimTrack	$AB93F1C7
+{
+	Enabled = false;
+}
+CEditorBackdropGrid	$CF880096
+{
+	Enabled = false;
+}
+CEditorBackdropMesh	$C9F5C011
+{
+	MeshPath = "Library/Persistant Studios/Common/Meshes/DemoDisplay_Base01.FBX";
+	Roughness = 4.1251701e-01;
+	Position = float3(0.0000000e+00, -3.0000001e-01, 0.0000000e+00);
+}
+CEditorBackdropDirectionalLight	$B34D67A8
+{
+	Intensity = 3.0000001e-01;
+}
+CEditorBackdropSound	$28CECB8B
+{
+	Enabled = false;
+}
+CEditorBackdropOccluder	$347F3BAA
+{
+	Enabled = false;
+}
+CEditorBackdropWind	$0A554EB5
+{
+	Enabled = false;
+}
+CEditorBackdropFrameExporter	$F551587E
+{
+}
+CEditorBackdropSpotLight	$0B148219
+{
+	Enabled = false;
+}
+CParticleAttributeSamplerDeclaration	$E9C576E2
+{
+	ExportedName = "Grid";
+	Pinned = true;
+	ExportedType = Grid;
+	AttribSamplerDefaultValue = "$42C687F5";
+}
+CResourceDescriptor_Grid	$42C687F5
+{
+	Order = 2D;
+	Dimensions4 = uint4(16, 16, 1, 1);
+	Type = float4;
+}
+CParticleNodeTemplate	$21C8A330
+{
+	InputPins = {
+		"$15E59E67",
+		"$E673317F",
+		"$B3FFC828",
+		"$60282DBE",
+		"$4D994331",
+		"$C8B3CDDE",
+		"$E1BFA92A",
+		"$71EBF96F",
+		"$7911A686",
+		"$456DB2D7",
+		"$28D4FA16",
+		"$FE30DA21",
+		"$0C9E6803",
+		"$0911B49E",
+		"$0FF3B252",
+		"$9566AC3A",
+		"$EB8B8B96",
+		"$F81C8172",
+		"$B427546B",
+		"$65AD5733",
+		"$72657FEE",
+		"$2770FFC2",
+	};
+	OutputPins = {
+		"$02682F66",
+		"$60D81B47",
+	};
+	WorkspacePosition = int2(572, -22);
+	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Events.pkfx";
+	SubGraphName = "EventMultiplier";
+}
+CParticleNodePinIn	$15E59E67
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$21C8A330";
+	BaseType = event;
+	ConnectedPins = {
+		"$FAC5D9D8",
+	};
+}
+CParticleNodePinIn	$E673317F
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$B3FFC828
+{
+	SelfName = "Infinite";
+	Type = bool;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = bool;
+}
+CParticleNodePinIn	$60282DBE
+{
+	SelfName = "Duration";
+	Type = float;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$4D994331
+{
+	SelfName = "SpawnCountMode";
+	Type = int;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = int;
+	ValueI = int4(3, 0, 0, 0);
+}
+CParticleNodePinIn	$C8B3CDDE
+{
+	SelfName = "SpawnCountRandom";
+	Type = int;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = int;
+}
+CParticleNodePinIn	$E1BFA92A
+{
+	SelfName = "SpawnCount";
+	Type = float;
+	Owner = "$21C8A330";
+	BaseType = float;
+	ConnectedPins = {
+		"$207EB5C3",
+	};
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$71EBF96F
+{
+	SelfName = "SpawnCountMax";
+	Type = float;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$7911A686
+{
+	SelfName = "SpawnCountDeviation";
+	Type = float;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = float;
+}
+CParticleNodePinIn	$456DB2D7
+{
+	SelfName = "Flux";
+	Type = float;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$28D4FA16
+{
+	SelfName = "DistanceInterval";
+	Type = float;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$FE30DA21
+{
+	SelfName = "LODMode";
+	Type = int;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = int;
+}
+CParticleNodePinIn	$0C9E6803
+{
+	SelfName = "FirstSpawnDelay";
+	Type = float;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = float;
+}
+CParticleNodePinIn	$0911B49E
+{
+	SelfName = "MinEmissionLOD";
+	Type = float;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = float;
+}
+CParticleNodePinIn	$0FF3B252
+{
+	SelfName = "MaxEmissionLOD";
+	Type = float;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$9566AC3A
+{
+	SelfName = "StopWithInstance";
+	Type = bool;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$EB8B8B96
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = bool;
+}
+CParticleNodePinIn	$F81C8172
+{
+	SelfName = "LODFluxMode";
+	Type = int;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = int;
+}
+CParticleNodePinIn	$B427546B
+{
+	SelfName = "AlwaysTriggerOnDeath";
+	Type = bool;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = bool;
+}
+CParticleNodePinIn	$65AD5733
+{
+	SelfName = "LODFluxAtCutoff";
+	Type = float;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$72657FEE
+{
+	SelfName = "LODFluxAfterCutoff";
+	Type = float;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = float;
+}
+CParticleNodePinIn	$2770FFC2
+{
+	SelfName = "LODFluxRamp";
+	Type = dataCurve;
+	Owner = "$21C8A330";
+	BaseType = dataCurve;
+}
+CParticleNodePinOut	$02682F66
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$21C8A330";
+	BaseType = event;
+	ConnectedPins = {
+		"$8A7F7783",
+	};
+}
+CParticleNodePinOut	$60D81B47
+{
+	SelfName = "OnDeath";
+	Type = event;
+	Visible = false;
+	Owner = "$21C8A330";
+	BaseType = event;
+}
+CParticleNodeTemplateExport	$63FB3C14
+{
+	InputPins = {
+		"$1773B21E",
+	};
+	OutputPins = {
+		"$02241EAF",
+	};
+	WorkspacePosition = int2(-110, 242);
+	ExportedName = "Grid";
+	ExportedType = dataGrid;
+	Type = Input;
+	InputType = Attribute;
+}
+CParticleNodePinIn	$1773B21E
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$63FB3C14";
+}
+CParticleNodePinOut	$02241EAF
+{
+	SelfName = "Value";
+	Owner = "$63FB3C14";
+	ConnectedPins = {
+		"$AA29391A",
+	};
+}
+CParticleNodeGraph	$54E80980
+{
+	ClassType = Event;
+	Nodes = {
+		"$B889F630",
+		"$A4749D6B",
+		"$3545CD9F",
+		"$5CBACC6A",
+		"$27608DC1",
+		"$DA6496E1",
+		"$453ADF51",
+		"$23606186",
+		"$23C4A1E6",
+		"$F676CC79",
+		"$8AC2FDBB",
+		"$5DBA6357",
+		"$993334C1",
+		"$EDCC1B4A",
+		"$C4E72AD8",
+		"$0DDF682A",
+		"$F0BF9EF1",
+		"$8971A0DB",
+		"$84094E70",
+		"$F0A82CA8",
+		"$C0EB6CDA",
+		"$DC709C5D",
+		"$3B07997B",
+		"$F815037F",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeLayer	$52EAA79B
+{
+	InputPins = {
+		"$8A7F7783",
+	};
+	WorkspacePosition = int2(968, -22);
+	NodeGraph = "$54E80980";
+}
+CParticleNodePinIn	$8A7F7783
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$52EAA79B";
+	BaseType = event;
+	ConnectedPins = {
+		"$02682F66",
+	};
+}
+CParticleNodeRendererBillboard	$B889F630
+{
+	InputPins = {
+		"$45E16FA4",
+		"$1CDAF8B3",
+		"$6D063342",
+		"$A5197FEB",
+		"$4D0927CB",
+		"$D7082753",
+		"$35FC0E30",
+		"$BE483253",
+		"$8A7709F1",
+		"$DFE67317",
+		"$E1620CEA",
+		"$8CA0C9F4",
+		"$4EC47F6C",
+		"$2840BCF1",
+		"$687EA31D",
+		"$C57885BC",
+		"$AE7F9B9B",
+		"$652BEB78",
+		"$45FD6BAC",
+		"$62CBD7AC",
+		"$52318AAC",
+		"$8D790F9C",
+		"$AE64C7D1",
+		"$EB0C78C4",
+		"$1BCF5191",
+		"$28796AF7",
+		"$2BB2060F",
+		"$1EEA7ABA",
+		"$B07955A5",
+	};
+	WorkspacePosition = int2(2178, 264);
+	Material = "Library/PopcornFXCore/Materials/Billboard_Transparent.pkma";
+	RendererFeatures = {
+		"GeometryBillboard",
+		"ComputeVelocity",
+		"EnableRendering",
+		"Transparent",
+		"Diffuse",
+		"DiffuseRamp",
+		"Lit",
+		"NormalWrap",
+		"NormalBend",
+		"Emissive",
+		"EmissiveRamp",
+		"AlphaRemap",
+		"SoftParticles",
+		"Atlas",
+		"BasicTransformUVs",
+		"TransformUVs",
+		"FastLit",
+	};
+}
+CParticleNodePinIn	$45E16FA4
+{
+	SelfName = "General.Position";
+	Type = float3;
+	Owner = "$B889F630";
+	BaseType = float3;
+	ConnectedPins = {
+		"$16D55D7B",
+	};
+}
+CParticleNodePinIn	$1CDAF8B3
+{
+	SelfName = "General.EnableSize2D";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$6D063342
+{
+	SelfName = "General.Size";
+	Type = float;
+	Owner = "$B889F630";
+	BaseType = float;
+	ValueF = float4(2.5000000e-02, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$A5197FEB
+{
+	SelfName = "General.Size2";
+	Type = float2;
+	Owner = "$B889F630";
+	BaseType = float2;
+	ValueF = float4(5.0000001e-02, 5.0000001e-02, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$4D0927CB
+{
+	SelfName = "General.Rotation";
+	Type = float;
+	Owner = "$B889F630";
+	BaseType = float;
+}
+CParticleNodePinIn	$D7082753
+{
+	SelfName = "General.Axis";
+	Type = float3;
+	Owner = "$B889F630";
+	BaseType = float3;
+}
+CParticleNodePinIn	$35FC0E30
+{
+	SelfName = "General.NormalAxis";
+	Type = float3;
+	Owner = "$B889F630";
+	BaseType = float3;
+}
+CParticleNodePinIn	$BE483253
+{
+	SelfName = "General.BillboardingMode";
+	Type = int;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = int;
+}
+CParticleNodePinIn	$8A7709F1
+{
+	SelfName = "General.Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$AE7F9B9B
+{
+	SelfName = "DiffuseRamp";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$652BEB78
+{
+	SelfName = "Lit";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$62CBD7AC
+{
+	SelfName = "NormalBend";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$52318AAC
+{
+	SelfName = "Emissive";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$8D790F9C
+{
+	SelfName = "EmissiveRamp";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$AE64C7D1
+{
+	SelfName = "AlphaRemap";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$1BCF5191
+{
+	SelfName = "Atlas";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$28796AF7
+{
+	SelfName = "BasicTransformUVs";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$2BB2060F
+{
+	SelfName = "TransformUVs";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$1EEA7ABA
+{
+	SelfName = "FastLit";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$B07955A5
+{
+	SelfName = "Pivot";
+	Type = float2;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = float2;
+}
+CParticleNodeTemplate	$A4749D6B
+{
+	OutputPins = {
+		"$33BA43CD",
+	};
+	WorkspacePosition = int2(-682, 572);
+	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "parent.emittedCount";
+}
+CParticleNodePinOut	$33BA43CD
+{
+	SelfName = "EmittedCount";
+	Type = int;
+	Owner = "$A4749D6B";
+	BaseType = int;
+	ConnectedPins = {
+		"$E817546A",
+		"$1243D59E",
+		"$A1C6FCB6",
+	};
+}
+CParticleNodeTemplate	$3545CD9F
+{
+	InputPins = {
+		"$898E03CC",
+	};
+	OutputPins = {
+		"$3AB35992",
+	};
+	WorkspacePosition = int2(1056, 0);
+	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Utils.pkfx";
+	SubGraphName = "InfiniteLife";
+}
+CParticleNodePinIn	$898E03CC
+{
+	SelfName = "DeathDelay";
+	Type = float;
+	Visible = false;
+	Owner = "$3545CD9F";
+	BaseType = float;
+}
+CParticleNodePinOut	$3AB35992
+{
+	SelfName = "DeathLifeRatio";
+	Type = float;
+	Owner = "$3545CD9F";
+	BaseType = float;
+}
+CParticleNodeConstructor	$5CBACC6A
+{
+	InputPins = {
+		"$05BCB746",
+		"$67BD8205",
+		"$C5F7981E",
+	};
+	OutputPins = {
+		"$036B1FFE",
+	};
+	WorkspacePosition = int2(1056, 264);
+	Dimension = 3D;
+}
+CParticleNodePinOut	$036B1FFE
+{
+	SelfName = "Value";
+	Owner = "$5CBACC6A";
+	ConnectedPins = {
+		"$FFCB0275",
+	};
+}
+CParticleNodePinIn	$05BCB746
+{
+	SelfName = "X";
+	Owner = "$5CBACC6A";
+	ConnectedPins = {
+		"$894F391F",
+	};
+}
+CParticleNodePinIn	$67BD8205
+{
+	SelfName = "Y";
+	Owner = "$5CBACC6A";
+}
+CParticleNodePinIn	$C5F7981E
+{
+	SelfName = "Z";
+	Owner = "$5CBACC6A";
+	ConnectedPins = {
+		"$5D5AA032",
+	};
+}
+CParticleNodeArithmetic	$27608DC1
+{
+	InputPins = {
+		"$E817546A",
+		"$337BADAD",
+	};
+	OutputPins = {
+		"$DD4C0F13",
+	};
+	WorkspacePosition = int2(-242, 242);
+	Operation = Mod;
+}
+CParticleNodePinIn	$E817546A
+{
+	SelfName = "Value";
+	Type = int;
+	Owner = "$27608DC1";
+	ConnectedPins = {
+		"$33BA43CD",
+	};
+}
+CParticleNodePinIn	$337BADAD
+{
+	SelfName = "ValueB";
+	Owner = "$27608DC1";
+	ConnectedPins = {
+		"$26F4D841",
+	};
+}
+CParticleNodePinOut	$DD4C0F13
+{
+	SelfName = "Value";
+	Owner = "$27608DC1";
+	ConnectedPins = {
+		"$0527DC5E",
+	};
+}
+CParticleNodeTemplateExport	$DA6496E1
+{
+	InputPins = {
+		"$B81AD455",
+	};
+	OutputPins = {
+		"$05A593D9",
+	};
+	WorkspacePosition = int2(-1254, 286);
+	ExportedName = "Grid";
+	ExportedType = dataGrid;
+	Type = Input;
+	InputType = Attribute;
+}
+CParticleNodePinIn	$B81AD455
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$DA6496E1";
+}
+CParticleNodePinOut	$05A593D9
+{
+	SelfName = "Value";
+	Owner = "$DA6496E1";
+	ConnectedPins = {
+		"$DE3B8FA2",
+	};
+}
+CParticleNodeTemplate	$8D336A55
+{
+	InputPins = {
+		"$AA29391A",
+	};
+	OutputPins = {
+		"$45EA99AF",
+		"$207EB5C3",
+	};
+	WorkspacePosition = int2(132, 242);
+	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Samplers.pkfx";
+	SubGraphName = "grid.dimensions";
+}
+CParticleNodePinIn	$AA29391A
+{
+	SelfName = "Grid";
+	Type = dataGrid;
+	Owner = "$8D336A55";
+	BaseType = dataGrid;
+	ConnectedPins = {
+		"$02241EAF",
+	};
+}
+CParticleNodePinOut	$45EA99AF
+{
+	SelfName = "Dimensions";
+	Type = int4;
+	Owner = "$8D336A55";
+	BaseType = int4;
+}
+CParticleNodePinOut	$207EB5C3
+{
+	SelfName = "CellCount";
+	Type = int;
+	Owner = "$8D336A55";
+	BaseType = int;
+	ConnectedPins = {
+		"$E1BFA92A",
+	};
+}
+CParticleNodeTemplate	$453ADF51
+{
+	InputPins = {
+		"$DE3B8FA2",
+	};
+	OutputPins = {
+		"$7B777346",
+		"$66DEC2A6",
+	};
+	WorkspacePosition = int2(-1012, 286);
+	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Samplers.pkfx";
+	SubGraphName = "grid.dimensions";
+}
+CParticleNodePinIn	$DE3B8FA2
+{
+	SelfName = "Grid";
+	Type = dataGrid;
+	Owner = "$453ADF51";
+	BaseType = dataGrid;
+	ConnectedPins = {
+		"$05A593D9",
+	};
+}
+CParticleNodePinOut	$7B777346
+{
+	SelfName = "Dimensions";
+	Type = int4;
+	Owner = "$453ADF51";
+	BaseType = int4;
+	ConnectedPins = {
+		"$4B51D47D",
+	};
+}
+CParticleNodePinOut	$66DEC2A6
+{
+	SelfName = "CellCount";
+	Type = int;
+	Owner = "$453ADF51";
+	BaseType = int;
+}
+CParticleNodeSplitter	$23606186
+{
+	InputPins = {
+		"$4B51D47D",
+	};
+	OutputPins = {
+		"$26F4D841",
+		"$4CE32AE7",
+		"$FDF170EC",
+		"$FFF61612",
+	};
+	WorkspacePosition = int2(-704, 286);
+}
+CParticleNodePinIn	$4B51D47D
+{
+	SelfName = "Value";
+	Type = int4;
+	Owner = "$23606186";
+	ConnectedPins = {
+		"$7B777346",
+	};
+}
+CParticleNodePinOut	$26F4D841
+{
+	SelfName = "X";
+	Owner = "$23606186";
+	ConnectedPins = {
+		"$337BADAD",
+		"$A188E239",
+		"$674849B4",
+	};
+}
+CParticleNodePinOut	$4CE32AE7
+{
+	SelfName = "Y";
+	Owner = "$23606186";
+}
+CParticleNodePinOut	$FDF170EC
+{
+	SelfName = "Z";
+	Owner = "$23606186";
+}
+CParticleNodePinOut	$FFF61612
+{
+	SelfName = "W";
+	Owner = "$23606186";
+}
+CParticleNodeArithmetic	$F676CC79
+{
+	InputPins = {
+		"$1243D59E",
+		"$674849B4",
+	};
+	OutputPins = {
+		"$450A0F42",
+	};
+	WorkspacePosition = int2(-242, 374);
+	Operation = Div;
+}
+CParticleNodePinIn	$1243D59E
+{
+	SelfName = "Value";
+	Type = int;
+	Owner = "$F676CC79";
+	ConnectedPins = {
+		"$33BA43CD",
+	};
+}
+CParticleNodePinIn	$674849B4
+{
+	SelfName = "ValueB";
+	Owner = "$F676CC79";
+	ConnectedPins = {
+		"$26F4D841",
+	};
+}
+CParticleNodePinOut	$450A0F42
+{
+	SelfName = "Value";
+	Owner = "$F676CC79";
+	ConnectedPins = {
+		"$3FF6DB0C",
+	};
+}
+CParticleNodeArithmetic	$8AC2FDBB
+{
+	InputPins = {
+		"$0527DC5E",
+		"$73FB4E0F",
+	};
+	OutputPins = {
+		"$27AC8D51",
+	};
+	WorkspacePosition = int2(88, 242);
+	Operation = Sub;
+}
+CParticleNodePinIn	$0527DC5E
+{
+	SelfName = "Value";
+	Owner = "$8AC2FDBB";
+	ConnectedPins = {
+		"$DD4C0F13",
+	};
+}
+CParticleNodePinIn	$73FB4E0F
+{
+	SelfName = "ValueB";
+	Owner = "$8AC2FDBB";
+	ConnectedPins = {
+		"$EA42A2C8",
+	};
+}
+CParticleNodePinOut	$27AC8D51
+{
+	SelfName = "Value";
+	Owner = "$8AC2FDBB";
+	ConnectedPins = {
+		"$2E637211",
+	};
+}
+CParticleNodeArithmetic	$5DBA6357
+{
+	InputPins = {
+		"$1136D45A",
+		"$051A489C",
+	};
+	OutputPins = {
+		"$EA42A2C8",
+	};
+	WorkspacePosition = int2(-176, 66);
+	Operation = Div;
+}
+CParticleNodePinIn	$1136D45A
+{
+	SelfName = "Value";
+	Owner = "$5DBA6357";
+	ConnectedPins = {
+		"$18C1C32E",
+	};
+}
+CParticleNodePinIn	$051A489C
+{
+	SelfName = "ValueB";
+	Type = float;
+	Owner = "$5DBA6357";
+	ValueF = float4(2.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinOut	$EA42A2C8
+{
+	SelfName = "Value";
+	Owner = "$5DBA6357";
+	ConnectedPins = {
+		"$73FB4E0F",
+	};
+}
+CParticleNodeTemplate	$993334C1
+{
+	ExecStage = Evolve;
+	InputPins = {
+		"$44D1C677",
+		"$A1C6FCB6",
+		"$DAF68F51",
+	};
+	OutputPins = {
+		"$2F568E4E",
+	};
+	WorkspacePosition = int2(572, 858);
+	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Samplers.pkfx";
+	SubGraphName = "grid.read";
+}
+CParticleNodePinIn	$44D1C677
+{
+	SelfName = "Grid";
+	Type = dataGrid;
+	Owner = "$993334C1";
+	BaseType = dataGrid;
+	ConnectedPins = {
+		"$23155A1B",
+	};
+}
+CParticleNodePinIn	$A1C6FCB6
+{
+	SelfName = "ID";
+	Type = int;
+	Owner = "$993334C1";
+	BaseType = int;
+	ConnectedPins = {
+		"$33BA43CD",
+	};
+}
+CParticleNodePinIn	$DAF68F51
+{
+	SelfName = "CellOffset";
+	Type = int4;
+	Visible = false;
+	Owner = "$993334C1";
+	BaseType = int4;
+}
+CParticleNodePinOut	$2F568E4E
+{
+	SelfName = "Value";
+	Type = float;
+	Owner = "$993334C1";
+	ConnectedPins = {
+		"$64F965BA",
+	};
+}
+CParticleNodeTemplateExport	$EDCC1B4A
+{
+	InputPins = {
+		"$2B56DD57",
+	};
+	OutputPins = {
+		"$23155A1B",
+	};
+	WorkspacePosition = int2(-286, 858);
+	ExportedName = "Grid";
+	ExportedType = dataGrid;
+	Type = Input;
+	InputType = Attribute;
+}
+CParticleNodePinIn	$2B56DD57
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$EDCC1B4A";
+}
+CParticleNodePinOut	$23155A1B
+{
+	SelfName = "Value";
+	Owner = "$EDCC1B4A";
+	ConnectedPins = {
+		"$44D1C677",
+		"$14BD6E4A",
+	};
+}
+CParticleNodeArithmetic	$0DDF682A
+{
+	InputPins = {
+		"$A188E239",
+		"$011DA3D8",
+	};
+	OutputPins = {
+		"$18C1C32E",
+	};
+	WorkspacePosition = int2(-418, 66);
+	Operation = Sub;
+}
+CParticleNodePinIn	$A188E239
+{
+	SelfName = "Value";
+	Owner = "$0DDF682A";
+	ConnectedPins = {
+		"$26F4D841",
+	};
+}
+CParticleNodePinIn	$011DA3D8
+{
+	SelfName = "ValueB";
+	Type = float;
+	Owner = "$0DDF682A";
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinOut	$18C1C32E
+{
+	SelfName = "Value";
+	Owner = "$0DDF682A";
+	ConnectedPins = {
+		"$1136D45A",
+	};
+}
+CParticleNodeTemplate	$F0BF9EF1
+{
+	InputPins = {
+		"$14BD6E4A",
+	};
+	OutputPins = {
+		"$BDE7C039",
+		"$FEEC80D3",
+	};
+	WorkspacePosition = int2(66, 572);
+	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Samplers.pkfx";
+	SubGraphName = "grid.dimensions";
+}
+CParticleNodePinIn	$14BD6E4A
+{
+	SelfName = "Grid";
+	Type = dataGrid;
+	Owner = "$F0BF9EF1";
+	BaseType = dataGrid;
+	ConnectedPins = {
+		"$23155A1B",
+	};
+}
+CParticleNodePinOut	$BDE7C039
+{
+	SelfName = "Dimensions";
+	Type = int4;
+	Owner = "$F0BF9EF1";
+	BaseType = int4;
+	ConnectedPins = {
+		"$79E8FF18",
+	};
+}
+CParticleNodePinOut	$FEEC80D3
+{
+	SelfName = "CellCount";
+	Type = int;
+	Owner = "$F0BF9EF1";
+	BaseType = int;
+}
+CParticleNodeSplitter	$8971A0DB
+{
+	InputPins = {
+		"$79E8FF18",
+	};
+	OutputPins = {
+		"$0D751C80",
+		"$45299226",
+		"$7BA27B86",
+		"$A9E180D9",
+	};
+	WorkspacePosition = int2(396, 572);
+}
+CParticleNodePinIn	$79E8FF18
+{
+	SelfName = "Value";
+	Type = int4;
+	Owner = "$8971A0DB";
+	ConnectedPins = {
+		"$BDE7C039",
+	};
+}
+CParticleNodePinOut	$0D751C80
+{
+	SelfName = "X";
+	Owner = "$8971A0DB";
+	ConnectedPins = {
+		"$2958DBE4",
+	};
+}
+CParticleNodePinOut	$45299226
+{
+	SelfName = "Y";
+	Owner = "$8971A0DB";
+	ConnectedPins = {
+		"$BF1A990F",
+	};
+}
+CParticleNodePinOut	$7BA27B86
+{
+	SelfName = "Z";
+	Owner = "$8971A0DB";
+}
+CParticleNodePinOut	$A9E180D9
+{
+	SelfName = "W";
+	Owner = "$8971A0DB";
+}
+CParticleNodeArithmetic	$84094E70
+{
+	InputPins = {
+		"$2E637211",
+		"$2958DBE4",
+	};
+	OutputPins = {
+		"$894F391F",
+	};
+	WorkspacePosition = int2(660, 242);
+	Operation = Div;
+}
+CParticleNodePinIn	$2E637211
+{
+	SelfName = "Value";
+	Owner = "$84094E70";
+	ConnectedPins = {
+		"$27AC8D51",
+	};
+}
+CParticleNodePinIn	$2958DBE4
+{
+	SelfName = "ValueB";
+	Owner = "$84094E70";
+	ConnectedPins = {
+		"$0D751C80",
+	};
+}
+CParticleNodePinOut	$894F391F
+{
+	SelfName = "Value";
+	Owner = "$84094E70";
+	ConnectedPins = {
+		"$05BCB746",
+	};
+}
+CParticleNodeArithmetic	$F0A82CA8
+{
+	InputPins = {
+		"$B2DBBC54",
+		"$BF1A990F",
+	};
+	OutputPins = {
+		"$5D5AA032",
+	};
+	WorkspacePosition = int2(660, 374);
+	Operation = Div;
+}
+CParticleNodePinIn	$B2DBBC54
+{
+	SelfName = "Value";
+	Owner = "$F0A82CA8";
+	ConnectedPins = {
+		"$88CE4850",
+	};
+}
+CParticleNodePinIn	$BF1A990F
+{
+	SelfName = "ValueB";
+	Owner = "$F0A82CA8";
+	ConnectedPins = {
+		"$45299226",
+	};
+}
+CParticleNodePinOut	$5D5AA032
+{
+	SelfName = "Value";
+	Owner = "$F0A82CA8";
+	ConnectedPins = {
+		"$C5F7981E",
+	};
+}
+CParticleNodeTemplate	$C0EB6CDA
+{
+	InputPins = {
+		"$3FF6DB0C",
+	};
+	OutputPins = {
+		"$88CE4850",
+	};
+	WorkspacePosition = int2(0, 374);
+	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "toFloat";
+}
+CParticleNodePinIn	$3FF6DB0C
+{
+	SelfName = "Value";
+	Type = int;
+	Owner = "$C0EB6CDA";
+	ConnectedPins = {
+		"$450A0F42",
+	};
+}
+CParticleNodePinOut	$88CE4850
+{
+	SelfName = "Value";
+	Type = float;
+	Owner = "$C0EB6CDA";
+	ConnectedPins = {
+		"$B2DBBC54",
+	};
+}
+CParticleNodeArithmetic	$23C4A1E6
+{
+	InputPins = {
+		"$FFCB0275",
+		"$89FE3593",
+	};
+	OutputPins = {
+		"$436167A2",
+	};
+	WorkspacePosition = int2(1386, 264);
+	Operation = Mul;
+}
+CParticleNodePinOut	$436167A2
+{
+	SelfName = "Value";
+	Owner = "$23C4A1E6";
+	ConnectedPins = {
+		"$BC43B695",
+	};
+}
+CParticleNodePinIn	$89FE3593
+{
+	SelfName = "ValueB";
+	Type = float;
+	Owner = "$23C4A1E6";
+	ValueF = float4(2.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$FFCB0275
+{
+	SelfName = "Value";
+	Owner = "$23C4A1E6";
+	ConnectedPins = {
+		"$036B1FFE",
+	};
+}
+CParticleNodeConstructor	$C4E72AD8
+{
+	InputPins = {
+		"$F6CD9510",
+		"$3EF0EAF0",
+		"$6F30608F",
+		"$CA788919",
+	};
+	OutputPins = {
+		"$5633B9C8",
+	};
+	WorkspacePosition = int2(1144, 858);
+}
+CParticleNodePinOut	$5633B9C8
+{
+	SelfName = "Value";
+	Owner = "$C4E72AD8";
+	ConnectedPins = {
+		"$C57885BC",
+	};
+}
+CParticleNodePinIn	$CA788919
+{
+	SelfName = "W";
+	Type = float;
+	Owner = "$C4E72AD8";
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$6F30608F
+{
+	SelfName = "Z";
+	Owner = "$C4E72AD8";
+	ConnectedPins = {
+		"$0653E07C",
+	};
+}
+CParticleNodePinIn	$3EF0EAF0
+{
+	SelfName = "Y";
+	Owner = "$C4E72AD8";
+	ConnectedPins = {
+		"$B2E9187F",
+	};
+}
+CParticleNodePinIn	$F6CD9510
+{
+	SelfName = "X";
+	Type = float;
+	Owner = "$C4E72AD8";
+	ConnectedPins = {
+		"$71208CE8",
+	};
+}
+CParticleNodeSplitter	$DC709C5D
+{
+	InputPins = {
+		"$64F965BA",
+	};
+	OutputPins = {
+		"$71208CE8",
+		"$B2E9187F",
+		"$0653E07C",
+		"$1CCA4951",
+	};
+	WorkspacePosition = int2(836, 858);
+}
+CParticleNodePinIn	$64F965BA
+{
+	SelfName = "Value";
+	Type = float;
+	Owner = "$DC709C5D";
+	ConnectedPins = {
+		"$2F568E4E",
+	};
+}
+CParticleNodePinOut	$71208CE8
+{
+	SelfName = "X";
+	Owner = "$DC709C5D";
+	ConnectedPins = {
+		"$F6CD9510",
+	};
+}
+CParticleNodePinOut	$B2E9187F
+{
+	SelfName = "Y";
+	Owner = "$DC709C5D";
+	ConnectedPins = {
+		"$3EF0EAF0",
+	};
+}
+CParticleNodePinOut	$0653E07C
+{
+	SelfName = "Z";
+	Owner = "$DC709C5D";
+	ConnectedPins = {
+		"$6F30608F",
+	};
+}
+CParticleNodePinOut	$1CCA4951
+{
+	SelfName = "W";
+	Owner = "$DC709C5D";
+}
+CParticleNodeTemplate	$3B07997B
+{
+	OutputPins = {
+		"$623B243C",
+	};
+	WorkspacePosition = int2(1408, 462);
+	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "effect.position";
+}
+CParticleNodePinOut	$623B243C
+{
+	SelfName = "Position";
+	Type = float3;
+	Owner = "$3B07997B";
+	BaseType = float3;
+	ConnectedPins = {
+		"$68DD270D",
+	};
+}
+CParticleNodeArithmetic	$F815037F
+{
+	InputPins = {
+		"$BC43B695",
+		"$68DD270D",
+	};
+	OutputPins = {
+		"$16D55D7B",
+	};
+	WorkspacePosition = int2(1716, 264);
+}
+CParticleNodePinIn	$BC43B695
+{
+	SelfName = "Value";
+	Owner = "$F815037F";
+	ConnectedPins = {
+		"$436167A2",
+	};
+}
+CParticleNodePinIn	$68DD270D
+{
+	SelfName = "ValueB";
+	Owner = "$F815037F";
+	ConnectedPins = {
+		"$623B243C",
+	};
+}
+CParticleNodePinOut	$16D55D7B
+{
+	SelfName = "Value";
+	Owner = "$F815037F";
+	ConnectedPins = {
+		"$45E16FA4",
+	};
+}
+CParticleNodePinIn	$DFE67317
+{
+	SelfName = "Transparent.SortMode";
+	Type = int;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = int;
+}
+CParticleNodePinIn	$E1620CEA
+{
+	SelfName = "Transparent.SortKey";
+	Type = float;
+	Owner = "$B889F630";
+	BaseType = float;
+}
+CParticleNodePinIn	$8CA0C9F4
+{
+	SelfName = "Transparent.GlobalSortOverride";
+	Type = int;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = int;
+}
+CParticleNodePinIn	$4EC47F6C
+{
+	SelfName = "Transparent.CameraSortOffset";
+	Type = float;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = float;
+}
+CParticleNodePinIn	$2840BCF1
+{
+	SelfName = "Diffuse";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$45FD6BAC
+{
+	SelfName = "NormalWrap";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$EB0C78C4
+{
+	SelfName = "SoftParticles";
+	Type = bool;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = bool;
+}
+CParticleNodePinIn	$687EA31D
+{
+	SelfName = "Diffuse.DiffuseMap";
+	Type = dataImage;
+	Visible = false;
+	Owner = "$B889F630";
+	BaseType = dataImage;
+	ValueD = "Library/PopcornFXCore/Materials/DefaultTextures/Diffuse.dds";
+}
+CParticleNodePinIn	$C57885BC
+{
+	SelfName = "Diffuse.DiffuseColor";
+	Type = float4;
+	Owner = "$B889F630";
+	BaseType = float4;
+	ConnectedPins = {
+		"$5633B9C8",
+	};
+	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
