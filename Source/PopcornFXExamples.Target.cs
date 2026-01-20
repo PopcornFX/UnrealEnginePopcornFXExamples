@@ -9,7 +9,7 @@ public class PopcornFXExamplesTarget : TargetRules
 	{
 		Type = TargetType.Game;
 		ExtraModuleNames.AddRange( new string[] { "PopcornFXExamples" } );
-		DefaultBuildSettings = BuildSettingsVersion.V5;
-		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
+        IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
     }
 }

@@ -72,6 +72,7 @@
 		"LinuxNoEditor",
 		"PS4",
 		"XboxOne",
-		"MacNoEditor"
+		"MacNoEditor",
+		"Windows"
 	]
 }
