@@ -1,4 +1,4 @@
-Version = 2.23.0.25073;
+Version = 2.24.0.26309;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -10143,6 +10143,7 @@ CParticleNodePinOut	$1AE40607
 CParticleNodeTemplate	$519389D6
 {
 	InputPins = {
+		"$7C2A4FCF",
 		"$1FF76251",
 		"$8E1560EA",
 		"$A5FC6A11",
@@ -12512,151 +12513,12 @@ CParticleNodeGraph	$89E643D7
 	ClassType = Event;
 	IconKey = "Node_Math_Mul";
 	Nodes = {
-		"$3310B3E6",
 		"$2A8484CD",
 		"$2B47A0B1",
+		"$7C782744",
 	};
 	WorkspaceZoom = 0;
 	Collapsed = true;
-}
-CParticleNodeTemplate	$3310B3E6
-{
-	InputPins = {
-		"$D617CDA1",
-		"$6A833B3D",
-		"$723ABC78",
-		"$7F79589B",
-		"$CDD745FA",
-		"$1057900F",
-		"$F93DFF45",
-		"$F551587E",
-		"$A9B23CEC",
-		"$4E71E81F",
-		"$1E9F89CE",
-		"$EDCFAEB7",
-		"$2B8AE5A9",
-		"$E75B242C",
-		"$C667A787",
-		"$25083120",
-		"$37BDC976",
-		"$59015012",
-		"$8ED04936",
-		"$ECD16B3B",
-		"$03E7EA94",
-		"$E1B0C322",
-	};
-	OutputPins = {
-		"$876C1663",
-		"$4A667362",
-	};
-	WorkspacePosition = int2(-374, -88);
-	SubGraphFilePath = "Library/PopcornFXCore/Templates/Events.pkfx";
-	SubGraphName = "EventMultiplier";
-}
-CParticleNodePinIn	$D617CDA1
-{
-	SelfName = "Spawn";
-	Type = event;
-	Owner = "$3310B3E6";
-	BaseType = event;
-	ConnectedPins = {
-		"$54B4B6B6",
-	};
-}
-CParticleNodePinIn	$723ABC78
-{
-	SelfName = "Infinite";
-	Type = bool;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = bool;
-}
-CParticleNodePinIn	$7F79589B
-{
-	SelfName = "Duration";
-	Type = float;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = float;
-}
-CParticleNodePinIn	$CDD745FA
-{
-	SelfName = "SpawnCountMode";
-	Type = int;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = int;
-	ValueI = int4(3, 0, 0, 0);
-}
-CParticleNodePinIn	$F93DFF45
-{
-	SelfName = "SpawnCount";
-	Type = float;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = float;
-	ValueF = float4(1.0000000e+01, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinIn	$A9B23CEC
-{
-	SelfName = "SpawnCountDeviation";
-	Type = float;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = float;
-}
-CParticleNodePinIn	$4E71E81F
-{
-	SelfName = "Flux";
-	Type = float;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = float;
-	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinIn	$1E9F89CE
-{
-	SelfName = "DistanceInterval";
-	Type = float;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = float;
-	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinIn	$2B8AE5A9
-{
-	SelfName = "FirstSpawnDelay";
-	Type = float;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = float;
-}
-CParticleNodePinIn	$25083120
-{
-	SelfName = "StopWithInstance";
-	Type = bool;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = bool;
-	ValueB = bool4(true, false, false, false);
-}
-CParticleNodePinOut	$876C1663
-{
-	SelfName = "Spawn";
-	Type = event;
-	Owner = "$3310B3E6";
-	BaseType = event;
-	ConnectedPins = {
-		"$8C3E84C8",
-	};
-}
-CParticleNodePinOut	$4A667362
-{
-	SelfName = "OnDeath";
-	Type = event;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = event;
 }
 CParticleNodeTemplateExport	$2A8484CD
 {
@@ -12683,7 +12545,7 @@ CParticleNodePinOut	$54B4B6B6
 	SelfName = "Value";
 	Owner = "$2A8484CD";
 	ConnectedPins = {
-		"$D617CDA1",
+		"$BD385948",
 	};
 }
 CParticleNodeLayer	$2B47A0B1
@@ -12701,7 +12563,7 @@ CParticleNodePinIn	$8C3E84C8
 	Owner = "$2B47A0B1";
 	BaseType = event;
 	ConnectedPins = {
-		"$876C1663",
+		"$1CCDA4F0",
 	};
 }
 CParticleNodeGraph	$08799F2B
@@ -17245,6 +17107,7 @@ CParticleNodeGraph	$CDDBD987
 CParticleNodeTemplate	$F76AA28A
 {
 	InputPins = {
+		"$CE3952A9",
 		"$6F7A7D2C",
 		"$15FC25B4",
 		"$C8A1F42F",
@@ -22918,23 +22781,6 @@ CParticleNodePinIn	$029B091C
 	BaseType = float;
 	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
 }
-CParticleNodePinIn	$1057900F
-{
-	SelfName = "SpawnCountRandom";
-	Type = int;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = int;
-}
-CParticleNodePinIn	$F551587E
-{
-	SelfName = "SpawnCountMax";
-	Type = float;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = float;
-	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
 CParticleNodePinIn	$23FC3F0C
 {
 	SelfName = "LODMode";
@@ -22984,69 +22830,12 @@ CParticleNodePinIn	$8164C5FC
 	Owner = "$709C301D";
 	BaseType = dataCurve;
 }
-CParticleNodePinIn	$EDCFAEB7
-{
-	SelfName = "LODMode";
-	Type = int;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = int;
-}
-CParticleNodePinIn	$E75B242C
-{
-	SelfName = "MinEmissionLOD";
-	Type = float;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = float;
-}
-CParticleNodePinIn	$C667A787
-{
-	SelfName = "MaxEmissionLOD";
-	Type = float;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = float;
-	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinIn	$59015012
-{
-	SelfName = "LODFluxMode";
-	Type = int;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = int;
-}
-CParticleNodePinIn	$ECD16B3B
-{
-	SelfName = "LODFluxAtCutoff";
-	Type = float;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = float;
-	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
-}
-CParticleNodePinIn	$E1B0C322
-{
-	SelfName = "LODFluxRamp";
-	Type = dataCurve;
-	Owner = "$3310B3E6";
-	BaseType = dataCurve;
-}
 CParticleNodePinIn	$00BB3D96
 {
 	SelfName = "LODFluxAfterCutoff";
 	Type = float;
 	Visible = false;
 	Owner = "$709C301D";
-	BaseType = float;
-}
-CParticleNodePinIn	$03E7EA94
-{
-	SelfName = "LODFluxAfterCutoff";
-	Type = float;
-	Visible = false;
-	Owner = "$3310B3E6";
 	BaseType = float;
 }
 CParticleNodePinIn	$1237CD56
@@ -24604,14 +24393,6 @@ CParticleNodePinIn	$331AD03E
 	Type = bool;
 	Visible = false;
 	Owner = "$709C301D";
-	BaseType = bool;
-}
-CParticleNodePinIn	$8ED04936
-{
-	SelfName = "AlwaysTriggerOnDeath";
-	Type = bool;
-	Visible = false;
-	Owner = "$3310B3E6";
 	BaseType = bool;
 }
 CResourceDescriptor_Curve	$22142957
@@ -27384,14 +27165,6 @@ CParticleNodePinIn	$2277C9C2
 	Owner = "$709C301D";
 	BaseType = bool;
 }
-CParticleNodePinIn	$37BDC976
-{
-	SelfName = "Kill";
-	Type = bool;
-	Visible = false;
-	Owner = "$3310B3E6";
-	BaseType = bool;
-}
 CParticleNodePinIn	$DA4915EE
 {
 	SelfName = "Clamp";
@@ -28107,16 +27880,6 @@ CParticleNodePinIn	$C6A10B13
 	Visible = false;
 	ExportInParent = true;
 	Owner = "$709C301D";
-	BaseType = bool;
-	ValueB = bool4(true, false, false, false);
-}
-CParticleNodePinIn	$6A833B3D
-{
-	SelfName = "Enabled";
-	Type = bool;
-	Visible = false;
-	ExportInParent = true;
-	Owner = "$3310B3E6";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
 }
@@ -33602,5 +33365,188 @@ CParticleNodePinOut	$611CB4D4
 	BaseType = float;
 	ConnectedPins = {
 		"$D517C1F0",
+	};
+}
+CParticleNodePinIn	$7C2A4FCF
+{
+	SelfName = "Dimensionality";
+	Type = int;
+	Visible = false;
+	Owner = "$519389D6";
+	BaseType = int;
+}
+CParticleNodePinIn	$CE3952A9
+{
+	SelfName = "Dimensionality";
+	Type = int;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$F76AA28A";
+	BaseType = int;
+	ValueI = int4(1, 0, 0, 0);
+}
+CParticleNodeTemplate	$7C782744
+{
+	InputPins = {
+		"$BD385948",
+		"$DB300B86",
+		"$95EB774D",
+		"$7EEB1EE9",
+		"$AC10FD57",
+		"$138A5D98",
+		"$70916070",
+		"$772D244E",
+		"$4076CDC0",
+		"$22AF41E9",
+		"$34659484",
+		"$77FA9C57",
+		"$85DC3031",
+		"$D2F8F85A",
+		"$EDFE1F00",
+	};
+	OutputPins = {
+		"$1CCDA4F0",
+	};
+	WorkspacePosition = int2(-374, -88);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Events.pkfx";
+	SubGraphName = "EventMultiplierBurst";
+}
+CParticleNodePinIn	$BD385948
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$7C782744";
+	BaseType = event;
+	ConnectedPins = {
+		"$54B4B6B6",
+	};
+}
+CParticleNodePinIn	$DB300B86
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$7C782744";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$95EB774D
+{
+	SelfName = "SpawnCountRandom";
+	Type = int;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = int;
+}
+CParticleNodePinIn	$7EEB1EE9
+{
+	SelfName = "SpawnCount";
+	Type = float;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$AC10FD57
+{
+	SelfName = "SpawnCountMax";
+	Type = float;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$138A5D98
+{
+	SelfName = "SpawnCountDeviation";
+	Type = float;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = float;
+}
+CParticleNodePinIn	$70916070
+{
+	SelfName = "Flux";
+	Type = float;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$772D244E
+{
+	SelfName = "LODMode";
+	Type = int;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = int;
+}
+CParticleNodePinIn	$4076CDC0
+{
+	SelfName = "FirstSpawnDelay";
+	Type = float;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = float;
+}
+CParticleNodePinIn	$22AF41E9
+{
+	SelfName = "MinEmissionLOD";
+	Type = float;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = float;
+}
+CParticleNodePinIn	$34659484
+{
+	SelfName = "MaxEmissionLOD";
+	Type = float;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$77FA9C57
+{
+	SelfName = "StopWithInstance";
+	Type = bool;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$85DC3031
+{
+	SelfName = "LODFluxMode";
+	Type = int;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = int;
+}
+CParticleNodePinIn	$D2F8F85A
+{
+	SelfName = "LODFluxAtCutoff";
+	Type = float;
+	Visible = false;
+	Owner = "$7C782744";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$EDFE1F00
+{
+	SelfName = "LODFluxRamp";
+	Type = dataCurve;
+	Owner = "$7C782744";
+	BaseType = dataCurve;
+}
+CParticleNodePinOut	$1CCDA4F0
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$7C782744";
+	BaseType = event;
+	ConnectedPins = {
+		"$8C3E84C8",
 	};
 }

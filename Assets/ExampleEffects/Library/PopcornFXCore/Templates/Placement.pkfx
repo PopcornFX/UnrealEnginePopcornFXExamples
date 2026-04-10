@@ -1,4 +1,4 @@
-Version = 2.23.0.25073;
+Version = 2.24.0.26309;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -793,6 +793,9 @@ CParticleNodeGraph	$D4DF65A2
 		"$76DCB097",
 		"$D9D7C868",
 		"$1D3765D1",
+		"$25591384",
+		"$50B27861",
+		"$0E3E46FF",
 	};
 	WorkspaceZoom = 0;
 }
@@ -801,7 +804,7 @@ CParticleNodeTemplateExport	$500768A5
 	InputPins = {
 		"$48A5FC1F",
 	};
-	WorkspacePosition = int2(1364, 154);
+	WorkspacePosition = int2(1738, 154);
 	ExportedName = "Child";
 	ExportedType = event;
 	Type = Output;
@@ -811,7 +814,7 @@ CParticleNodePinIn	$48A5FC1F
 	SelfName = "Value";
 	Owner = "$500768A5";
 	ConnectedPins = {
-		"$E51A33B5",
+		"$D8998F04",
 	};
 }
 CParticleNodePassThrough	$006CED04
@@ -4303,6 +4306,7 @@ CParticleNodeGraph	$B21F6DFA
 		"$64AF00CF",
 		"$2775B444",
 		"$2C02AB32",
+		"$37F3487C",
 	};
 	WorkspaceZoom = 0;
 }
@@ -4560,6 +4564,7 @@ CParticleNodeScript	$3DAC0B32
 		"$88CB86DC",
 		"$DB3418C6",
 		"$2E8D233D",
+		"$79AC718C",
 	};
 	WorkspacePosition = int2(418, -352);
 	Expression = "int3	res = max(1, abs(Resolution));
@@ -4576,6 +4581,7 @@ UVW = (float3suf(coordsSUF) + centerOffset) / max(1, normalizer) + axisSystemOff
 Coords = abs(coordsSUF);
 Coordinates = UVW - 0.5;
 EffectiveResolution = res;
+GridCoords = coordsSUF;
 ";
 }
 CParticleNodePinIn	$8B7B10DD
@@ -4739,6 +4745,7 @@ CParticleNodeTemplate	$C5B01702
 		"$FB1DFCD9",
 		"$62F08C5D",
 		"$A6DAE866",
+		"$1B2A7441",
 	};
 	WorkspacePosition = int2(-396, 154);
 	SubGraphName = "LinearGridPlacement";
@@ -5005,7 +5012,7 @@ CParticleNodeTemplate	$C7A2DE56
 	OutputPins = {
 		"$6703BAFD",
 	};
-	WorkspacePosition = int2(-396, 418);
+	WorkspacePosition = int2(-396, 462);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "rotate";
 }
@@ -5204,7 +5211,7 @@ CParticleNodePinOut	$E51A33B5
 	Owner = "$518B80A8";
 	BaseType = event;
 	ConnectedPins = {
-		"$48A5FC1F",
+		"$7751AD49",
 	};
 }
 CParticleNodePassThrough	$F31D0D0F
@@ -13611,5 +13618,141 @@ CParticleNodePinOut	$3C1D50C5
 	BaseType = event;
 	ConnectedPins = {
 		"$59663DE6",
+	};
+}
+CParticleNodePinOut	$79AC718C
+{
+	SelfName = "GridCoords";
+	Type = int3;
+	Owner = "$3DAC0B32";
+	BaseType = int3;
+	ConnectedPins = {
+		"$999A77AB",
+	};
+}
+CParticleNodeTemplateExport	$37F3487C
+{
+	InputPins = {
+		"$999A77AB",
+	};
+	WorkspacePosition = int2(880, 176);
+	ExportedName = "GridCoords";
+	ExportedType = int3;
+	Type = Output;
+	Order = 11;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$999A77AB
+{
+	SelfName = "Value";
+	Type = int3;
+	Owner = "$37F3487C";
+	ConnectedPins = {
+		"$79AC718C",
+	};
+}
+CParticleNodePinOut	$1B2A7441
+{
+	SelfName = "GridCoords";
+	Type = int3;
+	Owner = "$C5B01702";
+	BaseType = int3;
+	ConnectedPins = {
+		"$F8C4DC5F",
+	};
+}
+CParticleNodeEventPayloadAppend	$25591384
+{
+	InputPins = {
+		"$7751AD49",
+		"$28C11C31",
+	};
+	OutputPins = {
+		"$D8998F04",
+	};
+	WorkspacePosition = int2(1364, 154);
+	PayloadName = "GirdCoords";
+	PayloadType = int3;
+}
+CParticleNodePinIn	$7751AD49
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$25591384";
+	BaseType = event;
+	ConnectedPins = {
+		"$E51A33B5",
+	};
+}
+CParticleNodePinIn	$28C11C31
+{
+	SelfName = "Value";
+	Type = int3;
+	Owner = "$25591384";
+	BaseType = int3;
+	ConnectedPins = {
+		"$76C27016",
+	};
+}
+CParticleNodePinOut	$D8998F04
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$25591384";
+	BaseType = event;
+	ConnectedPins = {
+		"$48A5FC1F",
+	};
+}
+CParticleNodePassThrough	$50B27861
+{
+	InputPins = {
+		"$A30A6416",
+	};
+	OutputPins = {
+		"$76C27016",
+	};
+	WorkspacePosition = int2(1100, 462);
+}
+CParticleNodePinIn	$A30A6416
+{
+	SelfName = "Value";
+	Owner = "$50B27861";
+	ConnectedPins = {
+		"$E491EAD6",
+	};
+}
+CParticleNodePinOut	$76C27016
+{
+	SelfName = "Value";
+	Owner = "$50B27861";
+	ConnectedPins = {
+		"$28C11C31",
+	};
+}
+CParticleNodePassThrough	$0E3E46FF
+{
+	InputPins = {
+		"$F8C4DC5F",
+	};
+	OutputPins = {
+		"$E491EAD6",
+	};
+	WorkspacePosition = int2(44, 462);
+}
+CParticleNodePinIn	$F8C4DC5F
+{
+	SelfName = "Value";
+	Owner = "$0E3E46FF";
+	ConnectedPins = {
+		"$1B2A7441",
+	};
+}
+CParticleNodePinOut	$E491EAD6
+{
+	SelfName = "Value";
+	Owner = "$0E3E46FF";
+	ConnectedPins = {
+		"$A30A6416",
 	};
 }

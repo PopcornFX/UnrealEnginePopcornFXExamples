@@ -1,8 +1,8 @@
-Version = 2.23.0.25073;
+Version = 2.24.0.26309;
 CAssetGeneratorVectorField_Graph	$D857A040
 {
 	Description = {
-		"@eng:Empty vectorField graph",
+		"@eng:Empty vector-field graph",
 	};
 	Dimensions = uint3(256, 256, 1);
 	GeneratorGraph = "$A55AEFC6";

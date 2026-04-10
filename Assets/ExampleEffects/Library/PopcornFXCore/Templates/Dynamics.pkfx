@@ -1,4 +1,4 @@
-Version = 2.23.0.25073;
+Version = 2.24.0.26309;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -5313,6 +5313,9 @@ CParticleNodePinOut	$272A4ED1
 CParticleNodeGraph	$E191BFCB
 {
 	CustomName = "Projection";
+	Description = {
+		"@eng:Reprojects particles on a shape each frame, projecting both the `Position` & `Velocity` so the particle properly flows along the shape surface.\\nYou can typically use this by chaining it after a physics node.\\n\\nThis node will use discretization paths and force stores on the output `Position` & `Velocity`. If you do not want the forced discretization, use the `Projection_NoStore` node instead.",
+	};
 	Public = true;
 	SearchKeywords = "surface";
 	Nodes = {
@@ -29164,6 +29167,9 @@ CParticleNodePinIn	$6EFB5B0A
 CParticleNodeGraph	$34DF3731
 {
 	CustomName = "Projection_NoStore";
+	Description = {
+		"@eng:Reprojects particles on a shape each frame, projecting both the `Position` & `Velocity` so the particle properly flows along the shape surface.\\n\\nIf you want this node to automatically store the Position & Velocity for the next frame, without having to use explicit discretization paths, use the `Projection` node instead.",
+	};
 	Public = true;
 	SearchKeywords = "surface";
 	Nodes = {
@@ -31525,6 +31531,7 @@ CParticleNodePinOut	$81D9E827
 CParticleNodeTemplate	$1B18F726
 {
 	InputPins = {
+		"$05CFB2A5",
 		"$717701CD",
 		"$90847F00",
 		"$EABE739E",
@@ -31953,6 +31960,9 @@ CParticleNodeTemplate	$96F6C520
 		"$7B7FAFF6",
 		"$D59E8E13",
 		"$A5575240",
+		"$BB8A6E31",
+		"$2CABCC21",
+		"$CC3C2379",
 	};
 	OutputPins = {
 		"$5D7251B0",
@@ -50971,4 +50981,38 @@ CParticleNodePinIn	$FE44C2C8
 	Owner = "$AFFD48E7";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$05CFB2A5
+{
+	SelfName = "Dimensionality";
+	Type = int;
+	Visible = false;
+	Owner = "$1B18F726";
+	BaseType = int;
+	ValueI = int4(1, 0, 0, 0);
+}
+CParticleNodePinIn	$BB8A6E31
+{
+	SelfName = "Translation";
+	Type = float3;
+	Visible = false;
+	Owner = "$96F6C520";
+	BaseType = float3;
+}
+CParticleNodePinIn	$2CABCC21
+{
+	SelfName = "Orientation";
+	Type = orientation;
+	Visible = false;
+	Owner = "$96F6C520";
+	BaseType = orientation;
+}
+CParticleNodePinIn	$CC3C2379
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$96F6C520";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 1.0000000e+00, 1.0000000e+00, 0.0000000e+00);
 }

@@ -1,4 +1,4 @@
-Version = 2.23.0.25067;
+Version = 2.24.0.26309;
 CProjectSettings	$D857A09F
 {
 	General = "$35A36C4E";
@@ -221,4 +221,5 @@ CEditorProject	$AF0F155D
 }
 CProjectSettingsRendering	$DBE780E4
 {
+	ToneMappingType = PopcornFX;
 }

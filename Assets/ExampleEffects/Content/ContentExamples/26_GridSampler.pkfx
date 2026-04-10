@@ -1,4 +1,4 @@
-Version = 2.23.0.25083;
+Version = 2.24.0.26309;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -8,8 +8,8 @@ CEditorAssetEffect	$41EED1A4
 {
 	LoopingEnabled = false;
 	LoopDelay = 1.0000000e+01;
-	StartCameraPosition = float3(0.0000000e+00, 1.8939700e+00, 5.8410201e+00);
-	StartCameraOrientation = float3(1.0885617e-01, -2.6767501e-03, 0.0000000e+00);
+	StartCameraPosition = float3(0.0000000e+00, 2.6800001e+00, 5.5000000e+00);
+	StartCameraOrientation = float3(2.0943955e-01, 0.0000000e+00, 0.0000000e+00);
 	StartCameraFov = 9.0000000e+01;
 	Camera2Position = float3(0.0000000e+00, 0.0000000e+00, 5.0000000e+00);
 	Camera2Orientation = float3(0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
@@ -180,7 +180,7 @@ CParticleNodeTemplate	$21C8A330
 		"$60D81B47",
 	};
 	WorkspacePosition = int2(572, -22);
-	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Events.pkfx";
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Events.pkfx";
 	SubGraphName = "EventMultiplier";
 }
 CParticleNodePinIn	$15E59E67
@@ -688,7 +688,7 @@ CParticleNodeTemplate	$A4749D6B
 		"$33BA43CD",
 	};
 	WorkspacePosition = int2(-682, 572);
-	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "parent.emittedCount";
 }
 CParticleNodePinOut	$33BA43CD
@@ -712,7 +712,7 @@ CParticleNodeTemplate	$3545CD9F
 		"$3AB35992",
 	};
 	WorkspacePosition = int2(1056, 0);
-	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Utils.pkfx";
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Utils.pkfx";
 	SubGraphName = "InfiniteLife";
 }
 CParticleNodePinIn	$898E03CC
@@ -847,7 +847,7 @@ CParticleNodeTemplate	$8D336A55
 		"$207EB5C3",
 	};
 	WorkspacePosition = int2(132, 242);
-	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Samplers.pkfx";
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
 	SubGraphName = "grid.dimensions";
 }
 CParticleNodePinIn	$AA29391A
@@ -887,7 +887,7 @@ CParticleNodeTemplate	$453ADF51
 		"$66DEC2A6",
 	};
 	WorkspacePosition = int2(-1012, 286);
-	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Samplers.pkfx";
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
 	SubGraphName = "grid.dimensions";
 }
 CParticleNodePinIn	$DE3B8FA2
@@ -1084,7 +1084,7 @@ CParticleNodeTemplate	$993334C1
 		"$2F568E4E",
 	};
 	WorkspacePosition = int2(572, 858);
-	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Samplers.pkfx";
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
 	SubGraphName = "grid.read";
 }
 CParticleNodePinIn	$44D1C677
@@ -1198,7 +1198,7 @@ CParticleNodeTemplate	$F0BF9EF1
 		"$FEEC80D3",
 	};
 	WorkspacePosition = int2(66, 572);
-	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Samplers.pkfx";
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
 	SubGraphName = "grid.dimensions";
 }
 CParticleNodePinIn	$14BD6E4A
@@ -1357,7 +1357,7 @@ CParticleNodeTemplate	$C0EB6CDA
 		"$88CE4850",
 	};
 	WorkspacePosition = int2(0, 374);
-	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "toFloat";
 }
 CParticleNodePinIn	$3FF6DB0C
@@ -1523,7 +1523,7 @@ CParticleNodeTemplate	$3B07997B
 		"$623B243C",
 	};
 	WorkspacePosition = int2(1408, 462);
-	SubGraphFilePath = "Content/Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "effect.position";
 }
 CParticleNodePinOut	$623B243C

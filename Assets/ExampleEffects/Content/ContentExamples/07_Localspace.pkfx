@@ -1,4 +1,4 @@
-Version = 2.23.0.25073;
+Version = 2.24.0.26309;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -844,6 +844,7 @@ CParticleNodePinOut	$12CE6FB0
 CParticleNodeTemplate	$33C09A0A
 {
 	InputPins = {
+		"$3BD8AC15",
 		"$90698E83",
 		"$C2F3F662",
 		"$9169A12F",
@@ -1885,6 +1886,7 @@ CParticleNodePinOut	$9F344FC3
 CParticleNodeTemplate	$C34A5682
 {
 	InputPins = {
+		"$98030297",
 		"$BBFDDA16",
 		"$74668C00",
 		"$7D5F6705",
@@ -4076,4 +4078,22 @@ CParticleNodePinIn	$DA7E7A7C
 	Owner = "$C9511FED";
 	BaseType = bool;
 	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$3BD8AC15
+{
+	SelfName = "Dimensionality";
+	Type = int;
+	Visible = false;
+	Owner = "$33C09A0A";
+	BaseType = int;
+	ValueI = int4(1, 0, 0, 0);
+}
+CParticleNodePinIn	$98030297
+{
+	SelfName = "Dimensionality";
+	Type = int;
+	Visible = false;
+	Owner = "$C34A5682";
+	BaseType = int;
+	ValueI = int4(1, 0, 0, 0);
 }

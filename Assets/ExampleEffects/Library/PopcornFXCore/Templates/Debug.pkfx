@@ -1,4 +1,4 @@
-Version = 2.23.0.25073;
+Version = 2.24.0.26309;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -9,6 +9,7 @@ CParticleEffect	$6B70D015
 		"$008093E4",
 		"$8F13B6C0",
 		"$506D362A",
+		"$DE248CAA",
 		"$77FD347B",
 	};
 	AttributeFlatList = "$8F7A985A";
@@ -6393,4 +6394,68 @@ CParticleNodePinIn	$32E0B8D9
 	Owner = "$D6511F34";
 	BaseType = float3;
 	ValueF = float4(-5.0000000e-01, -5.0000000e-01, -5.0000000e-01, 0.0000000e+00);
+}
+CParticleNodeGraph	$DE248CAA
+{
+	CustomName = "debug.enabled";
+	Description = {
+		"@eng:This node outputs `true` when the Editor debug draws are enabled, `false` otherwise.",
+	};
+	Public = true;
+	ClassType = Math;
+	IconKey = "Node_Info";
+	SearchKeywords = "cpu gpu";
+	Nodes = {
+		"$1A90DA7C",
+		"$159315FB",
+		"$AE54D77B",
+	};
+	WorkspaceZoom = 0;
+	Collapsed = true;
+}
+CParticleNodeTemplateExport	$1A90DA7C
+{
+	InputPins = {
+		"$97B400E5",
+	};
+	WorkspacePosition = int2(22, -242);
+	ExportedName = "Enabled";
+	ExportedType = bool;
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$97B400E5
+{
+	SelfName = "Value";
+	Owner = "$1A90DA7C";
+	ConnectedPins = {
+		"$813B825B",
+	};
+}
+CParticleNodeAnnotation	$159315FB
+{
+	CustomName = {
+		"@eng:$(Graph.Name)",
+	};
+	Description = {
+		"@eng:$(Graph.Description)",
+	};
+	WorkspacePosition = int2(-484, -572);
+	SelfSize = int2(858, 198);
+}
+CParticleNodeScript	$AE54D77B
+{
+	OutputPins = {
+		"$813B825B",
+	};
+	WorkspacePosition = int2(-264, -242);
+	Expression = "Value = debug.enabled();";
+}
+CParticleNodePinOut	$813B825B
+{
+	SelfName = "Value";
+	Owner = "$AE54D77B";
+	ConnectedPins = {
+		"$97B400E5",
+	};
 }

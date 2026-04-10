@@ -1,4 +1,4 @@
-Version = 2.23.0.25083;
+Version = 2.24.0.26309;
 CParticleEffect	$D857A09F
 {
 	LayerGraph = "$4B933A29";
@@ -17424,6 +17424,7 @@ CResourceDescriptor_Shape	$D12384DB
 CParticleNodeTemplate	$B344A9EC
 {
 	InputPins = {
+		"$F57AAAB4",
 		"$CFC84D32",
 		"$06261599",
 		"$5FCFC6D0",
@@ -42388,4 +42389,13 @@ CParticleNodePinIn	$39E76F80
 	Owner = "$28491D6A";
 	BaseType = dataImage;
 	ValueD = "Library/PopcornFXCore/Materials/DefaultTextures/White.dds";
+}
+CParticleNodePinIn	$F57AAAB4
+{
+	SelfName = "Dimensionality";
+	Type = int;
+	Visible = false;
+	Owner = "$B344A9EC";
+	BaseType = int;
+	ValueI = int4(1, 0, 0, 0);
 }
