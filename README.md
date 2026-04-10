@@ -1,7 +1,7 @@
 # Unreal Engine PopcornFX Examples Project
 
 **Unreal Engine** project to showcase **PopcornFX** plugin features.
-* **PopcornFX:** `v2.23.3`
+* **PopcornFX:** `v2.24.1`
 * **Unreal Engine:** `5.5`, `5.6` and `5.7`
 
 This example project presents integration features of PopcornFX into Unreal Engine,
@@ -9,14 +9,14 @@ it does not present the full range of PopcornFX features.
 
 Take a tour in the `/Content/ExampleMaps/` levels to explore this project.
 
-The source PopcornFX Project is located in `Assets/ExampleEffects/`, you can inspect how effects were created in **[PopcornFX Editor](https://www.popcornfx.com/popcornfx-editor/)**.
+The source PopcornFX Project is located in `Assets/ExampleEffects/`, you can inspect how effects were created in the **[PopcornFX Editor](https://www.popcornfx.com/editor/)**.
 
 If you have any questions, suggestions, or just feed backs, you can
 use **Github Issues** !
 
 # Setup
 
-This project requires the [PopcornFX Plugin](https://www.popcornfx.com/plugin-unrealengine/) for Unreal Engine.
+This project requires the [PopcornFX Plugin](https://www.popcornfx.com/plugin-unreal-engine/) for Unreal Engine.
 
 ## If you are cloning this project from Github
 
@@ -54,7 +54,7 @@ There are two ways to launch the project:
 
 ## Quick Links: Documentation and Support
 
-* [**Plugin** documentation](https://www.popcornfx.com/docs/popcornfx-v2/plugins/ue-plugin/) (Install, Import, Setup, Troubleshooting, etc..)
+* [**Plugin** documentation](https://documentation.popcornfx.com/PopcornFX/latest/plugins/ue-plugin/) (Install, Import, Setup, Troubleshooting, etc..)
 * [PopcornFX **Editor** documentation](https://www.popcornfx.com/docs/popcornfx-v2/)
 * [PopcornFX **Discord** server](https://discord.gg/4ka27cVrsf)
 
