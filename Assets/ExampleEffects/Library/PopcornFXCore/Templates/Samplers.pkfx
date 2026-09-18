@@ -1,4 +1,4 @@
-Version = 2.24.0.26309;
+Version = 2.25.0.27466;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -80,6 +80,9 @@ CParticleEffect	$6B70D015
 		"$11ED050A",
 		"$90E651D5",
 		"$F7074406",
+		"$00CFCF5C",
+		"$D0972B33",
+		"$43973390",
 		"$D6EE4CF0",
 		"$ECF81A02",
 		"$CF9086D4",
@@ -12819,7 +12822,7 @@ UV = asfloat(PCoords.yz);
 // FIXME(Julien): Hide the UVW unpacking inside a native call ?
 TetraID = PCoords.x / 4;
 UVW = float3(asfloat((int2(PCoords.y & 0xFFFF,
-						   PCoords.y >> 16) << 7) | 0x3F800000),
+						   PCoords.y >> 16) << 7) | 0x3F800000) - 1.0f,
 			 asfloat(PCoords.z));
 ";
 }
@@ -30225,6 +30228,7 @@ CParticleNodeTemplateExport	$87F6DAE8
 	};
 	WorkspacePosition = int2(176, -330);
 	ExportedName = "OutsideValue";
+	ExportedTypeMask = 8160;
 	Type = Input;
 	Order = 10;
 	CategoryName = {
@@ -37744,6 +37748,7 @@ CParticleNodeTemplateExport	$43FFA33A
 	};
 	WorkspacePosition = int2(836, -330);
 	ExportedName = "OutsideValue";
+	ExportedTypeMask = 8160;
 	Type = Input;
 	Order = 10;
 	CategoryName = {
@@ -41399,4 +41404,1938 @@ CParticleNodePinOut	$62BA76DE
 	ConnectedPins = {
 		"$FF19205D",
 	};
+}
+CParticleNodeGraph	$00CFCF5C
+{
+	CustomName = "eventStream.properties";
+	Description = {
+		"@eng:Outputs the properties of the input `EventStream`",
+	};
+	Public = true;
+	ClassType = Sampler;
+	IconKey = "Resource_Simcache";
+	SearchKeywords = "array resolution dimensions";
+	Nodes = {
+		"$1C0A0ED7",
+		"$E79CEFD0",
+		"$468DF603",
+	};
+	WorkspaceZoom = -4;
+	Collapsed = true;
+}
+CParticleNodeScript	$1C0A0ED7
+{
+	InputPins = {
+		"$4C0810C9",
+	};
+	OutputPins = {
+		"$6138C280",
+	};
+	WorkspacePosition = int2(198, -154);
+	Expression = "Duration = Sampler.duration();";
+}
+CParticleNodePinIn	$4C0810C9
+{
+	SelfName = "Sampler";
+	Type = dataEventStream;
+	Owner = "$1C0A0ED7";
+	BaseType = dataEventStream;
+	ConnectedPins = {
+		"$B5563736",
+	};
+}
+CParticleNodePinOut	$6138C280
+{
+	SelfName = "Duration";
+	Type = float;
+	Owner = "$1C0A0ED7";
+	BaseType = float;
+	ConnectedPins = {
+		"$DE61C21A",
+	};
+}
+CParticleNodeTemplateExport	$E79CEFD0
+{
+	Description = {
+		"@eng:Duration of the event stream in seconds",
+	};
+	InputPins = {
+		"$DE61C21A",
+	};
+	WorkspacePosition = int2(792, -154);
+	ExportedName = "Duration";
+	ExportedType = float;
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$DE61C21A
+{
+	SelfName = "Value";
+	Type = float;
+	Owner = "$E79CEFD0";
+	ConnectedPins = {
+		"$6138C280",
+	};
+}
+CParticleNodeTemplateExport	$468DF603
+{
+	Description = {
+		"@eng:Event-stream (simulation cache) sampler",
+	};
+	InputPins = {
+		"$9C0A4947",
+	};
+	OutputPins = {
+		"$B5563736",
+	};
+	WorkspacePosition = int2(-352, -154);
+	ExportedName = "Sampler";
+	ExportedType = dataEventStream;
+	Type = Input;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$9C0A4947
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$468DF603";
+}
+CParticleNodePinOut	$B5563736
+{
+	SelfName = "Value";
+	Owner = "$468DF603";
+	ConnectedPins = {
+		"$4C0810C9",
+	};
+}
+CParticleNodeGraph	$D0972B33
+{
+	CustomName = "eventStream.generator";
+	Public = true;
+	ClassType = Sampler;
+	IconKey = "Resource_Simcache";
+	Nodes = {
+		"$A3C93C46",
+		"$8AFC4ED6",
+		"$9B120C83",
+		"$256D8372",
+		"$81C9C626",
+		"$0A2D31B7",
+		"$8BF4EC3B",
+		"$60625989",
+		"$22041EB7",
+		"$C31C3AE7",
+		"$E26CEF49",
+	};
+	WorkspaceZoom = -4;
+	Collapsed = true;
+}
+CParticleNodeTemplateExport	$A3C93C46
+{
+	Description = {
+		"@eng:Normalized start time offset between two spawns.",
+	};
+	InputPins = {
+		"$175E14A4",
+	};
+	OutputPins = {
+		"$A6AEB28E",
+	};
+	WorkspacePosition = int2(-572, -154);
+	ExportedName = "FirstSpawnDelay";
+	ExportedType = float;
+	Type = Input;
+	Order = 50;
+	CategoryName = {
+		"@eng:Emission",
+	};
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$175E14A4
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$A3C93C46";
+}
+CParticleNodePinOut	$A6AEB28E
+{
+	SelfName = "Value";
+	Owner = "$A3C93C46";
+	ConnectedPins = {
+		"$5A405111",
+	};
+}
+CParticleNodeScript	$8AFC4ED6
+{
+	CustomName = {
+		"@eng:Accumulator",
+	};
+	InputPins = {
+		"$5A405111",
+	};
+	OutputPins = {
+		"$966DB475",
+	};
+	WorkspacePosition = int2(-242, -154);
+	Expression = "// Build the int2 accumuator expected by the event generator node
+// by packing the raw bits of the spawn fraction, and the initial emitted count:
+
+int		initialEmittedCount = 0;
+float	epsilon = 1.0e-3f;	// In theory should be 0.0
+float	initialSpawnFraction = (1.0 - epsilon) - FirstSpawnDelay * (1.0 - 2.0 * epsilon);
+InitialAccum = int2(asint(initialSpawnFraction), initialEmittedCount);
+";
+}
+CParticleNodePinIn	$5A405111
+{
+	SelfName = "FirstSpawnDelay";
+	Type = float;
+	Owner = "$8AFC4ED6";
+	BaseType = float;
+	ConnectedPins = {
+		"$A6AEB28E",
+	};
+}
+CParticleNodePinOut	$966DB475
+{
+	SelfName = "InitialAccum";
+	Type = int2;
+	Owner = "$8AFC4ED6";
+	BaseType = int2;
+	ConnectedPins = {
+		"$047EEFAF",
+	};
+}
+CParticleNodeTemplateExport	$9B120C83
+{
+	InputPins = {
+		"$530CDF6F",
+	};
+	WorkspacePosition = int2(374, -22);
+	ExportedName = "Signal";
+	ExportedType = event;
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$530CDF6F
+{
+	SelfName = "Value";
+	Type = event;
+	Owner = "$9B120C83";
+	ConnectedPins = {
+		"$EC129346",
+	};
+}
+CParticleNodeDiscretizationPoint	$256D8372
+{
+	InputPins = {
+		"$6A79C198",
+	};
+	OutputPins = {
+		"$FF5D7CD6",
+	};
+	WorkspacePosition = int2(374, -176);
+}
+CParticleNodePinIn	$6A79C198
+{
+	SelfName = "Value";
+	Type = int2;
+	Owner = "$256D8372";
+	ConnectedPins = {
+		"$915FA99E",
+	};
+}
+CParticleNodePinOut	$FF5D7CD6
+{
+	SelfName = "Value";
+	Owner = "$256D8372";
+}
+CParticleNodePassThrough	$81C9C626
+{
+	InputPins = {
+		"$F4732A60",
+	};
+	OutputPins = {
+		"$C4422D4A",
+	};
+	WorkspacePosition = int2(-330, 176);
+}
+CParticleNodePinIn	$F4732A60
+{
+	SelfName = "Value";
+	Owner = "$81C9C626";
+	ConnectedPins = {
+		"$E0F8D55D",
+	};
+}
+CParticleNodePinOut	$C4422D4A
+{
+	SelfName = "Value";
+	Owner = "$81C9C626";
+	ConnectedPins = {
+		"$D522C18E",
+		"$330BA5A5",
+	};
+}
+CParticleNodeStreamEventGenerator	$0A2D31B7
+{
+	InputPins = {
+		"$047EEFAF",
+		"$57048073",
+		"$D8CA8847",
+		"$A1D4D952",
+	};
+	OutputPins = {
+		"$915FA99E",
+		"$EC129346",
+	};
+	WorkspacePosition = int2(66, -66);
+}
+CParticleNodePinIn	$047EEFAF
+{
+	SelfName = "Accum";
+	Type = int2;
+	Owner = "$0A2D31B7";
+	BaseType = int2;
+	ConnectedPins = {
+		"$966DB475",
+	};
+}
+CParticleNodePinIn	$57048073
+{
+	SelfName = "EventStream";
+	Type = dataEventStream;
+	Owner = "$0A2D31B7";
+	BaseType = dataEventStream;
+	ConnectedPins = {
+		"$16D82534",
+	};
+}
+CParticleNodePinIn	$D8CA8847
+{
+	SelfName = "TimeCursorPrev";
+	Type = float;
+	Owner = "$0A2D31B7";
+	BaseType = float;
+	ConnectedPins = {
+		"$B6D81076",
+	};
+}
+CParticleNodePinIn	$A1D4D952
+{
+	SelfName = "TimeCursor";
+	Type = float;
+	Owner = "$0A2D31B7";
+	BaseType = float;
+	ConnectedPins = {
+		"$C32AC316",
+	};
+}
+CParticleNodePinOut	$915FA99E
+{
+	SelfName = "Accum";
+	Type = int2;
+	Owner = "$0A2D31B7";
+	BaseType = int2;
+	ConnectedPins = {
+		"$6A79C198",
+	};
+}
+CParticleNodePinOut	$EC129346
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$0A2D31B7";
+	BaseType = event;
+	ConnectedPins = {
+		"$530CDF6F",
+	};
+}
+CParticleNodeTemplateExport	$8BF4EC3B
+{
+	InputPins = {
+		"$B824C370",
+	};
+	OutputPins = {
+		"$E0F8D55D",
+	};
+	WorkspacePosition = int2(-572, 154);
+	ExportedName = "TimeCursor";
+	Type = Input;
+}
+CParticleNodePinIn	$B824C370
+{
+	SelfName = "DefaultValue";
+	Owner = "$8BF4EC3B";
+	ConnectedPins = {
+		"$002EAB3C",
+	};
+}
+CParticleNodePinOut	$E0F8D55D
+{
+	SelfName = "Value";
+	Owner = "$8BF4EC3B";
+	ConnectedPins = {
+		"$F4732A60",
+	};
+}
+CParticleNodeTemplateExport	$60625989
+{
+	Description = {
+		"@eng:Event-stream to be sampled",
+	};
+	InputPins = {
+		"$8DBEE53E",
+	};
+	OutputPins = {
+		"$16D82534",
+	};
+	WorkspacePosition = int2(-572, -22);
+	ExportedName = "Sampler";
+	ExportedType = dataEventStream;
+	Type = Input;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$8DBEE53E
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$60625989";
+}
+CParticleNodePinOut	$16D82534
+{
+	SelfName = "Value";
+	Owner = "$60625989";
+	ConnectedPins = {
+		"$57048073",
+	};
+}
+CParticleNodeTemplate	$22041EB7
+{
+	InputPins = {
+		"$D522C18E",
+	};
+	OutputPins = {
+		"$B6D81076",
+	};
+	WorkspacePosition = int2(-242, 66);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "PreviousFrameValue";
+}
+CParticleNodePinIn	$D522C18E
+{
+	SelfName = "Value";
+	Type = float;
+	Owner = "$22041EB7";
+	ConnectedPins = {
+		"$C4422D4A",
+	};
+}
+CParticleNodePinOut	$B6D81076
+{
+	SelfName = "Value";
+	Type = float;
+	Owner = "$22041EB7";
+	ConnectedPins = {
+		"$D8CA8847",
+	};
+}
+CParticleNodePassThrough	$C31C3AE7
+{
+	InputPins = {
+		"$330BA5A5",
+	};
+	OutputPins = {
+		"$C32AC316",
+	};
+	WorkspacePosition = int2(-110, 176);
+}
+CParticleNodePinIn	$330BA5A5
+{
+	SelfName = "Value";
+	Owner = "$C31C3AE7";
+	ConnectedPins = {
+		"$C4422D4A",
+	};
+}
+CParticleNodePinOut	$C32AC316
+{
+	SelfName = "Value";
+	Owner = "$C31C3AE7";
+	ConnectedPins = {
+		"$A1D4D952",
+	};
+}
+CParticleNodeTemplate	$E26CEF49
+{
+	InputPins = {
+		"$7D17DE02",
+	};
+	OutputPins = {
+		"$002EAB3C",
+	};
+	WorkspacePosition = int2(-880, 154);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "self.age";
+}
+CParticleNodePinIn	$7D17DE02
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$E26CEF49";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinOut	$002EAB3C
+{
+	SelfName = "Age";
+	Type = float;
+	Owner = "$E26CEF49";
+	BaseType = float;
+	ConnectedPins = {
+		"$B824C370",
+	};
+}
+CParticleNodeGraph	$43973390
+{
+	CustomName = "eventStream.eventMultiplier";
+	Public = true;
+	ClassType = Event;
+	IconKey = "Resource_Simcache";
+	SearchKeywords = "*";
+	Nodes = {
+		"$4586D2AF",
+		"$CEF738AB",
+		"$F25A765A",
+		"$C1F55F76",
+	};
+	WorkspaceZoom = -4;
+	Collapsed = true;
+}
+CParticleNodeLayer	$4586D2AF
+{
+	CustomName = {
+		"@eng:EventStreamMultiplier",
+	};
+	InputPins = {
+		"$067FD281",
+		"$94EB5FBD",
+		"$AED6311E",
+		"$EAB2D606",
+		"$4D6D41E5",
+		"$FAC5FE8C",
+		"$F6660AC7",
+		"$785B961A",
+		"$17E54ED6",
+	};
+	OutputPins = {
+		"$D19B4F89",
+		"$B10CD11D",
+	};
+	WorkspacePosition = int2(-154, -66);
+	AutoEntrypoint = true;
+	PreferredStorageSize = TinyGrowable;
+	NodeGraph = "$CF587E70";
+}
+CParticleNodePinIn	$067FD281
+{
+	SelfName = "Spawn";
+	Type = event;
+	Owner = "$4586D2AF";
+	BaseType = event;
+	ConnectedPins = {
+		"$C274F48D",
+	};
+}
+CParticleNodePinIn	$94EB5FBD
+{
+	SelfName = "Sampler";
+	Type = dataEventStream;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$4586D2AF";
+	BaseType = dataEventStream;
+}
+CParticleNodePinIn	$AED6311E
+{
+	SelfName = "CursorMode";
+	Type = int;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$4586D2AF";
+	BaseType = int;
+}
+CParticleNodePinIn	$FAC5FE8C
+{
+	SelfName = "Cursor";
+	Type = float;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$4586D2AF";
+	BaseType = float;
+}
+CParticleNodePinOut	$D19B4F89
+{
+	SelfName = "Child";
+	Type = event;
+	Owner = "$4586D2AF";
+	BaseType = event;
+	ConnectedPins = {
+		"$DAB43E33",
+	};
+}
+CParticleNodePinOut	$B10CD11D
+{
+	SelfName = "OnDeath";
+	Type = event;
+	Owner = "$4586D2AF";
+	BaseType = event;
+	ConnectedPins = {
+		"$27604F23",
+	};
+}
+CParticleNodeGraph	$CF587E70
+{
+	ClassType = Event;
+	Nodes = {
+		"$692C02C2",
+		"$C3BE802F",
+		"$3CA7FEBB",
+		"$48C10358",
+		"$65A15C66",
+		"$A5D5951A",
+		"$7893D03E",
+		"$274628EC",
+		"$590F206F",
+		"$F45BB65C",
+		"$4E0D149D",
+		"$ACF06FAD",
+		"$91DD827D",
+		"$09253368",
+		"$9AEC0000",
+		"$4E04412A",
+		"$3DE85AE8",
+		"$8B5F6ED8",
+		"$2D19A723",
+		"$3872E1AE",
+		"$109696EE",
+		"$7A605E7D",
+		"$BCF6670E",
+		"$E42E9C41",
+		"$9F72B6A4",
+		"$74E87AEA",
+		"$8B1FAE4D",
+		"$102F5FB8",
+		"$4D34222D",
+		"$7A4ADD11",
+		"$6DA78ECB",
+		"$B4EBD6A5",
+		"$461FA909",
+		"$140D8715",
+		"$F8052630",
+		"$39FE67E1",
+		"$873D1917",
+		"$4A50F171",
+	};
+	WorkspaceZoom = -4;
+}
+CParticleNodeSetLife	$692C02C2
+{
+	InputPins = {
+		"$E9336CA1",
+	};
+	WorkspacePosition = int2(-264, 220);
+}
+CParticleNodePinIn	$E9336CA1
+{
+	SelfName = "Life";
+	Type = float;
+	Owner = "$692C02C2";
+	BaseType = float;
+	ConnectedPins = {
+		"$FC45077C",
+	};
+	ValueF = float4(inf, 1.0000000e+00, 1.0000000e+00, 1.0000000e+00);
+}
+CParticleNodeTemplateExport	$C3BE802F
+{
+	Description = {
+		"@eng:Event stream to sampled",
+	};
+	InputPins = {
+		"$A6C2D198",
+	};
+	OutputPins = {
+		"$6847DD7A",
+	};
+	WorkspacePosition = int2(-2156, 638);
+	ExportedName = "Sampler";
+	ExportedType = dataEventStream;
+	Type = Input;
+}
+CParticleNodePinIn	$A6C2D198
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$C3BE802F";
+}
+CParticleNodePinOut	$6847DD7A
+{
+	SelfName = "Value";
+	Owner = "$C3BE802F";
+	ConnectedPins = {
+		"$0DEBA495",
+	};
+}
+CParticleNodeTemplate	$3CA7FEBB
+{
+	InputPins = {
+		"$CB1355C0",
+		"$24F5BAB0",
+		"$08E54BE6",
+	};
+	OutputPins = {
+		"$C517C3C1",
+	};
+	WorkspacePosition = int2(-748, 638);
+	SubGraphName = "eventStream.generator";
+}
+CParticleNodePinIn	$CB1355C0
+{
+	SelfName = "Sampler";
+	Type = dataEventStream;
+	Owner = "$3CA7FEBB";
+	BaseType = dataEventStream;
+	ConnectedPins = {
+		"$07FCBFDD",
+	};
+}
+CParticleNodePinIn	$24F5BAB0
+{
+	SelfName = "TimeCursor";
+	Owner = "$3CA7FEBB";
+	ConnectedPins = {
+		"$45F07858",
+	};
+}
+CParticleNodePinIn	$08E54BE6
+{
+	SelfName = "FirstSpawnDelay";
+	Type = float;
+	Visible = false;
+	Owner = "$3CA7FEBB";
+	BaseType = float;
+}
+CParticleNodePinOut	$C517C3C1
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$3CA7FEBB";
+	BaseType = event;
+	ConnectedPins = {
+		"$E8FB8E59",
+	};
+}
+CParticleNodeTemplateExport	$48C10358
+{
+	InputPins = {
+		"$D8CB89A2",
+	};
+	WorkspacePosition = int2(550, 638);
+	ExportedName = "Child";
+	ExportedType = event;
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$D8CB89A2
+{
+	SelfName = "Value";
+	Type = event;
+	Owner = "$48C10358";
+	ConnectedPins = {
+		"$80DDA874",
+	};
+}
+CParticleNodeTemplate	$65A15C66
+{
+	ExecStage = Evolve;
+	InputPins = {
+		"$51B96F8A",
+	};
+	OutputPins = {
+		"$E7DB0BD1",
+	};
+	WorkspacePosition = int2(-1386, 1188);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "scene.time";
+}
+CParticleNodePinIn	$51B96F8A
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$65A15C66";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinOut	$E7DB0BD1
+{
+	SelfName = "Time";
+	Type = float;
+	Owner = "$65A15C66";
+	BaseType = float;
+	ConnectedPins = {
+		"$DB54330B",
+	};
+}
+CParticleNodeTemplate	$A5D5951A
+{
+	ExecStage = Evolve;
+	InputPins = {
+		"$861415FE",
+	};
+	OutputPins = {
+		"$28A02E5C",
+	};
+	WorkspacePosition = int2(-1386, 1056);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "effect.age";
+}
+CParticleNodePinIn	$861415FE
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$A5D5951A";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinOut	$28A02E5C
+{
+	SelfName = "Age";
+	Type = float;
+	Owner = "$A5D5951A";
+	BaseType = float;
+	ConnectedPins = {
+		"$69FBFD6D",
+	};
+}
+CParticleNodeTemplate	$7893D03E
+{
+	InputPins = {
+		"$51E71A7B",
+	};
+	OutputPins = {
+		"$DDCBB6BC",
+	};
+	WorkspacePosition = int2(-1386, 924);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "self.age";
+}
+CParticleNodePinIn	$51E71A7B
+{
+	SelfName = "Scale";
+	Type = float;
+	Visible = false;
+	Owner = "$7893D03E";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinOut	$DDCBB6BC
+{
+	SelfName = "Age";
+	Type = float;
+	Owner = "$7893D03E";
+	BaseType = float;
+	ConnectedPins = {
+		"$B67D9ABA",
+	};
+}
+CParticleNodeTemplateExport	$274628EC
+{
+	Description = {
+		"@eng:Specifies with what metric the event-stream should be sampled",
+	};
+	InputPins = {
+		"$2334F0AF",
+	};
+	OutputPins = {
+		"$28D4E1DA",
+	};
+	WorkspacePosition = int2(-1386, 792);
+	ExportedName = "CursorMode";
+	ExportedType = int;
+	Type = Input;
+	InputType = Property;
+	Order = 1;
+	CategoryName = {
+		"@eng:Timing",
+	};
+	DropDownMode = SingleSelect;
+	EnumList = {
+		"Age",
+		"Effect Age",
+		"Scene Time",
+		"Custom",
+	};
+}
+CParticleNodePinIn	$2334F0AF
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$274628EC";
+}
+CParticleNodePinOut	$28D4E1DA
+{
+	SelfName = "Value";
+	Owner = "$274628EC";
+	ConnectedPins = {
+		"$84CCF945",
+	};
+}
+CParticleNodePick	$590F206F
+{
+	InputPins = {
+		"$84CCF945",
+		"$48E6B996",
+		"$0F8825EC",
+		"$C577B5DC",
+		"$B67D9ABA",
+		"$69FBFD6D",
+		"$DB54330B",
+		"$897FA103",
+	};
+	OutputPins = {
+		"$45F07858",
+	};
+	WorkspacePosition = int2(-1056, 792);
+	InputCount = 3;
+}
+CParticleNodePinIn	$84CCF945
+{
+	SelfName = "Selector";
+	Owner = "$590F206F";
+	ConnectedPins = {
+		"$28D4E1DA",
+	};
+}
+CParticleNodePinIn	$48E6B996
+{
+	SelfName = "CompareValue0";
+	Type = int;
+	Visible = false;
+	Owner = "$590F206F";
+}
+CParticleNodePinIn	$0F8825EC
+{
+	SelfName = "CompareValue1";
+	Type = int;
+	Visible = false;
+	Owner = "$590F206F";
+	ValueI = int4(1, 0, 0, 0);
+}
+CParticleNodePinIn	$C577B5DC
+{
+	SelfName = "CompareValue2";
+	Type = int;
+	Visible = false;
+	Owner = "$590F206F";
+	ValueI = int4(2, 0, 0, 0);
+}
+CParticleNodePinIn	$B67D9ABA
+{
+	SelfName = "Value0";
+	Owner = "$590F206F";
+	ConnectedPins = {
+		"$DDCBB6BC",
+	};
+}
+CParticleNodePinIn	$69FBFD6D
+{
+	SelfName = "Value1";
+	Owner = "$590F206F";
+	ConnectedPins = {
+		"$28A02E5C",
+	};
+}
+CParticleNodePinIn	$DB54330B
+{
+	SelfName = "Value2";
+	Owner = "$590F206F";
+	ConnectedPins = {
+		"$E7DB0BD1",
+	};
+}
+CParticleNodePinIn	$897FA103
+{
+	SelfName = "DefaultValue";
+	Owner = "$590F206F";
+	ConnectedPins = {
+		"$2E9895F6",
+	};
+}
+CParticleNodePinOut	$45F07858
+{
+	SelfName = "Value";
+	Owner = "$590F206F";
+	ConnectedPins = {
+		"$24F5BAB0",
+	};
+}
+CParticleNodeTemplateExport	$F45BB65C
+{
+	Description = {
+		"@eng:Custom sampling cursor, used when `CursorMode` is set to `Custom`",
+	};
+	InputPins = {
+		"$02D76A10",
+	};
+	OutputPins = {
+		"$2E9895F6",
+	};
+	WorkspacePosition = int2(-1386, 1320);
+	ExportedName = "Cursor";
+	ExportedType = float;
+	Type = Input;
+	Order = 20;
+	VisibleByDefault = true;
+	CategoryName = {
+		"@eng:Timing",
+	};
+	PinRules = Rule1;
+	BaseVisibility = Hidden;
+	RuleResult = Visible;
+	DependentProperty = "CursorMode";
+	RuleValue = "3";
+}
+CParticleNodePinIn	$02D76A10
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$F45BB65C";
+}
+CParticleNodePinOut	$2E9895F6
+{
+	SelfName = "Value";
+	Owner = "$F45BB65C";
+	ConnectedPins = {
+		"$897FA103",
+	};
+}
+CParticleNodeTemplate	$4E0D149D
+{
+	InputPins = {
+		"$1EDC6A76",
+		"$F3B27A47",
+	};
+	OutputPins = {
+		"$03E5CF40",
+	};
+	WorkspacePosition = int2(-22, 1254);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Events.pkfx";
+	SubGraphName = "EventOnDeath";
+}
+CParticleNodePinIn	$1EDC6A76
+{
+	SelfName = "Enabled";
+	Type = bool;
+	Visible = false;
+	Owner = "$4E0D149D";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$F3B27A47
+{
+	SelfName = "EvenWhenEffectStopped";
+	Type = bool;
+	Owner = "$4E0D149D";
+	BaseType = bool;
+	ConnectedPins = {
+		"$E5E5EA8D",
+	};
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinOut	$03E5CF40
+{
+	SelfName = "OnDeath";
+	Type = event;
+	Owner = "$4E0D149D";
+	BaseType = event;
+	ConnectedPins = {
+		"$373578FA",
+	};
+}
+CParticleNodeEventPayloadCopy	$ACF06FAD
+{
+	InputPins = {
+		"$373578FA",
+		"$76DF8147",
+	};
+	OutputPins = {
+		"$335FFB08",
+	};
+	WorkspacePosition = int2(264, 1254);
+}
+CParticleNodePinIn	$373578FA
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$ACF06FAD";
+	BaseType = event;
+	ConnectedPins = {
+		"$03E5CF40",
+	};
+}
+CParticleNodePinIn	$76DF8147
+{
+	SelfName = "SignalB";
+	Type = event;
+	Owner = "$ACF06FAD";
+	BaseType = event;
+	ConnectedPins = {
+		"$39907E0B",
+	};
+}
+CParticleNodePinOut	$335FFB08
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$ACF06FAD";
+	BaseType = event;
+	ConnectedPins = {
+		"$0B97AEB9",
+	};
+}
+CParticleNodeEventParent	$91DD827D
+{
+	OutputPins = {
+		"$39907E0B",
+	};
+	WorkspacePosition = int2(-22, 1408);
+}
+CParticleNodePinOut	$39907E0B
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$91DD827D";
+	BaseType = event;
+	ConnectedPins = {
+		"$76DF8147",
+	};
+}
+CParticleNodeTemplateExport	$09253368
+{
+	InputPins = {
+		"$0B97AEB9",
+	};
+	WorkspacePosition = int2(550, 1254);
+	ExportedName = "OnDeath";
+	ExportedType = event;
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$0B97AEB9
+{
+	SelfName = "Value";
+	Type = event;
+	Owner = "$09253368";
+	ConnectedPins = {
+		"$335FFB08",
+	};
+}
+CParticleNodeEventPayloadAppend	$9AEC0000
+{
+	InputPins = {
+		"$608949B9",
+		"$95C5A141",
+	};
+	OutputPins = {
+		"$80DDA874",
+	};
+	WorkspacePosition = int2(264, 638);
+	PayloadName = "LifeRatio";
+	PayloadType = float;
+}
+CParticleNodePinIn	$608949B9
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$9AEC0000";
+	BaseType = event;
+	ConnectedPins = {
+		"$8820639D",
+	};
+}
+CParticleNodePinIn	$95C5A141
+{
+	SelfName = "Value";
+	Type = float;
+	Owner = "$9AEC0000";
+	BaseType = float;
+	ConnectedPins = {
+		"$E48E6696",
+	};
+}
+CParticleNodePinOut	$80DDA874
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$9AEC0000";
+	BaseType = event;
+	ConnectedPins = {
+		"$D8CB89A2",
+	};
+}
+CParticleNodeTemplate	$4E04412A
+{
+	OutputPins = {
+		"$E48E6696",
+	};
+	WorkspacePosition = int2(-22, 814);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "self.lifeRatio";
+}
+CParticleNodePinOut	$E48E6696
+{
+	SelfName = "LifeRatio";
+	Type = float;
+	Owner = "$4E04412A";
+	BaseType = float;
+	ConnectedPins = {
+		"$95C5A141",
+	};
+}
+CParticleNodeEventPayloadAppend	$3DE85AE8
+{
+	InputPins = {
+		"$E8FB8E59",
+		"$B269AA91",
+	};
+	OutputPins = {
+		"$8820639D",
+	};
+	WorkspacePosition = int2(-22, 638);
+	PayloadName = "LifeSpan";
+	PayloadType = float;
+}
+CParticleNodePinIn	$E8FB8E59
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$3DE85AE8";
+	BaseType = event;
+	ConnectedPins = {
+		"$C517C3C1",
+	};
+}
+CParticleNodePinIn	$B269AA91
+{
+	SelfName = "Value";
+	Type = float;
+	Owner = "$3DE85AE8";
+	BaseType = float;
+	ConnectedPins = {
+		"$D94EB43D",
+	};
+}
+CParticleNodePinOut	$8820639D
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$3DE85AE8";
+	BaseType = event;
+	ConnectedPins = {
+		"$608949B9",
+	};
+}
+CParticleNodePassThrough	$8B5F6ED8
+{
+	InputPins = {
+		"$70E80C89",
+	};
+	OutputPins = {
+		"$D94EB43D",
+	};
+	WorkspacePosition = int2(-110, 704);
+}
+CParticleNodePinIn	$70E80C89
+{
+	SelfName = "Value";
+	Owner = "$8B5F6ED8";
+	ConnectedPins = {
+		"$FC45077C",
+	};
+}
+CParticleNodePinOut	$D94EB43D
+{
+	SelfName = "Value";
+	Owner = "$8B5F6ED8";
+	ConnectedPins = {
+		"$B269AA91",
+	};
+}
+CParticleNodeTemplate	$2D19A723
+{
+	InputPins = {
+		"$5DAC9A66",
+	};
+	OutputPins = {
+		"$56673B58",
+	};
+	WorkspacePosition = int2(-1386, 484);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Samplers.pkfx";
+	SubGraphName = "eventStream.properties";
+}
+CParticleNodePinIn	$5DAC9A66
+{
+	SelfName = "Sampler";
+	Type = dataEventStream;
+	Owner = "$2D19A723";
+	BaseType = dataEventStream;
+	ConnectedPins = {
+		"$1B5D6903",
+	};
+}
+CParticleNodePinOut	$56673B58
+{
+	SelfName = "Duration";
+	Type = float;
+	Owner = "$2D19A723";
+	BaseType = float;
+	ConnectedPins = {
+		"$7AC7892C",
+	};
+}
+CParticleNodeTemplateExport	$CEF738AB
+{
+	InputPins = {
+		"$30D0B1EA",
+	};
+	OutputPins = {
+		"$C274F48D",
+	};
+	WorkspacePosition = int2(-572, -66);
+	ExportedName = "Spawn";
+	ExportedType = event;
+	Type = Input;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$30D0B1EA
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$CEF738AB";
+}
+CParticleNodePinOut	$C274F48D
+{
+	SelfName = "Value";
+	Owner = "$CEF738AB";
+	ConnectedPins = {
+		"$067FD281",
+	};
+}
+CParticleNodeTemplateExport	$F25A765A
+{
+	InputPins = {
+		"$DAB43E33",
+	};
+	WorkspacePosition = int2(264, -66);
+	ExportedName = "Spawn";
+	ExportedType = event;
+	Type = Output;
+	VisibleByDefault = true;
+}
+CParticleNodePinIn	$DAB43E33
+{
+	SelfName = "Value";
+	Owner = "$F25A765A";
+	ConnectedPins = {
+		"$D19B4F89",
+	};
+}
+CParticleNodeTemplateExport	$C1F55F76
+{
+	InputPins = {
+		"$27604F23",
+	};
+	WorkspacePosition = int2(264, 66);
+	ExportedName = "OnDeath";
+	ExportedType = event;
+	Type = Output;
+}
+CParticleNodePinIn	$27604F23
+{
+	SelfName = "Value";
+	Type = event;
+	Owner = "$C1F55F76";
+	ConnectedPins = {
+		"$B10CD11D",
+	};
+}
+CParticleNodeAnnotation	$3872E1AE
+{
+	CustomName = {
+		"@eng:EventStream multiplier node",
+	};
+	Description = {
+		"@eng:This node is the base \"emitter\" node for event-stream resources (aka simulation caches) in PopcornFX.\\n\\nYou should not modify this node, it is part of the template core library, and will be expanded in future versions.\\n",
+	};
+	WorkspacePosition = int2(-1364, -792);
+	Scale = 1;
+	PostIt = true;
+	SelfSize = int2(996, 482);
+}
+CParticleNodeAnnotation	$109696EE
+{
+	CustomName = {
+		"@eng:Kill on effect stop",
+	};
+	WorkspacePosition = int2(-638, 1694);
+	SelfSize = int2(682, 308);
+}
+CParticleNodeScript	$7A605E7D
+{
+	CustomName = {
+		"@eng:Effect Stopped ?",
+	};
+	ExecStage = Evolve;
+	OutputPins = {
+		"$5F5D9437",
+	};
+	WorkspacePosition = int2(-550, 1760);
+	Expression = "IsStopped = !effect.isRunning();
+";
+}
+CParticleNodePinOut	$5F5D9437
+{
+	SelfName = "IsStopped";
+	Type = bool;
+	Owner = "$7A605E7D";
+	BaseType = bool;
+	ConnectedPins = {
+		"$E09C035C",
+	};
+}
+CParticleNodeArithmetic	$BCF6670E
+{
+	InputPins = {
+		"$E09C035C",
+		"$6337BE71",
+	};
+	OutputPins = {
+		"$936DA0F6",
+	};
+	WorkspacePosition = int2(-198, 1760);
+	Operation = And;
+}
+CParticleNodePinIn	$E09C035C
+{
+	SelfName = "Value";
+	Owner = "$BCF6670E";
+	ConnectedPins = {
+		"$5F5D9437",
+	};
+}
+CParticleNodePinIn	$6337BE71
+{
+	SelfName = "ValueB";
+	Owner = "$BCF6670E";
+	ConnectedPins = {
+		"$F31DFA7C",
+	};
+}
+CParticleNodePinOut	$936DA0F6
+{
+	SelfName = "Value";
+	Owner = "$BCF6670E";
+	ConnectedPins = {
+		"$5C67E89D",
+	};
+}
+CParticleNodeTemplateExport	$E42E9C41
+{
+	Description = {
+		"@eng:Will stop emission as soon as the engine forcefully stops the effect instance.\\n\\nIf you disable this, and the emission is set to infinite, this event-stream multiplier will keep running indefinitely until the scene/level is shut down.",
+	};
+	InputPins = {
+		"$C230B01E",
+	};
+	OutputPins = {
+		"$F31DFA7C",
+	};
+	WorkspacePosition = int2(-550, 1870);
+	ExportedName = "StopWithInstance";
+	ExportedType = bool;
+	Type = Input;
+	Order = 60;
+	CategoryName = {
+		"@eng:Emission",
+	};
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	DefaultValueB4 = bool4(true, false, false, false);
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$C230B01E
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$E42E9C41";
+}
+CParticleNodePinOut	$F31DFA7C
+{
+	SelfName = "Value";
+	Owner = "$E42E9C41";
+	ConnectedPins = {
+		"$6337BE71",
+	};
+}
+CParticleNodeArithmetic	$9F72B6A4
+{
+	InputPins = {
+		"$5C67E89D",
+		"$C3C62E27",
+	};
+	OutputPins = {
+		"$6B34252B",
+	};
+	WorkspacePosition = int2(198, 1892);
+	Operation = Or;
+}
+CParticleNodePinIn	$5C67E89D
+{
+	SelfName = "Value";
+	Owner = "$9F72B6A4";
+	ConnectedPins = {
+		"$936DA0F6",
+	};
+}
+CParticleNodePinIn	$C3C62E27
+{
+	SelfName = "ValueB";
+	Owner = "$9F72B6A4";
+	ConnectedPins = {
+		"$6C2AC310",
+	};
+}
+CParticleNodePinOut	$6B34252B
+{
+	SelfName = "Value";
+	Owner = "$9F72B6A4";
+	ConnectedPins = {
+		"$C1FED24D",
+	};
+}
+CParticleNodeTemplate	$74E87AEA
+{
+	InputPins = {
+		"$C1FED24D",
+	};
+	WorkspacePosition = int2(550, 1892);
+	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
+	SubGraphName = "self.kill";
+}
+CParticleNodePinIn	$C1FED24D
+{
+	SelfName = "Condition";
+	Type = bool;
+	Owner = "$74E87AEA";
+	BaseType = bool;
+	ConnectedPins = {
+		"$6B34252B",
+	};
+}
+CParticleNodeTemplateExport	$8B1FAE4D
+{
+	Description = {
+		"@eng:If `true`, will force-kill this event-stream multiplier.",
+	};
+	InputPins = {
+		"$66959E09",
+	};
+	OutputPins = {
+		"$6C2AC310",
+	};
+	WorkspacePosition = int2(-198, 2068);
+	ExportedName = "Kill";
+	ExportedType = bool;
+	Type = Input;
+	Order = 60;
+	CategoryName = {
+		"@eng:Emission",
+	};
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$66959E09
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$8B1FAE4D";
+}
+CParticleNodePinOut	$6C2AC310
+{
+	SelfName = "Value";
+	Owner = "$8B1FAE4D";
+	ConnectedPins = {
+		"$C3C62E27",
+	};
+}
+CParticleNodePinIn	$F6660AC7
+{
+	SelfName = "StopWithInstance";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$4586D2AF";
+	BaseType = bool;
+	ValueB = bool4(true, false, false, false);
+}
+CParticleNodePinIn	$785B961A
+{
+	SelfName = "Kill";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$4586D2AF";
+	BaseType = bool;
+}
+CParticleNodePassThrough	$102F5FB8
+{
+	InputPins = {
+		"$0DEBA495",
+	};
+	OutputPins = {
+		"$7A0A451E",
+	};
+	WorkspacePosition = int2(-1848, 660);
+}
+CParticleNodePinIn	$0DEBA495
+{
+	SelfName = "Value";
+	Owner = "$102F5FB8";
+	ConnectedPins = {
+		"$6847DD7A",
+	};
+}
+CParticleNodePinOut	$7A0A451E
+{
+	SelfName = "Value";
+	Owner = "$102F5FB8";
+	ConnectedPins = {
+		"$727DBF86",
+		"$E53B1C1C",
+	};
+}
+CParticleNodeAnnotation	$4D34222D
+{
+	CustomName = {
+		"@eng:Emission duration",
+	};
+	WorkspacePosition = int2(-1518, 154);
+	SelfSize = int2(704, 440);
+}
+CParticleNodeTemplateExport	$7A4ADD11
+{
+	Description = {
+		"@eng:When enabled, will ignore the event-stream duration, and emit for the specified `Duration` instead.",
+	};
+	InputPins = {
+		"$14FA0BED",
+	};
+	OutputPins = {
+		"$9E71DA33",
+	};
+	WorkspacePosition = int2(-1386, 220);
+	ExportedName = "OverrideDuration";
+	ExportedType = bool;
+	Type = Input;
+	Order = 8;
+	CategoryName = {
+		"@eng:Emission",
+	};
+	HasMin = true;
+}
+CParticleNodePinIn	$14FA0BED
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$7A4ADD11";
+}
+CParticleNodePinOut	$9E71DA33
+{
+	SelfName = "Value";
+	Owner = "$7A4ADD11";
+	ConnectedPins = {
+		"$765FC135",
+	};
+}
+CParticleNodeTemplateExport	$6DA78ECB
+{
+	Description = {
+		"@eng:Duration of emission.\\nIgnored if `OverrideDuration` is `false`.\\n\\nSet to **`0.0`** for an instantaneous burst.\\nSet to **`inf`** for an infinite emission duration.\\n\\n*NOTE: infinite emission will stop when the effect instance is stopped in-engine, or when you click the \'Stop\' button in the editor.*",
+	};
+	InputPins = {
+		"$DF942F2F",
+	};
+	OutputPins = {
+		"$148C69FA",
+	};
+	WorkspacePosition = int2(-1386, 352);
+	ExportedName = "Duration";
+	ExportedType = float;
+	Type = Input;
+	Order = 10;
+	CategoryName = {
+		"@eng:Emission",
+	};
+	HasMin = true;
+	DefaultValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+	PinRules = Rule1;
+	RuleResult = Hidden;
+	DependentProperty = "OverrideDuration";
+}
+CParticleNodePinIn	$DF942F2F
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$6DA78ECB";
+}
+CParticleNodePinOut	$148C69FA
+{
+	SelfName = "Value";
+	Owner = "$6DA78ECB";
+	ConnectedPins = {
+		"$9EBD7ED9",
+	};
+}
+CParticleNodePinIn	$EAB2D606
+{
+	SelfName = "OverrideDuration";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$4586D2AF";
+	BaseType = bool;
+}
+CParticleNodePinIn	$4D6D41E5
+{
+	SelfName = "Duration";
+	Type = float;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$4586D2AF";
+	BaseType = float;
+	ValueF = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePassThrough	$B4EBD6A5
+{
+	InputPins = {
+		"$E53B1C1C",
+	};
+	OutputPins = {
+		"$07FCBFDD",
+	};
+	WorkspacePosition = int2(-682, 660);
+}
+CParticleNodePinIn	$E53B1C1C
+{
+	SelfName = "Value";
+	Owner = "$B4EBD6A5";
+	ConnectedPins = {
+		"$7A0A451E",
+	};
+}
+CParticleNodePinOut	$07FCBFDD
+{
+	SelfName = "Value";
+	Owner = "$B4EBD6A5";
+	ConnectedPins = {
+		"$CB1355C0",
+	};
+}
+CParticleNodePassThrough	$461FA909
+{
+	InputPins = {
+		"$4CE81523",
+	};
+	OutputPins = {
+		"$FC45077C",
+	};
+	WorkspacePosition = int2(-506, 242);
+}
+CParticleNodePinIn	$4CE81523
+{
+	SelfName = "Value";
+	Owner = "$461FA909";
+	ConnectedPins = {
+		"$4A10AD87",
+	};
+}
+CParticleNodePinOut	$FC45077C
+{
+	SelfName = "Value";
+	Owner = "$461FA909";
+	ConnectedPins = {
+		"$70E80C89",
+		"$E9336CA1",
+	};
+}
+CParticleNodePassThrough	$140D8715
+{
+	InputPins = {
+		"$0EFF566E",
+	};
+	OutputPins = {
+		"$4A10AD87",
+	};
+	WorkspacePosition = int2(-836, 242);
+}
+CParticleNodePinIn	$0EFF566E
+{
+	SelfName = "Value";
+	Owner = "$140D8715";
+	ConnectedPins = {
+		"$8F66F9DB",
+	};
+}
+CParticleNodePinOut	$4A10AD87
+{
+	SelfName = "Value";
+	Owner = "$140D8715";
+	ConnectedPins = {
+		"$4CE81523",
+	};
+}
+CParticleNodePassThrough	$F8052630
+{
+	InputPins = {
+		"$727DBF86",
+	};
+	OutputPins = {
+		"$1B5D6903",
+	};
+	WorkspacePosition = int2(-1540, 506);
+}
+CParticleNodePinIn	$727DBF86
+{
+	SelfName = "Value";
+	Owner = "$F8052630";
+	ConnectedPins = {
+		"$7A0A451E",
+	};
+}
+CParticleNodePinOut	$1B5D6903
+{
+	SelfName = "Value";
+	Owner = "$F8052630";
+	ConnectedPins = {
+		"$5DAC9A66",
+	};
+}
+CParticleNodeIf	$39FE67E1
+{
+	InputPins = {
+		"$765FC135",
+		"$9EBD7ED9",
+		"$7AC7892C",
+	};
+	OutputPins = {
+		"$8F66F9DB",
+	};
+	WorkspacePosition = int2(-1056, 220);
+}
+CParticleNodePinIn	$765FC135
+{
+	SelfName = "Condition";
+	Owner = "$39FE67E1";
+	ConnectedPins = {
+		"$9E71DA33",
+	};
+}
+CParticleNodePinIn	$9EBD7ED9
+{
+	SelfName = "Value";
+	Owner = "$39FE67E1";
+	ConnectedPins = {
+		"$148C69FA",
+	};
+}
+CParticleNodePinIn	$7AC7892C
+{
+	SelfName = "ValueIfFalse";
+	Owner = "$39FE67E1";
+	ConnectedPins = {
+		"$56673B58",
+	};
+}
+CParticleNodePinOut	$8F66F9DB
+{
+	SelfName = "Value";
+	Owner = "$39FE67E1";
+	ConnectedPins = {
+		"$0EFF566E",
+	};
+}
+CParticleNodeTemplateExport	$873D1917
+{
+	Description = {
+		"@eng:If enabled, will pulse the <c>OnDeath</c> event even when the effect has been stopped.",
+	};
+	InputPins = {
+		"$FCB9E456",
+	};
+	OutputPins = {
+		"$E5E5EA8D",
+	};
+	WorkspacePosition = int2(-572, 1254);
+	ExportedName = "AlwaysTriggerOnDeath";
+	ExportedType = bool;
+	Type = Input;
+	Order = 61;
+	CategoryName = {
+		"@eng:Emission",
+	};
+	HasMin = true;
+	HasMax = true;
+	UseSlider = true;
+	MaxValueF4 = float4(1.0000000e+00, 0.0000000e+00, 0.0000000e+00, 0.0000000e+00);
+}
+CParticleNodePinIn	$FCB9E456
+{
+	SelfName = "DefaultValue";
+	Visible = false;
+	Owner = "$873D1917";
+}
+CParticleNodePinOut	$E5E5EA8D
+{
+	SelfName = "Value";
+	Owner = "$873D1917";
+	ConnectedPins = {
+		"$F3B27A47",
+	};
+}
+CParticleNodePinIn	$17E54ED6
+{
+	SelfName = "AlwaysTriggerOnDeath";
+	Type = bool;
+	Visible = false;
+	ExportInParent = true;
+	Owner = "$4586D2AF";
+	BaseType = bool;
+}
+CParticleNodeAnnotation	$4A50F171
+{
+	CustomName = {
+		"@eng:OnDeath event",
+	};
+	WorkspacePosition = int2(-704, 1166);
+	SelfSize = int2(1496, 374);
 }

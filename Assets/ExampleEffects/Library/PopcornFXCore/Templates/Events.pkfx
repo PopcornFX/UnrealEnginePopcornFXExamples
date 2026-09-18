@@ -1,4 +1,4 @@
-Version = 2.24.0.26309;
+Version = 2.25.0.27466;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -745,9 +745,9 @@ CParticleNodeLayer	$8F92C16F
 		"$D9EE9315",
 		"$1F1B528F",
 		"$1AA88881",
+		"$1390E791",
 		"$01D20E87",
 		"$F07C2BD4",
-		"$1390E791",
 		"$AF8FC30B",
 		"$52645DD9",
 		"$A7146116",
@@ -760,7 +760,6 @@ CParticleNodeLayer	$8F92C16F
 	WorkspacePosition = int2(132, -66);
 	WorkspaceRollupState = 2;
 	AutoEntrypoint = true;
-	PreferredSimLocation = CPU;
 	PreferredStorageSize = TinyGrowable;
 	NodeGraph = "$CD34D184";
 }
@@ -971,6 +970,8 @@ CParticleNodeGraph	$CD34D184
 		"$F2D4E62B",
 		"$55F12F19",
 		"$BF74D469",
+		"$B5CB19FA",
+		"$EB9872CB",
 	};
 	WorkspaceZoom = 0;
 }
@@ -2589,7 +2590,7 @@ CParticleNodeScript	$4DBFC84C
 	OutputPins = {
 		"$6A581758",
 	};
-	WorkspacePosition = int2(1958, -638);
+	WorkspacePosition = int2(2420, 1408);
 	Expression = "IsStopped = !effect.isRunning();
 ";
 }
@@ -2612,7 +2613,7 @@ CParticleNodeTemplate	$75349401
 	InputPins = {
 		"$B40E2505",
 	};
-	WorkspacePosition = int2(3058, -506);
+	WorkspacePosition = int2(3520, 1540);
 	SubGraphFilePath = "Library/PopcornFXCore/Templates/Core.pkfx";
 	SubGraphName = "self.kill";
 }
@@ -2645,7 +2646,7 @@ CParticleNodeArithmetic	$616B6AF1
 	OutputPins = {
 		"$D6053923",
 	};
-	WorkspacePosition = int2(2310, -638);
+	WorkspacePosition = int2(2772, 1408);
 	Operation = And;
 }
 CParticleNodePinIn	$04585EAB
@@ -3612,9 +3613,9 @@ CParticleNodeTemplate	$916AD6EF
 		"$2C0DE2B2",
 		"$70DC0B18",
 		"$BFA11B24",
+		"$8CA88D26",
 		"$0F98BD06",
 		"$A4E01B5F",
-		"$8CA88D26",
 		"$2C63F77B",
 		"$6F2970C1",
 		"$9D67A4FB",
@@ -4617,7 +4618,7 @@ CParticleNodeAnnotation	$9A20CE48
 	CustomName = {
 		"@eng:Kill on effect stop",
 	};
-	WorkspacePosition = int2(1870, -704);
+	WorkspacePosition = int2(2332, 1342);
 	SelfSize = int2(682, 308);
 }
 CParticleNodePinIn	$E0A28FF3
@@ -5951,7 +5952,7 @@ CParticleNodePinIn	$2C0DE2B2
 CParticleNodeTemplateExport	$F78DFE5D
 {
 	Description = {
-		"@eng:Will stop emission as soon as the engine stops on the effect instance.\\n\\nIf you disable this, and the emission is set to infinite, this will keep running indefinitely until the scene/level is shut down.",
+		"@eng:Will stop emission as soon as the engine forcefully stops the effect instance.\\n\\nIf you disable this, and the emission is set to infinite, this event multiplier will keep running indefinitely until the scene/level is shut down.",
 	};
 	InputPins = {
 		"$526C1DE4",
@@ -5959,7 +5960,7 @@ CParticleNodeTemplateExport	$F78DFE5D
 	OutputPins = {
 		"$D3686077",
 	};
-	WorkspacePosition = int2(1958, -528);
+	WorkspacePosition = int2(2420, 1518);
 	ExportedName = "StopWithInstance";
 	ExportedType = bool;
 	Type = Input;
@@ -6136,7 +6137,7 @@ CParticleNodePinIn	$6067DC07
 	SelfName = "Value";
 	Owner = "$E2390734";
 	ConnectedPins = {
-		"$012E6879",
+		"$F87F851E",
 	};
 }
 CParticleNodePinOut	$5ED917D6
@@ -6247,7 +6248,7 @@ CParticleNodeTemplate	$D24B8D5E
 	OutputPins = {
 		"$012E6879",
 	};
-	WorkspacePosition = int2(3256, 924);
+	WorkspacePosition = int2(2970, 924);
 	SubGraphName = "EventOnDeath";
 }
 CParticleNodePinOut	$012E6879
@@ -6257,7 +6258,7 @@ CParticleNodePinOut	$012E6879
 	Owner = "$D24B8D5E";
 	BaseType = event;
 	ConnectedPins = {
-		"$6067DC07",
+		"$A4752782",
 	};
 }
 CParticleNodeAnnotation	$B66D8430
@@ -6265,8 +6266,8 @@ CParticleNodeAnnotation	$B66D8430
 	CustomName = {
 		"@eng:OnDeath event",
 	};
-	WorkspacePosition = int2(2442, 836);
-	SelfSize = int2(1364, 374);
+	WorkspacePosition = int2(2156, 836);
+	SelfSize = int2(1716, 374);
 }
 CParticleNodeTemplateExport	$4F135EB3
 {
@@ -20805,13 +20806,13 @@ CParticleNodePinOut	$DF13641E
 CParticleNodeAnnotation	$320357B3
 {
 	Description = {
-		"@eng:Unlike what you can commonly find in other effect systems, PopcornFX emitters are not hardcoded in the C++ runtime.\\nThey are instead simulated like any other \"particle\" through the vectorized VM.\\n\\nThis means you can roll your own emitter logic if necessary, with excellent performance, as it\'ll take care of using the latest vector instruction-set your CPU supports (SSE4, AVX, AVX2 and more if you\'re on PC/Linux/Mac, NEON if you\'re on mobile or Mac-M1...), without requiring any specific coding effort.\\n\\nIn theory, this makes it also possible to run these on GPU. Except the current implementation of the GPU simulation backend does not yet support pulsing events. So it will always fallback to CPU.",
+		"@eng:Unlike what you can commonly find in other effect systems, PopcornFX emitters are not hardcoded in the C++ runtime.\\nThey are instead simulated like any other \"particle\" through the vectorized VM.\\n\\nThis means you can roll your own emitter logic if necessary, with excellent performance, as it\'ll take care of using the latest vector instruction-set your CPU supports (SSE4, AVX, AVX2 and more if you\'re on PC/Linux/Mac, NEON if you\'re on mobile or Mac-M1...), without requiring any specific coding effort.\\n\\nThis makes it also possible to run these on GPU. Right now only the D3D12-Ultimate implementation of the GPU simulation backend that uses workgraphs supports pulsing events. Any other backend will always fallback to CPU.",
 	};
-	WorkspacePosition = int2(-440, -946);
+	WorkspacePosition = int2(-440, -968);
 	Scale = -2;
 	PostItType = Orange;
 	PostIt = true;
-	SelfSize = int2(1188, 792);
+	SelfSize = int2(1188, 836);
 }
 CParticleNodeTemplateExport	$196C2EF1
 {
@@ -20824,7 +20825,7 @@ CParticleNodeTemplateExport	$196C2EF1
 	OutputPins = {
 		"$A2FABA6A",
 	};
-	WorkspacePosition = int2(2486, 924);
+	WorkspacePosition = int2(2200, 924);
 	ExportedName = "AlwaysTriggerOnDeath";
 	ExportedType = bool;
 	Type = Input;
@@ -20859,7 +20860,6 @@ CParticleNodePinIn	$AF8FC30B
 	ExportInParent = true;
 	Owner = "$8F92C16F";
 	BaseType = bool;
-	ValueB = bool4(true, false, false, false);
 }
 CParticleNodePinIn	$2C63F77B
 {
@@ -21070,7 +21070,7 @@ CEditorBackdropSpotLight	$1057900F
 CParticleNodeTemplateExport	$D50493AE
 {
 	Description = {
-		"@eng:Will stop emission as soon as the engine stops on the effect instance.\\n\\nIf you disable this, and the emission is set to infinite, this will keep running indefinitely until the scene/level is shut down.",
+		"@eng:If `true`, will force-kill this event multiplier.",
 	};
 	InputPins = {
 		"$25DEF3CC",
@@ -21078,7 +21078,7 @@ CParticleNodeTemplateExport	$D50493AE
 	OutputPins = {
 		"$C7DA6449",
 	};
-	WorkspacePosition = int2(2310, -330);
+	WorkspacePosition = int2(2772, 1716);
 	ExportedName = "Kill";
 	ExportedType = bool;
 	Type = Input;
@@ -21131,7 +21131,7 @@ CParticleNodeArithmetic	$92D38EFE
 	OutputPins = {
 		"$343D9C23",
 	};
-	WorkspacePosition = int2(2706, -506);
+	WorkspacePosition = int2(3168, 1540);
 	Operation = Or;
 }
 CParticleNodePinIn	$A4B1DF79
@@ -21266,7 +21266,7 @@ CParticleNodeArithmetic	$F2D4E62B
 	OutputPins = {
 		"$E264E8FC",
 	};
-	WorkspacePosition = int2(2728, 924);
+	WorkspacePosition = int2(2442, 924);
 	Operation = And;
 }
 CParticleNodePinIn	$B72DA5F4
@@ -24724,5 +24724,69 @@ CParticleNodePinOut	$AC75AFE2
 	Owner = "$A318B1FA";
 	ConnectedPins = {
 		"$C4287E28",
+	};
+}
+CParticleNodeEventParent	$B5CB19FA
+{
+	CustomName = {
+		"@eng:Parent event",
+	};
+	OutputPins = {
+		"$7D6B4E41",
+	};
+	WorkspacePosition = int2(2970, 1078);
+}
+CParticleNodePinOut	$7D6B4E41
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$B5CB19FA";
+	BaseType = event;
+	ConnectedPins = {
+		"$4F6C9429",
+	};
+}
+CParticleNodeEventPayloadCopy	$EB9872CB
+{
+	CustomName = {
+		"@eng:Copy payload",
+	};
+	InputPins = {
+		"$A4752782",
+		"$4F6C9429",
+	};
+	OutputPins = {
+		"$F87F851E",
+	};
+	WorkspacePosition = int2(3278, 924);
+}
+CParticleNodePinIn	$A4752782
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$EB9872CB";
+	BaseType = event;
+	ConnectedPins = {
+		"$012E6879",
+	};
+}
+CParticleNodePinIn	$4F6C9429
+{
+	SelfName = "SignalB";
+	Type = event;
+	Owner = "$EB9872CB";
+	BaseType = event;
+	ConnectedPins = {
+		"$7D6B4E41",
+	};
+}
+CParticleNodePinOut	$F87F851E
+{
+	SelfName = "Signal";
+	Type = event;
+	Owner = "$EB9872CB";
+	BaseType = event;
+	ConnectedPins = {
+		"$6067DC07",
 	};
 }

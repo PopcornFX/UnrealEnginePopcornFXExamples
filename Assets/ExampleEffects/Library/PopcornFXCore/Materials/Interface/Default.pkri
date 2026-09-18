@@ -1,4 +1,4 @@
-Version = 2.24.0.26309;
+Version = 2.25.0.27466;
 CEngineRendererInterface	$6B70D015
 {
 	InterfaceName = "Default features";
@@ -1015,6 +1015,7 @@ CParticleRendererFeature	$DADBF2F1
 		"$63EBE82E",
 		"$BEDF8936",
 		"$D6DEA348",
+		"$977AE1F4",
 		"$2D0B2651",
 	};
 }
@@ -2049,6 +2050,7 @@ CRHIRenderingFeature	$85A347AD
 		"MotionVectorsMap",
 		"DistortionStrength",
 		"SubDiv",
+		"Trimming",
 	};
 }
 CRHIRenderingFeature	$43951B1E
@@ -5801,4 +5803,45 @@ CParticleNodePinOut	$1E9A3E0D
 {
 	SelfName = "Value";
 	Owner = "$A2B15E3D";
+}
+CParticleNodeTemplateExport	$977AE1F4
+{
+	Description = {
+		"@eng:Enables the geometry trimming of billboard quads to reduce overdraw, using trimmed geometry data of the associated .pkat file.\\nCurrently only supported for 4-vertices hull.\\nTo generate trimming data in the pkat, you need to bake the .pkat file a with a custom config that looks like this:\\n<YourPkat>.pkcf:```COvenBakeConfig_TextureAtlas <hash>\\n{\\n	TrimTexture = true;\\n	TrimmerVertexCount = 4;\\n}\\n```",
+	};
+	InputPins = {
+		"$4513DAB7",
+	};
+	OutputPins = {
+		"$BA53D10E",
+	};
+	ExportedName = "Atlas.Trimming";
+	ExportedType = bool;
+	Type = Input;
+	InputType = Property;
+	CategoryName = {
+		"@eng:Atlas",
+	};
+	DropDownMode = SingleSelect;
+	EnumList = {
+		"None",
+		"Enabled",
+	};
+	PinRules = Rule3;
+	BaseVisibility = Hidden;
+	RuleResult = Visible;
+	DependentProperty = "Atlas.Source";
+	DependentProperty2 = "Atlas.Blending";
+	DependentProperty3 = "General.EnableSize2D";
+	RuleFunction3 = GreaterEqual;
+}
+CParticleNodePinIn	$4513DAB7
+{
+	SelfName = "DefaultValue";
+	Owner = "$977AE1F4";
+}
+CParticleNodePinOut	$BA53D10E
+{
+	SelfName = "Value";
+	Owner = "$977AE1F4";
 }

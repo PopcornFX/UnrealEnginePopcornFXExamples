@@ -144,8 +144,8 @@ void	FragmentInputToFragGeometry(IN(SFragmentInput) fInput, OUT(SFragGeometry) f
 // For decals, adjust UVs if the feature atlas is enabled
 // (this is done in the billboarding tasks for billboard and ribbons):
 #		if defined(HAS_Atlas)
-	vec4 fragRect0 = LOADF4(GET_RAW_BUFFER(Atlas), RAW_BUFFER_INDEX(min(LOADU(GET_RAW_BUFFER(Atlas), 0) - 1, uint(fInput.fragAtlas_TextureID)) * 4 + 1));
-	vec4 fragRect1 = LOADF4(GET_RAW_BUFFER(Atlas), RAW_BUFFER_INDEX(min(LOADU(GET_RAW_BUFFER(Atlas), 0) - 1, uint(fInput.fragAtlas_TextureID) + 1) * 4 + 1));
+	vec4 fragRect0 = LOADF4(GET_RAW_BUFFER(Atlas), RAW_BUFFER_INDEX(min(LOADU(GET_RAW_BUFFER(Atlas), 0) - 1, uint(fInput.fragAtlas_TextureID)) * 4 + 4));
+	vec4 fragRect1 = LOADF4(GET_RAW_BUFFER(Atlas), RAW_BUFFER_INDEX(min(LOADU(GET_RAW_BUFFER(Atlas), 0) - 1, uint(fInput.fragAtlas_TextureID) + 1) * 4 + 4));
 	fGeom.m_UV1 = fGeom.m_UV0;
 	fGeom.m_UV0 *= fragRect0.xy;
 	fGeom.m_UV0 += fragRect0.zw;

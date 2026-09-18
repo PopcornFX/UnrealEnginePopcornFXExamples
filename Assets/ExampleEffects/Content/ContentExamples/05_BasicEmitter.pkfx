@@ -1,4 +1,4 @@
-Version = 2.24.0.26309;
+Version = 2.25.0.27466;
 CParticleEffect	$6B70D015
 {
 	LayerGraph = "$81861AB7";
@@ -1737,5 +1737,5 @@ CParticleNodePinIn	$F62567D2
 	Visible = false;
 	Owner = "$33C09A0A";
 	BaseType = int;
-	ValueI = int4(1, 0, 0, 0);
+	ValueI = int4(3, 0, 0, 0);
 }

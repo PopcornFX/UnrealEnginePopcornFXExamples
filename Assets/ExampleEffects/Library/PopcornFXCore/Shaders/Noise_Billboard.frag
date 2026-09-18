@@ -36,8 +36,8 @@ void    FragmentMain(IN(SFragmentInput) fInput, OUT(SFragmentOutput) fOutput FS_
 #if	defined(HAS_TransformUVs)
 #	if defined(HAS_Atlas)
 	uint	maxAtlasID = LOADU(GET_RAW_BUFFER(Atlas), 0) - 1;
-	vec4	rect0 = LOADF4(GET_RAW_BUFFER(Atlas), RAW_BUFFER_INDEX(min(maxAtlasID, uint(fInput.fragAtlas_TextureID)) * 4 + 1));
-	vec4	rect1 = LOADF4(GET_RAW_BUFFER(Atlas), RAW_BUFFER_INDEX(min(maxAtlasID, uint(fInput.fragAtlas_TextureID) + 1) * 4 + 1));
+	vec4	rect0 = LOADF4(GET_RAW_BUFFER(Atlas), RAW_BUFFER_INDEX(min(maxAtlasID, uint(fInput.fragAtlas_TextureID)) * 4 + 4));
+	vec4	rect1 = LOADF4(GET_RAW_BUFFER(Atlas), RAW_BUFFER_INDEX(min(maxAtlasID, uint(fInput.fragAtlas_TextureID) + 1) * 4 + 4));
 	ApplyTransformUVs(fGeom, rect0, rect1, fInput.fragTransformUVs_UVRotate, fInput.fragTransformUVs_UVScale, fInput.fragTransformUVs_UVOffset FS_PARAMS);
 #	else
 	ApplyTransformUVs(fGeom, fInput.fragTransformUVs_UVRotate, fInput.fragTransformUVs_UVScale, fInput.fragTransformUVs_UVOffset FS_PARAMS);

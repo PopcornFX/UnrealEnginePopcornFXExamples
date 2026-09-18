@@ -1,4 +1,4 @@
-Version = 2.24.0.26309;
+Version = 2.25.0.27469;
 CProjectSettings	$D857A09F
 {
 	General = "$35A36C4E";
@@ -99,6 +99,7 @@ CProjectSettingsAssets	$4ADE8DE2
 	};
 	SimCacheExtensions = {
 		"pksc",
+		"pksx",
 	};
 	FontExtensions = {
 		"ttf",
